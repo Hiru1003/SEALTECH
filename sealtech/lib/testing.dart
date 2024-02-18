@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sealtech/button.dart';
 
-import 'custom_button.dart'; // Make sure to import the custom button file
-
 class CustomPage extends StatelessWidget {
   final String title;
   final String bodyText;

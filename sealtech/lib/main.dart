@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sealtech/button.dart';
+import 'package:sealtech/testing.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,9 +12,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: CustomButton(onPressed: (){
-        print('Button Pressed');
-      }, buttonText: 'Button'),
+      home: CustomPage(
+        title: 'Custom Page',
+        bodyText: 'This is a custom page.',
+      ),
     );
   }
 }
