@@ -1,10 +1,10 @@
-# MoodMenders, mood tracking app for NSBM students | Code of Conduct
+# SEALTECH, Waterproofing company app for client and employees | Code of Conduct
 
 ![Logo - White (With Partner)](https://github.com/Hiru1003/SEALTECH/assets/122656994/3230aaa3-3fdb-4c0c-a7b8-ad2cfd9d9502)
 
-## Welcome to Mood Menders
+## Welcome to SEALTECH
 
-The importance of mental fortitude cannot be overstated in our world's ever-accelerating cadence. Countless people struggle with the tremendous weight of psychological stress and emotional traumas, casting formidable shadows on their daily lives. "Mood Menders" is a Flutter app built with the Dart programming language that serves as a guide for persons dealing with mental health issues, seeking guidance, or simply looking for ways to relieve stress.
+Welcome to the SEALTECH Waterproofing Company App Development Project! We're excited to embark on this journey together to create a cutting-edge application that will revolutionize how we interact with our clients and manage waterproofing projects. Your expertise and dedication will play a crucial role in shaping the future of our company. Let's collaborate, innovate, and build something extraordinary! Together, we'll set new standards in the waterproofing industry. Welcome aboard!
 
 ## Our Guidelines
 
@@ -16,7 +16,7 @@ Treat all individuals with respect and kindness. Be considerate of others' opini
 
 ### 2. Foster Collaboration
 
-Mood Menders is a collaborative project. Encourage constructive discussions and feedback. Work together to solve problems and build a strong and supportive community. Share knowledge and learn from others.
+SEALTECH is a collaborative project. Encourage constructive discussions and feedback. Work together to solve problems and build a strong and supportive community. Share knowledge and learn from others.
 
 ### 3. Stay Open-Minded
 
@@ -24,7 +24,7 @@ Open source thrives on diverse perspectives. Be open to new ideas and approaches
 
 ### 4. Contribute Positively
 
-Contribute to Mood Menders in a positive and constructive manner. Help others learn and grow. Share your knowledge and support newcomers. Remember that behind every screen is a human with feelings and experiences.
+Contribute to SEALTECH in a positive and constructive manner. Help others learn and grow. Share your knowledge and support newcomers. Remember that behind every screen is a human with feelings and experiences.
 
 ### 5. Respect Project Decisions
 
@@ -49,6 +49,6 @@ In the event of a violation of this code of conduct, the project maintainers may
 
 This code of conduct is inspired by the [Contributor Covenant](https://www.contributor-covenant.org/version/2/0/code_of_conduct/).
 
-We appreciate your commitment to creating a welcoming and inclusive community around Mood Menders.
+We appreciate your commitment to creating a welcoming and inclusive community around SEALTECH.
 
 ---
