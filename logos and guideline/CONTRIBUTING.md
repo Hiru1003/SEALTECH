@@ -18,7 +18,7 @@ Contributions are always welcome!
 
 I welcome contributions in the form of bug reports, feature requests, code changes, and documentation improvements. To contribute, please follow these general steps:
 
-1. [Search for existing issues](https://github.com/Risini-33/Mood-Menders/issues) to avoid duplication.
+1. [Search for existing issues](https://github.com/Risini-33/SEALTECH/issues) to avoid duplication.
 
 2. Clone the `lib` branch of the repository. Pull all changes from the `lib` branch.
 
@@ -76,7 +76,7 @@ This project uses Firebase, the set of backend cloud computing services and appl
 
 ## Reporting Issues
 
-If you encounter a bug or want to request a new feature, please open an issue in our [issue tracker](https://github.com/Risini-33/Mood-Menders/issues). Be sure to provide as much detail as possible, including the steps to reproduce the issue.
+If you encounter a bug or want to request a new feature, please open an issue in our [issue tracker](https://github.com/Risini-33/SEALTECH/issues). Be sure to provide as much detail as possible, including the steps to reproduce the issue.
 
 ## Pull Requests
 
