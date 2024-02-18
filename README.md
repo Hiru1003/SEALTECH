@@ -1,4 +1,4 @@
-# SEALTECH
+# SEALTECH - Waterproofing Company
 
 SealTech Mobile Application
 
