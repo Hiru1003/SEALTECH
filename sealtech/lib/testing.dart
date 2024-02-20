@@ -4,8 +4,9 @@ import 'package:sealtech/button.dart';
 class CustomPage extends StatelessWidget {
   final String title;
   final String bodyText;
+  final Color buttonColor; // Add this line to add a buttonColor parameter
 
-  CustomPage({required this.title, required this.bodyText});
+  CustomPage({required this.title, required this.bodyText, this.buttonColor = Colors.blue});
 
   @override
   Widget build(BuildContext context) {
@@ -22,11 +23,11 @@ class CustomPage extends StatelessWidget {
               bodyText,
               style: Theme.of(context).textTheme.headlineMedium,
             ),
-            CustomButton(
+            GradientButton(
               onPressed: () {
                 // Put your code here
               },
-              buttonText: 'Click Me',
+              buttonText: 'Button',
             ),
           ],
         ),
