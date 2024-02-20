@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-class GradientButton extends StatelessWidget {
+class SolidColorButton extends StatelessWidget {
   final String buttonText;
   final bool enableIcon;
   final VoidCallback onPressed;
-  final List<Color> colors; // Add this line to add a colors parameter
+  final Color color; // Change this to a single Color
 
-  GradientButton({
+  SolidColorButton({
     required this.buttonText,
     this.enableIcon = true,
     required this.onPressed,
-    this.colors = const [Color.fromARGB(255, 64, 205, 205), Color.fromARGB(255, 134, 208, 203)], // Set default gradient colors
+    this.color = const Color.fromARGB(255, 64, 205, 205), // Set default color
   });
 
   @override
@@ -21,11 +21,7 @@ class GradientButton extends StatelessWidget {
         onTap: onPressed,
         child: DecoratedBox(
           decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: colors, // Use the colors parameter here
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ),
+            color: color, // Use the color parameter here
             borderRadius: BorderRadius.circular(8),
           ),
           child: SizedBox(
