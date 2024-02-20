@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class SolidColorButton extends StatelessWidget {
+class Button extends StatelessWidget {
   final String buttonText;
   final bool enableIcon;
   final VoidCallback onPressed;
   final Color color; // Change this to a single Color
 
-  SolidColorButton({
+  Button({
     required this.buttonText,
     this.enableIcon = true,
     required this.onPressed,
