@@ -4,13 +4,13 @@ class Button extends StatelessWidget {
   final String buttonText;
   final bool enableIcon;
   final VoidCallback onPressed;
-  final String color; // Change this to a String
+  final String color;
 
   Button({
     required this.buttonText,
     this.enableIcon = true,
     required this.onPressed,
-    this.color = 'orange', // Set default color to orange
+    this.color = 'orange',
   });
 
   @override
@@ -19,7 +19,7 @@ class Button extends StatelessWidget {
     if (color == 'black') {
       buttonColor = Colors.black;
     } else {
-      buttonColor = Colors.orange;
+      buttonColor = Color(0xFFFF8400);
     }
 
     return Padding(
@@ -28,7 +28,7 @@ class Button extends StatelessWidget {
         onTap: onPressed,
         child: DecoratedBox(
           decoration: BoxDecoration(
-            color: buttonColor, // Use the buttonColor variable here
+            color: buttonColor,
             borderRadius: BorderRadius.circular(8),
           ),
           child: SizedBox(
@@ -39,6 +39,7 @@ class Button extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Text(buttonText, style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w500)),
+                  if (enableIcon) SizedBox(width: 10), // Add space
                   if (enableIcon) Icon(Icons.arrow_forward, color: Colors.white),
                 ],
               ),
