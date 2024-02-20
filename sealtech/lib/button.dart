@@ -4,24 +4,31 @@ class Button extends StatelessWidget {
   final String buttonText;
   final bool enableIcon;
   final VoidCallback onPressed;
-  final Color color; // Change this to a single Color
+  final String color; // Change this to a String
 
   Button({
     required this.buttonText,
     this.enableIcon = true,
     required this.onPressed,
-    this.color = const Color.fromARGB(255, 64, 205, 205), // Set default color
+    this.color = 'orange', // Set default color to orange
   });
 
   @override
   Widget build(BuildContext context) {
+    Color buttonColor;
+    if (color == 'black') {
+      buttonColor = Colors.black;
+    } else {
+      buttonColor = Colors.orange;
+    }
+
     return Padding(
       padding: const EdgeInsets.only(top: 20),
       child: GestureDetector(
         onTap: onPressed,
         child: DecoratedBox(
           decoration: BoxDecoration(
-            color: color, // Use the color parameter here
+            color: buttonColor, // Use the buttonColor variable here
             borderRadius: BorderRadius.circular(8),
           ),
           child: SizedBox(
@@ -31,8 +38,8 @@ class Button extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Text(buttonText, style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.w500)),
-                  if (enableIcon) Icon(Icons.arrow_forward, color: Colors.black),
+                  Text(buttonText, style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w500)),
+                  if (enableIcon) Icon(Icons.arrow_forward, color: Colors.white),
                 ],
               ),
             ),

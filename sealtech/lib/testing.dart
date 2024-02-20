@@ -29,7 +29,7 @@ class CustomPage extends StatelessWidget {
               onPressed: () {
                 print('Button pressed!');
               },
-              color: const Color.fromARGB(255, 70, 91, 108), // Set the gradient colors to red and blue
+              color: 'orange',
             )
           ],
         ),
