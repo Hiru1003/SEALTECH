@@ -29,7 +29,8 @@ class CustomPage extends StatelessWidget {
               onPressed: () {
                 print('Button pressed!');
               },
-              color: 'orange',
+              color: 'black',
+              isStroked: false,
             )
           ],
         ),

@@ -5,21 +5,26 @@ class Button extends StatelessWidget {
   final bool enableIcon;
   final VoidCallback onPressed;
   final String color;
+  final bool isStroked; // Add this parameter
 
   Button({
     required this.buttonText,
     this.enableIcon = true,
     required this.onPressed,
     this.color = 'orange',
+    this.isStroked = false, // Set default value to false
   });
 
   @override
   Widget build(BuildContext context) {
     Color buttonColor;
+    Color borderColor;
     if (color == 'black') {
       buttonColor = Colors.black;
+      borderColor = Colors.black;
     } else {
       buttonColor = Color(0xFFFF8400);
+      borderColor = Color(0xFFFF8400);
     }
 
     return Padding(
@@ -28,8 +33,12 @@ class Button extends StatelessWidget {
         onTap: onPressed,
         child: DecoratedBox(
           decoration: BoxDecoration(
-            color: buttonColor,
+            color: isStroked ? Colors.transparent : buttonColor, // Set color to transparent if isStroked is true
             borderRadius: BorderRadius.circular(8),
+            border: Border.all(
+              color: isStroked ? buttonColor : borderColor, // Set border color to buttonColor if isStroked is true
+              width: 2,
+            ),
           ),
           child: SizedBox(
             height: 50,
@@ -38,9 +47,9 @@ class Button extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Text(buttonText, style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w500)),
-                  if (enableIcon) SizedBox(width: 10), // Add space
-                  if (enableIcon) Icon(Icons.arrow_forward, color: Colors.white),
+                  Text(buttonText, style: TextStyle(color: isStroked ? buttonColor : Colors.white, fontSize: 16, fontWeight: FontWeight.w500)), // Set text color to buttonColor if isStroked is true
+                  if (enableIcon) SizedBox(width: 10),
+                  if (enableIcon) Icon(Icons.arrow_forward, color: isStroked ? buttonColor : Colors.white), // Set icon color to buttonColor if isStroked is true
                 ],
               ),
             ),
