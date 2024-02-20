@@ -4,11 +4,13 @@ class GradientButton extends StatelessWidget {
   final String buttonText;
   final bool enableIcon;
   final VoidCallback onPressed;
+  final List<Color> colors; // Add this line to add a colors parameter
 
   GradientButton({
     required this.buttonText,
     this.enableIcon = true,
     required this.onPressed,
+    this.colors = const [Color.fromARGB(255, 64, 205, 205), Color.fromARGB(255, 134, 208, 203)], // Set default gradient colors
   });
 
   @override
@@ -19,8 +21,8 @@ class GradientButton extends StatelessWidget {
         onTap: onPressed,
         child: DecoratedBox(
           decoration: BoxDecoration(
-            gradient: const LinearGradient(
-              colors: [Color.fromARGB(255, 64, 205, 205),Color.fromARGB(255, 134, 208, 203)], // Define your gradient colors
+            gradient: LinearGradient(
+              colors: colors, // Use the colors parameter here
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
             ),

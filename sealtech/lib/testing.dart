@@ -28,6 +28,7 @@ class CustomPage extends StatelessWidget {
                 // Put your code here
               },
               buttonText: 'Button',
+              enableIcon: false,
             ),
           ],
         ),
