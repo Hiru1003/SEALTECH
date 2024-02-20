@@ -24,12 +24,13 @@ class CustomPage extends StatelessWidget {
               style: Theme.of(context).textTheme.headlineMedium,
             ),
             GradientButton(
+              buttonText: 'Press Me',
+              enableIcon: true,
               onPressed: () {
-                // Put your code here
+                print('Button pressed!');
               },
-              buttonText: 'Button',
-              enableIcon: false,
-            ),
+              colors: [const Color.fromARGB(255, 255, 17, 0), const Color.fromARGB(255, 70, 91, 108)], // Set the gradient colors to red and blue
+            )
           ],
         ),
       ),
