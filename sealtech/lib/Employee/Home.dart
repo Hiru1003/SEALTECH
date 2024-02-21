@@ -170,7 +170,10 @@ class _Home_PageState extends State<Home_Page> {
               child: const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(Icons.chat_bubble_rounded),
+                  Icon(
+                    Icons.chat_bubble_rounded,
+                    color: Color.fromARGB(255, 235, 217, 87),
+                  ),
                   SizedBox(height: 5),
                   Text('Appointment'),
                 ],
