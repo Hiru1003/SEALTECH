@@ -63,7 +63,7 @@ class _Home_PageState extends State<Home_Page> {
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   const SizedBox(
-                    width: 16,
+                    width: 12,
                   ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -76,7 +76,7 @@ class _Home_PageState extends State<Home_Page> {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(height: 15),
+                      SizedBox(height: 5),
                       Text(
                         'View more site locations \nand get to know the site \nthat completed and \nongoing\n',
                         style: GoogleFonts.poppins(
@@ -84,7 +84,6 @@ class _Home_PageState extends State<Home_Page> {
                           color: const Color.fromARGB(255, 70, 66, 68),
                         ),
                       ),
-                      const SizedBox(height: 5),
                       OutlinedButton(
                         onPressed: () {
                           // Handle button press
@@ -99,6 +98,7 @@ class _Home_PageState extends State<Home_Page> {
                         ),
                         child: const Text('View More'),
                       ),
+                      SizedBox(height: 5),
                     ],
                   ),
                   Expanded(
