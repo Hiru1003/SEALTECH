@@ -96,7 +96,7 @@ class _Home_PageState extends State<Home_Page> {
                             borderRadius: BorderRadius.circular(20.0),
                           ),
                         ),
-                        child: const Text('View More'),
+                        child: const Text('View More Details'),
                       ),
                       SizedBox(height: 5),
                     ],
