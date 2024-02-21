@@ -170,7 +170,7 @@ class _Home_PageState extends State<Home_Page> {
               child: const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(Icons.access_alarm),
+                  Icon(Icons.calendar_view_week),
                   SizedBox(height: 5),
                   Text('Attendance'),
                 ],
