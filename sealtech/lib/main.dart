@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sealtech/Employee/Home.dart';
-import 'package:sealtech/loadingpage1.dart';
+import 'package:sealtech/loadingPage2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,8 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: //LoadingPage1(),
-          Home_Page(),
+      home: LoadingPage2(),
     );
   }
 }
