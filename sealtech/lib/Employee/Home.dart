@@ -150,7 +150,7 @@ class _Home_PageState extends State<Home_Page> {
               child: const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(Icons.access_alarm),
+                  Icon(Icons.chat_bubble_outline),
                   SizedBox(height: 5),
                   Text('Appointment'),
                 ],
