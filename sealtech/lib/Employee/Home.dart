@@ -118,6 +118,9 @@ class _Home_PageState extends State<Home_Page> {
             ),
           ),
           SizedBox(height: 15),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+          )
         ])));
   }
 }
