@@ -6,12 +6,6 @@
 
 </br>
 
-<a href="https://github.com/Risini-33/SEALTECH/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Risini-33/SEALTECH" />
-</a>
-
-</br>
-
 UI UX Design = https://www.figma.com/file/eQWQXOwH0tP0X5vs9u9y6L/Sealtech?type=design&node-id=30-2&mode=design&t=jRRTaLcAcdqrV57e-0
 ## SEALTECH: waterprofing company e-commerce app for client and employees
 
