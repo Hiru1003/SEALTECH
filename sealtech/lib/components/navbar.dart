@@ -26,6 +26,7 @@ class _NavigationState extends State<Navigation> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.search),
+            
             label: 'Search',
           ),
           BottomNavigationBarItem(
