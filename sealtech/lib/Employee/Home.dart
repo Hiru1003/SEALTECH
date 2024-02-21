@@ -51,6 +51,19 @@ class _Home_PageState extends State<Home_Page> {
             decoration: const BoxDecoration(
               color: Color.fromARGB(255, 134, 208, 203),
             ),
+            child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                    const SizedBox(width: 16,),
+                    Text(
+                    'Text',
+                    style: GoogleFonts.poppins(
+                    textStyle: Theme.of(context).textTheme.displayLarge,
+                    color: const Color.fromARGB(255, 70, 66, 68),
+                    fontSize: 22,
+                    fontWeight: FontWeight.w500
+                    ),
+                  ),
           )
         ])));
   }
