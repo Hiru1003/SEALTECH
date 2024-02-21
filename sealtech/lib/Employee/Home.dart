@@ -122,7 +122,7 @@ class _Home_PageState extends State<Home_Page> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Padding(
-                padding: EdgeInsets.only(left: 12),
+                padding: EdgeInsets.only(left: 15),
                 child: Text(
                   'Category',
                   style: GoogleFonts.poppins(
