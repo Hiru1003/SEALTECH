@@ -62,11 +62,11 @@ class _Home_PageState extends State<Home_Page> {
                   width: 16,
                 ),
                 Text(
-                  'Text',
+                  'Ongoing Locations \n\nOngoing Locations ',
                   style: GoogleFonts.poppins(
                       textStyle: Theme.of(context).textTheme.displayLarge,
                       color: const Color.fromARGB(255, 70, 66, 68),
-                      fontSize: 22,
+                      fontSize: 16,
                       fontWeight: FontWeight.w500),
                 ),
                 Expanded(
@@ -75,7 +75,7 @@ class _Home_PageState extends State<Home_Page> {
                     children: [
                       Image.asset(
                         'lib/images/home_emp.png',
-                        height: 100,
+                        height: 170,
                       ),
                     ],
                   ),
