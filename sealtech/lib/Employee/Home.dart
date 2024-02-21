@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sealtech/components/button.dart';
 
 class Home_Page extends StatefulWidget {
   const Home_Page({
@@ -79,9 +80,24 @@ class _Home_PageState extends State<Home_Page> {
                       Text(
                         'View more site locations \nand get to know the site \nthat completed and \nongoing\n',
                         style: GoogleFonts.poppins(
-                          fontSize: 13, // Adjust the font size as needed
+                          fontSize: 13,
                           color: const Color.fromARGB(255, 70, 66, 68),
                         ),
+                      ),
+                      const SizedBox(height: 5),
+                      OutlinedButton(
+                        onPressed: () {
+                          // Handle button press
+                        },
+                        style: OutlinedButton.styleFrom(
+                          foregroundColor:
+                              const Color.fromARGB(255, 23, 22, 22),
+                          side: const BorderSide(color: Colors.black),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                        ),
+                        child: const Text('View More'),
                       ),
                     ],
                   ),
