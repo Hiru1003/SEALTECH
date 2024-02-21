@@ -68,6 +68,7 @@ class _Home_PageState extends State<Home_Page> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      SizedBox(height: 7),
                       Text(
                         'Ongoing Locations',
                         style: GoogleFonts.poppins(
@@ -76,7 +77,7 @@ class _Home_PageState extends State<Home_Page> {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(height: 7),
+                      SizedBox(height: 9),
                       Text(
                         'View more site locations \nand get to know the site \nthat completed and \nongoing\n',
                         style: GoogleFonts.poppins(
