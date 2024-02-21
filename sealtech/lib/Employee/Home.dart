@@ -149,7 +149,10 @@ class _Home_PageState extends State<Home_Page> {
                 child: const Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(Icons.calendar_month),
+                      Icon(
+                        Icons.calendar_month,
+                        color: Color.fromARGB(255, 235, 217, 87),
+                      ),
                       SizedBox(height: 5),
                       Text('Holidays'),
                     ])),
