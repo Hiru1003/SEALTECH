@@ -56,7 +56,7 @@ class _Home_PageState extends State<Home_Page> {
             child: Container(
               padding: const EdgeInsets.all(0),
               decoration: BoxDecoration(
-                color: const Color.fromRGBO(250, 193, 113, 1),
+                color: Color.fromARGB(255, 247, 219, 180),
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Row(
