@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-//Use the given below code segment to import button in any file.
+//Use the given below code segment to import a button in any file.
 
     // Button(
       //   buttonText: 'Press Me', //Add a text as you want
