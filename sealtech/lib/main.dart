@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sealtech/Employee/Home.dart';
 import 'package:sealtech/testing.dart';
 
 void main() {
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: CustomPage(title: 'title', bodyText: 'bodyText'),
+      home: Home_Page(),
     );
   }
 }

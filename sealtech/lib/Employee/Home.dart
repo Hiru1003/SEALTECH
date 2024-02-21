@@ -18,6 +18,16 @@ class _Home_PageState extends State<Home_Page> {
           padding: const EdgeInsets.only(
             left: 10,
           ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              Image.asset(
+                'lib/images/logo-word-no-background.png',
+                height: 72,
+              )
+            ],
+          ),
         ),
         titleSpacing: 4.0,
         toolbarHeight: 65,
@@ -28,7 +38,7 @@ class _Home_PageState extends State<Home_Page> {
               bottomLeft: Radius.circular(18)),
         ),
         iconTheme: const IconThemeData(
-          color: Colors.black, //change your color here
+          color: Colors.black,
         ),
         elevation: 0.00,
         backgroundColor: Color.fromRGBO(251, 147, 0, 1),
