@@ -47,7 +47,7 @@ class _Home_PageState extends State<Home_Page> {
         backgroundColor: const Color.fromRGBO(255, 252, 245, 1),
         body: SingleChildScrollView(
             child: Column(children: [
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Padding(
@@ -55,7 +55,7 @@ class _Home_PageState extends State<Home_Page> {
             child: Container(
               padding: const EdgeInsets.all(0),
               decoration: BoxDecoration(
-                color: Color.fromRGBO(250, 193, 113, 1),
+                color: const Color.fromRGBO(250, 193, 113, 1),
                 borderRadius:
                     BorderRadius.circular(10), // Adjust the radius as needed
               ),
