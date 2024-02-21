@@ -156,7 +156,7 @@ class _Home_PageState extends State<Home_Page> {
                       SizedBox(height: 15),
                       Text('Holidays'),
                     ])),
-            SizedBox(width: 20),
+            SizedBox(width: 15),
             Container(
               width: 100,
               height: 100,
@@ -179,7 +179,7 @@ class _Home_PageState extends State<Home_Page> {
                 ],
               ),
             ),
-            SizedBox(width: 20), // Add space between containers
+            SizedBox(width: 15), // Add space between containers
             Container(
               width: 100,
               height: 100,
