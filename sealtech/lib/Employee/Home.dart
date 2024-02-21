@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Home_Page extends StatefulWidget {
   const Home_Page({
@@ -52,19 +53,33 @@ class _Home_PageState extends State<Home_Page> {
               color: Color.fromARGB(255, 134, 208, 203),
             ),
             child: Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                const SizedBox(
+                  width: 16,
+                ),
+                Text(
+                  'Text',
+                  style: GoogleFonts.poppins(
+                      textStyle: Theme.of(context).textTheme.displayLarge,
+                      color: const Color.fromARGB(255, 70, 66, 68),
+                      fontSize: 22,
+                      fontWeight: FontWeight.w500),
+                ),
+                Expanded(
+                  child: Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                    const SizedBox(width: 16,),
-                    Text(
-                    'Text',
-                    style: GoogleFonts.poppins(
-                    textStyle: Theme.of(context).textTheme.displayLarge,
-                    color: const Color.fromARGB(255, 70, 66, 68),
-                    fontSize: 22,
-                    fontWeight: FontWeight.w500
-                    ),
+                      Image.asset(
+                        'lib/images/home_emp.png',
+                        height: 100,
+                      ),
+                    ],
                   ),
-          )
+                ),
+              ],
+            ),
+          ),
         ])));
   }
 }
