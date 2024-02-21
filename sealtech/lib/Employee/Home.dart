@@ -125,7 +125,7 @@ class _Home_PageState extends State<Home_Page> {
                 decoration: BoxDecoration(
                   color: Color.fromARGB(255, 248, 241, 192),
                   border: Border.all(
-                    color: Color.fromARGB(255, 243, 226, 119),
+                    color: Color.fromARGB(255, 248, 241, 192),
                   ),
                   borderRadius: BorderRadius.circular(10),
                 ),
