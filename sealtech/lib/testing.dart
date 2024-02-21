@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sealtech/components/button.dart';
+import 'package:sealtech/components/navbar.dart';
 
 class CustomPage extends StatelessWidget {
   final String title;
@@ -34,6 +35,7 @@ class CustomPage extends StatelessWidget {
             )
           ],
         ),
+        Navigation(),
       ),
     );
   }
