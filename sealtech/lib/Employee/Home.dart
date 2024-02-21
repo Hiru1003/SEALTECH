@@ -174,7 +174,7 @@ class _Home_PageState extends State<Home_Page> {
                     Icons.chat_bubble_rounded,
                     color: Color.fromARGB(255, 235, 217, 87),
                   ),
-                  SizedBox(height: 5),
+                  SizedBox(height: 15),
                   Text('Appointment'),
                 ],
               ),
