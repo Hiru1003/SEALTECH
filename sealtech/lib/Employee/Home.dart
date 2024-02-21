@@ -215,6 +215,11 @@ class _Home_PageState extends State<Home_Page> {
               ),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  const SizedBox(
+                    width: 12,
+                  ),
+                ],
               ),
             ),
           ),
