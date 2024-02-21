@@ -4,7 +4,7 @@ import 'package:sealtech/components/button.dart';
 class CustomPage extends StatelessWidget {
   final String title;
   final String bodyText;
-  final Color buttonColor; // Add this line to add a buttonColor parameter
+  final Color buttonColor;
 
   CustomPage({required this.title, required this.bodyText, this.buttonColor = Colors.blue});
 

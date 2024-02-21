@@ -1,5 +1,17 @@
 import 'package:flutter/material.dart';
 
+//Use the given below code segment to import button in any file.
+
+    // Button(
+      //   buttonText: 'Press Me', //Add a text as you want
+      //   enableIcon: true, //Set true if you want to show icon
+      //   onPressed: () {
+      //     print('Button pressed!'); //Add a function to perform on button press
+      //   },
+      //   color: 'black', //Set black or orange as you want
+      //   isStroked: false, //Set true if you want to show stroked button and false for filled button
+    // )
+
 class Button extends StatelessWidget {
   final String buttonText;
   final bool enableIcon;
