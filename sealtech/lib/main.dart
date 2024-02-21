@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sealtech/privacypolicy.dart';
+import 'package:sealtech/signin.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       
       debugShowCheckedModeBanner: false,
-      home: PrivacyPolicyPage(),
+      home: SignInPage(),
     );
   }
 }
