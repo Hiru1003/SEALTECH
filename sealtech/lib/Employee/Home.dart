@@ -193,7 +193,10 @@ class _Home_PageState extends State<Home_Page> {
               child: const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(Icons.calendar_view_week),
+                  Icon(
+                    Icons.calendar_view_week,
+                    color: Color.fromARGB(255, 235, 217, 87),
+                  ),
                   SizedBox(height: 5),
                   Text('Attendance'),
                 ],
