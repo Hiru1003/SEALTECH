@@ -19,12 +19,12 @@ class _Home_PageState extends State<Home_Page> {
             left: 10,
           ),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               Image.asset(
                 'lib/images/logo-word-no-background.png',
-                height: 72,
+                height: 20,
               )
             ],
           ),
