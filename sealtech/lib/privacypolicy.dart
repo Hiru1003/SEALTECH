@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sealtech/components/button.dart';
+import 'package:sealtech/components/theme.dart';
 
 class PrivacyPolicyPage extends StatefulWidget {
   const PrivacyPolicyPage({Key? key}) : super(key: key);
@@ -22,6 +23,7 @@ class _PrivacyPolicyPageState extends State<PrivacyPolicyPage> {
         centerTitle: true,
         toolbarHeight: kToolbarHeight + MediaQuery.of(context).padding.top,
       ),
+      backgroundColor: bgColor,
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0),
