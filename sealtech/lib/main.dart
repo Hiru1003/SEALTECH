@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sealtech/Employee/Home.dart';
 import 'package:sealtech/loadingPage2.dart';
 
 void main() {
@@ -10,9 +11,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: LoadingPage2(),
-    );
+    return MaterialApp(debugShowCheckedModeBanner: false, home: Home_Page()
+        //LoadingPage2(),
+        );
   }
 }

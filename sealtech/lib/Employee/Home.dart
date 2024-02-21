@@ -47,10 +47,13 @@ class _Home_PageState extends State<Home_Page> {
         backgroundColor: const Color.fromRGBO(255, 252, 245, 1),
         body: SingleChildScrollView(
             child: Column(children: [
+          SizedBox(
+            height: 20,
+          ),
           Container(
             padding: const EdgeInsets.all(0),
             decoration: const BoxDecoration(
-              color: Color.fromARGB(255, 134, 208, 203),
+              color: Color.fromRGBO(250, 193, 113, 1),
             ),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.end,
