@@ -56,8 +56,7 @@ class _Home_PageState extends State<Home_Page> {
               padding: const EdgeInsets.all(0),
               decoration: BoxDecoration(
                 color: const Color.fromRGBO(250, 193, 113, 1),
-                borderRadius:
-                    BorderRadius.circular(10), // Adjust the radius as needed
+                borderRadius: BorderRadius.circular(10),
               ),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.end,
@@ -65,14 +64,26 @@ class _Home_PageState extends State<Home_Page> {
                   const SizedBox(
                     width: 16,
                   ),
-                  Text(
-                    'Ongoing Locations \n\nOngoing Locations ',
-                    style: GoogleFonts.poppins(
-                      textStyle: Theme.of(context).textTheme.displayLarge,
-                      color: const Color.fromARGB(255, 70, 66, 68),
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                    ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Ongoing Locations',
+                        style: GoogleFonts.poppins(
+                          textStyle: Theme.of(context).textTheme.bodyText1,
+                          color: const Color.fromARGB(255, 70, 66, 68),
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      SizedBox(height: 15),
+                      Text(
+                        'View more site locations \nand get to know the site \nthat completed and \nongoing\n',
+                        style: GoogleFonts.poppins(
+                          fontSize: 13, // Adjust the font size as needed
+                          color: const Color.fromARGB(255, 70, 66, 68),
+                        ),
+                      ),
+                    ],
                   ),
                   Expanded(
                     child: Column(
