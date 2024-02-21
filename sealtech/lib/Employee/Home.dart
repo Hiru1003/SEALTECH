@@ -152,6 +152,17 @@ class _Home_PageState extends State<Home_Page> {
                 ],
               ),
             ),
+            SizedBox(width: 20), // Add space between containers
+    Container(
+      width: 100,
+      height: 100,
+      decoration: BoxDecoration(
+        border: Border.all(color: Colors.black),
+        borderRadius: BorderRadius.circular(10),
+      )
+        ],
+      ),
+    ),
           ])
         ])));
   }
