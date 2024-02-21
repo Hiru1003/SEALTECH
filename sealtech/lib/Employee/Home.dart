@@ -222,9 +222,8 @@ class _Home_PageState extends State<Home_Page> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const SizedBox(height: 7),
                       Text(
-                        'Ongoing Locations',
+                        'Salary Calculator',
                         style: GoogleFonts.poppins(
                           textStyle: Theme.of(context).textTheme.bodyLarge,
                           color: const Color.fromARGB(255, 70, 66, 68),
@@ -233,7 +232,7 @@ class _Home_PageState extends State<Home_Page> {
                       ),
                       const SizedBox(height: 9),
                       Text(
-                        'View more site locations \nand get to know the site \nthat completed and \nongoing\n',
+                        'Let’s calculate your salary by \nentering details\n',
                         style: GoogleFonts.poppins(
                           fontSize: 13,
                           color: const Color.fromARGB(255, 70, 66, 68),
@@ -251,7 +250,7 @@ class _Home_PageState extends State<Home_Page> {
                             borderRadius: BorderRadius.circular(20.0),
                           ),
                         ),
-                        child: const Text('View More Details'),
+                        child: const Text('Calculate Now'),
                       ),
                       const SizedBox(height: 5),
                     ],
@@ -261,7 +260,7 @@ class _Home_PageState extends State<Home_Page> {
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
                         Image.asset(
-                          'lib/images/home_emp.png',
+                          'lib/images/salary.png',
                           height: 190,
                         ),
                       ],
