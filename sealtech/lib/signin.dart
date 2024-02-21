@@ -7,7 +7,30 @@ class SignInPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: bgColor,
       body: Center(
-        child: Image.asset('lib/images/logo-no-background.png', width: 130,),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Padding(
+              padding: EdgeInsets.only(top: 80),
+              child: Image.asset('lib/images/logo-no-background.png', width: 130,),
+            ),
+            SizedBox(height: 30),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Sign In and Start Exploring!',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w400,
+                    fontFamily: 'inter',
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
