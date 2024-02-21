@@ -213,6 +213,9 @@ class _Home_PageState extends State<Home_Page> {
                 color: const Color.fromARGB(255, 247, 219, 180),
                 borderRadius: BorderRadius.circular(10),
               ),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+              ),
             ),
           ),
         ])));
