@@ -165,7 +165,7 @@ class _Home_PageState extends State<Home_Page> {
                 children: [
                   Icon(Icons.access_alarm),
                   SizedBox(height: 5),
-                  Text('Container 3'),
+                  Text('Attendance'),
                 ],
               ),
             ),
