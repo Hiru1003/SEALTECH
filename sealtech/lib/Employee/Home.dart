@@ -239,7 +239,21 @@ class _Home_PageState extends State<Home_Page> {
                           color: const Color.fromARGB(255, 70, 66, 68),
                         ),
                       ),
-                      
+                      OutlinedButton(
+                        onPressed: () {
+                          // Handle button press
+                        },
+                        style: OutlinedButton.styleFrom(
+                          foregroundColor:
+                              const Color.fromARGB(255, 23, 22, 22),
+                          side: const BorderSide(color: Colors.black),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                        ),
+                        child: const Text('View More Details'),
+                      ),
+                     
                 ],
               ),
             ),
