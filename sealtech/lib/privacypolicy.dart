@@ -42,8 +42,8 @@ class _PrivacyPolicyPageState extends State<PrivacyPolicyPage> {
                         isChecked = value!;
                       });
                     },
-                    activeColor: Colors.orange, // Change the color of the checkbox itself
-                    checkColor: Colors.white, // Change the color of the check mark
+                    activeColor: Colors.orange,
+                    checkColor: Colors.white,
                   ),
                   const Text(
                     'I agree to the terms and conditions',
