@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sealtech/button.dart';
+import 'package:sealtech/components/button.dart';
 
 class CustomPage extends StatelessWidget {
   final String title;
