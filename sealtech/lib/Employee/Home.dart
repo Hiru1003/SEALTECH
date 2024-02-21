@@ -159,7 +159,9 @@ class _Home_PageState extends State<Home_Page> {
               width: 100,
               height: 100,
               decoration: BoxDecoration(
-                border: Border.all(color: Colors.black),
+                border: Border.all(
+                  color: const Color.fromARGB(255, 245, 214, 87),
+                ),
                 borderRadius: BorderRadius.circular(10),
               ),
               child: const Column(
