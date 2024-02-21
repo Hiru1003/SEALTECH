@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sealtech/components/button.dart';
 import 'package:sealtech/components/theme.dart';
 
 class SignInPage extends StatelessWidget {
@@ -51,7 +52,7 @@ class SignInPage extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 16),
                 child: TextField(
-                  obscureText: true, // Set obscureText to true to hide the text
+                  obscureText: true,
                   decoration: InputDecoration(
                     labelText: '   Password',
                     labelStyle: TextStyle(
@@ -68,7 +69,7 @@ class SignInPage extends StatelessWidget {
                   alignment: Alignment.centerRight,
                   child: TextButton(
                     onPressed: () {
-                      // TODO: Implement forgot password functionality
+
                     },
                     child: Text(
                       'Forgot Password?',
@@ -78,6 +79,21 @@ class SignInPage extends StatelessWidget {
                       ),
                     ),
                   ),
+                ),
+              ),
+              
+              SizedBox(height:20),
+
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16),
+                child: Button(
+                  buttonText: 'Sign In',
+                  onPressed: () {
+                    
+                  },
+                  color: 'orange',
+                  enableIcon: false,
+                  isStroked: false,
                 ),
               ),
             ],
