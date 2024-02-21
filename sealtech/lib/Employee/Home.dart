@@ -50,39 +50,43 @@ class _Home_PageState extends State<Home_Page> {
           SizedBox(
             height: 20,
           ),
-          Container(
-            padding: const EdgeInsets.all(0),
-            decoration: const BoxDecoration(
-              color: Color.fromRGBO(250, 193, 113, 1),
-            ),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                const SizedBox(
-                  width: 16,
-                ),
-                Text(
-                  'Ongoing Locations \n\nOngoing Locations ',
-                  style: GoogleFonts.poppins(
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15),
+            child: Container(
+              padding: const EdgeInsets.all(0),
+              decoration: const BoxDecoration(
+                color: Color.fromRGBO(250, 193, 113, 1),
+              ),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  const SizedBox(
+                    width: 16,
+                  ),
+                  Text(
+                    'Ongoing Locations \n\nOngoing Locations ',
+                    style: GoogleFonts.poppins(
                       textStyle: Theme.of(context).textTheme.displayLarge,
                       color: const Color.fromARGB(255, 70, 66, 68),
                       fontSize: 16,
-                      fontWeight: FontWeight.w500),
-                ),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      Image.asset(
-                        'lib/images/home_emp.png',
-                        height: 170,
-                      ),
-                    ],
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
-                ),
-              ],
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        Image.asset(
+                          'lib/images/home_emp.png',
+                          height: 170,
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ),
+          )
         ])));
   }
 }
