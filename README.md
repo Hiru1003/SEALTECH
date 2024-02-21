@@ -5,7 +5,7 @@
 </div>
 
 UI UX Design = https://www.figma.com/file/eQWQXOwH0tP0X5vs9u9y6L/Sealtech?type=design&node-id=30-2&mode=design&t=jRRTaLcAcdqrV57e-0
-## SEALTECH: waterprofing company app for client and employees
+## SEALTECH: waterprofing company e-commerce app for client and employees
 
 The SEALTECH Waterproofing Company App Development Project represents a pivotal moment in our company's journey towards innovation and enhanced customer engagement. As we embark on this endeavor, we recognize the transformative potential of technology in streamlining processes and improving service delivery. Our commitment to excellence drives us to leverage the latest advancements in app development to create a seamless and intuitive platform for our clients and team members. With a clear vision and dedicated teamwork, we aim to redefine the standards of efficiency and effectiveness in the waterproofing industry.
 
