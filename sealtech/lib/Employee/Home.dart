@@ -143,6 +143,14 @@ class _Home_PageState extends State<Home_Page> {
                 border: Border.all(color: Colors.black),
                 borderRadius: BorderRadius.circular(10),
               ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.access_alarm),
+                  SizedBox(height: 5),
+                  Text('Container 2'),
+                ],
+              ),
             ),
           ])
         ])));
