@@ -44,6 +44,14 @@ class _Home_PageState extends State<Home_Page> {
           backgroundColor: Color.fromRGBO(251, 147, 0, 1),
         ),
         backgroundColor: const Color.fromRGBO(255, 252, 245, 1),
-        body: SingleChildScrollView(child: Column(children: [Container()])));
+        body: SingleChildScrollView(
+            child: Column(children: [
+          Container(
+            padding: const EdgeInsets.all(0),
+            decoration: const BoxDecoration(
+              color: Color.fromARGB(255, 134, 208, 203),
+            ),
+          )
+        ])));
   }
 }
