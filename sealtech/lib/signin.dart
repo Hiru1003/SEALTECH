@@ -29,6 +29,20 @@ class SignInPage extends StatelessWidget {
                 ),
               ),
             ),
+            SizedBox(height: 20),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16),
+              child: TextField(
+                decoration: InputDecoration(
+                  labelText: '   Email',
+                  labelStyle: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 16,
+                  ),
+                  border: UnderlineInputBorder(),
+                ),
+              ),
+            ),
           ],
         ),
       ),
