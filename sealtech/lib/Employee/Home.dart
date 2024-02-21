@@ -107,7 +107,7 @@ class _Home_PageState extends State<Home_Page> {
                       children: [
                         Image.asset(
                           'lib/images/home_emp.png',
-                          height: 170,
+                          height: 190,
                         ),
                       ],
                     ),
