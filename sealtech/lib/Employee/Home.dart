@@ -253,7 +253,20 @@ class _Home_PageState extends State<Home_Page> {
                         ),
                         child: const Text('View More Details'),
                       ),
-                     
+                      const SizedBox(height: 5),
+                    ],
+                  ),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        Image.asset(
+                          'lib/images/home_emp.png',
+                          height: 190,
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
