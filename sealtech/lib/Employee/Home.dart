@@ -12,6 +12,15 @@ class Home_Page extends StatefulWidget {
 class _Home_PageState extends State<Home_Page> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: Padding(
+          padding: const EdgeInsets.only(
+            left: 10,
+          ),
+        ),
+        backgroundColor: Color(0xFFFF9500),
+      ),
+    );
   }
 }
