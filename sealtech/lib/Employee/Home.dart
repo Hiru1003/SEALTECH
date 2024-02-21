@@ -19,7 +19,8 @@ class _Home_PageState extends State<Home_Page> {
             left: 10,
           ),
         ),
-        backgroundColor: Color(0xFFFF9500),
+        elevation: 0.00,
+        backgroundColor: Color.fromRGBO(251, 147, 0, 1),
       ),
     );
   }
