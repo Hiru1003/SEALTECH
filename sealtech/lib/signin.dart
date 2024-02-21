@@ -74,7 +74,7 @@ class SignInPage extends StatelessWidget {
                     child: Text(
                       'Forgot Password?',
                       style: TextStyle(
-                        color: Colors.grey,
+                        color: const Color.fromARGB(255, 110, 110, 110),
                         fontSize: 13,
                       ),
                     ),
@@ -94,6 +94,32 @@ class SignInPage extends StatelessWidget {
                   color: 'orange',
                   enableIcon: false,
                   isStroked: false,
+                ),
+              ),
+              Center(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'New to SEALTECH?',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 13,
+                      ),
+                    ),
+                    TextButton(
+                      onPressed: () {
+                        // TODO: Implement signup functionality
+                      },
+                      child: Text(
+                        'Sign Up',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 14,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],
