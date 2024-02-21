@@ -219,6 +219,19 @@ class _Home_PageState extends State<Home_Page> {
                   const SizedBox(
                     width: 12,
                   ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const SizedBox(height: 7),
+                      Text(
+                        'Ongoing Locations',
+                        style: GoogleFonts.poppins(
+                          textStyle: Theme.of(context).textTheme.bodyLarge,
+                          color: const Color.fromARGB(255, 70, 66, 68),
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                     
                 ],
               ),
             ),
