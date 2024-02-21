@@ -7,7 +7,7 @@ class LoadingPage2 extends StatelessWidget {
     return Scaffold(
       backgroundColor: bgColor,
       body: Center(
-        child: Image.asset('lib/images/logo-word-no-background .png', width: 60,),
+        child: Image.asset('lib/images/logo-word-no-background .png', width: 160,),
       ),
     );
   }

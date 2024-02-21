@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sealtech/loadingpage1.dart';
+import 'package:sealtech/loadingPage2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       
       debugShowCheckedModeBanner: false,
-      home: LoadingPage1(),
+      home: LoadingPage2(),
     );
   }
 }
