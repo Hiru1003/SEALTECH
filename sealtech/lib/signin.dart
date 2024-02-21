@@ -12,12 +12,16 @@ class SignInPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
+              
+              //logo
               Padding(
-                padding: EdgeInsets.only(top: 80),
-                child: Image.asset('lib/images/logo-no-background.png', width: 130,),
+                padding: const EdgeInsets.only(top: 100),
+                child: Image.asset('lib/images/logo-no-background.png', width: 60,),
               ),
-              SizedBox(height: 30),
-              Padding(
+              const SizedBox(height: 60),
+
+              //sign in text
+              const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 16),
                 child: Align(
                   alignment: Alignment.centerLeft,
@@ -25,31 +29,34 @@ class SignInPage extends StatelessWidget {
                     'Sign In and Start Exploring!',
                     style: TextStyle(
                       fontSize: 20,
-                      fontWeight: FontWeight.w400,
+                      fontWeight: FontWeight.w500,
                       fontFamily: 'inter',
                     ),
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
+
+              //email and password fields
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 16),
+                padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: TextField(
                   decoration: InputDecoration(
                     labelText: '   Email',
-                    labelStyle: TextStyle(
+                    labelStyle: const TextStyle(
                       color: Colors.grey,
                       fontSize: 16,
                     ),
-                    border: UnderlineInputBorder(),
+                    border: const UnderlineInputBorder(),
                     focusedBorder: UnderlineInputBorder(
                       borderSide: BorderSide(color: Theme.of(context).primaryColor),
                     ),
                   ),
+                  style: TextStyle(color: Theme.of(context).primaryColor),
                 ),
               ),
-              SizedBox(height: 20),
-              Padding(
+              const SizedBox(height: 20),
+              const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 16),
                 child: TextField(
                   obscureText: true,
@@ -63,18 +70,20 @@ class SignInPage extends StatelessWidget {
                   ),
                 ),
               ),
+
+              //forgot password
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 5),
+                padding: const EdgeInsets.symmetric(horizontal: 5),
                 child: Align(
                   alignment: Alignment.centerRight,
                   child: TextButton(
                     onPressed: () {
 
                     },
-                    child: Text(
+                    child: const Text(
                       'Forgot Password?',
                       style: TextStyle(
-                        color: const Color.fromARGB(255, 110, 110, 110),
+                        color: Color.fromARGB(255, 110, 110, 110),
                         fontSize: 13,
                       ),
                     ),
@@ -82,10 +91,11 @@ class SignInPage extends StatelessWidget {
                 ),
               ),
               
-              SizedBox(height:20),
+              const SizedBox(height:20),
 
+              //sign in button
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 16),
+                padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: Button(
                   buttonText: 'Sign In',
                   onPressed: () {
@@ -96,11 +106,13 @@ class SignInPage extends StatelessWidget {
                   isStroked: false,
                 ),
               ),
+
+              //new to sealtech
               Center(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
+                    const Text(
                       'New to SEALTECH?',
                       style: TextStyle(
                         color: Colors.black,
@@ -109,9 +121,9 @@ class SignInPage extends StatelessWidget {
                     ),
                     TextButton(
                       onPressed: () {
-                        // TODO: Implement signup functionality
+                        
                       },
-                      child: Text(
+                      child: const Text(
                         'Sign Up',
                         style: TextStyle(
                           color: Colors.black,
