@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class MyHomePage extends StatefulWidget {
+class Navigation extends StatefulWidget {
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _NavigationState createState() => _NavigationState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _NavigationState extends State<Navigation> {
   int _currentIndex = 0;
 
   @override
@@ -53,6 +53,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
 void main() {
   runApp(MaterialApp(
-    home: MyHomePage(),
+    home: Navigation(),
   ));
 }
