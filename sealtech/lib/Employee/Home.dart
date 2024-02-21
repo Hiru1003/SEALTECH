@@ -127,7 +127,7 @@ class _Home_PageState extends State<Home_Page> {
                   'Category',
                   style: GoogleFonts.poppins(
                     fontSize: 16,
-                    fontWeight: FontWeight.w500,
+                    fontWeight: FontWeight.w700,
                     color: const Color.fromARGB(255, 70, 66, 68),
                   ),
                 ),
