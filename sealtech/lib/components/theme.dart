@@ -16,3 +16,9 @@ var accentColor = Color.fromRGBO(144, 53, 14, 1);
 var accent75 = Color.fromRGBO(172, 103, 71, 1);
 var accent50 = Color.fromRGBO(199, 152, 129, 1);
 var accent25 = Color.fromRGBO(227, 202, 187, 1);
+
+var ternaryRed = Color.fromRGBO(212, 0, 0, 1);
+var ternaryRed50 = Color.fromRGBO(233, 127, 127, 1);
+
+var ternaryGreen = Color.fromRGBO(4, 147, 18, 1);
+var ternaryGreen50 = Color.fromRGBO(129, 200, 136, 1);
