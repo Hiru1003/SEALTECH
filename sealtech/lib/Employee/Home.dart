@@ -231,7 +231,15 @@ class _Home_PageState extends State<Home_Page> {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                     
+                      const SizedBox(height: 9),
+                      Text(
+                        'View more site locations \nand get to know the site \nthat completed and \nongoing\n',
+                        style: GoogleFonts.poppins(
+                          fontSize: 13,
+                          color: const Color.fromARGB(255, 70, 66, 68),
+                        ),
+                      ),
+                      
                 ],
               ),
             ),
