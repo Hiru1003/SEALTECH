@@ -207,7 +207,13 @@ class _Home_PageState extends State<Home_Page> {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15),
-            child: Container(),
+            child: Container(
+              padding: const EdgeInsets.all(0),
+              decoration: BoxDecoration(
+                color: const Color.fromARGB(255, 247, 219, 180),
+                borderRadius: BorderRadius.circular(10),
+              ),
+            ),
           ),
         ])));
   }
