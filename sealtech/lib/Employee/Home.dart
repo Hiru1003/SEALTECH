@@ -197,7 +197,7 @@ class _Home_PageState extends State<Home_Page> {
                     Icons.calendar_view_week,
                     color: Color.fromARGB(255, 235, 217, 87),
                   ),
-                  SizedBox(height: 5),
+                  SizedBox(height: 15),
                   Text('Attendance'),
                 ],
               ),
