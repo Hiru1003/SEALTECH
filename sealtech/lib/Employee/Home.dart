@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sealtech/components/button.dart';
 
 class Home_Page extends StatefulWidget {
   const Home_Page({
@@ -43,7 +42,7 @@ class _Home_PageState extends State<Home_Page> {
             color: Colors.black,
           ),
           elevation: 0.00,
-          backgroundColor: Color.fromRGBO(251, 147, 0, 1),
+          backgroundColor: const Color.fromRGBO(251, 147, 0, 1),
         ),
         backgroundColor: const Color.fromRGBO(255, 252, 245, 1),
         body: SingleChildScrollView(
@@ -56,7 +55,7 @@ class _Home_PageState extends State<Home_Page> {
             child: Container(
               padding: const EdgeInsets.all(0),
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 247, 219, 180),
+                color: const Color.fromARGB(255, 247, 219, 180),
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Row(
@@ -68,16 +67,16 @@ class _Home_PageState extends State<Home_Page> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(height: 7),
+                      const SizedBox(height: 7),
                       Text(
                         'Ongoing Locations',
                         style: GoogleFonts.poppins(
-                          textStyle: Theme.of(context).textTheme.bodyText1,
+                          textStyle: Theme.of(context).textTheme.bodyLarge,
                           color: const Color.fromARGB(255, 70, 66, 68),
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(height: 9),
+                      const SizedBox(height: 9),
                       Text(
                         'View more site locations \nand get to know the site \nthat completed and \nongoing\n',
                         style: GoogleFonts.poppins(
@@ -99,7 +98,7 @@ class _Home_PageState extends State<Home_Page> {
                         ),
                         child: const Text('View More Details'),
                       ),
-                      SizedBox(height: 5),
+                      const SizedBox(height: 5),
                     ],
                   ),
                   Expanded(
@@ -117,12 +116,12 @@ class _Home_PageState extends State<Home_Page> {
               ),
             ),
           ),
-          SizedBox(height: 25),
+          const SizedBox(height: 25),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Padding(
-                padding: EdgeInsets.only(left: 15),
+                padding: const EdgeInsets.only(left: 15),
                 child: Text(
                   'Category',
                   style: GoogleFonts.poppins(
@@ -134,15 +133,15 @@ class _Home_PageState extends State<Home_Page> {
               ),
             ],
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Row(mainAxisAlignment: MainAxisAlignment.center, children: [
             Container(
                 width: 100,
                 height: 100,
                 decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 248, 241, 192),
+                  color: const Color.fromARGB(255, 248, 241, 192),
                   border: Border.all(
-                    color: Color.fromARGB(255, 248, 241, 192),
+                    color: const Color.fromARGB(255, 248, 241, 192),
                   ),
                   borderRadius: BorderRadius.circular(10),
                 ),
@@ -156,14 +155,14 @@ class _Home_PageState extends State<Home_Page> {
                       SizedBox(height: 15),
                       Text('Holidays'),
                     ])),
-            SizedBox(width: 15),
+            const SizedBox(width: 15),
             Container(
               width: 100,
               height: 100,
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 248, 241, 192),
+                color: const Color.fromARGB(255, 248, 241, 192),
                 border: Border.all(
-                  color: Color.fromARGB(255, 248, 241, 192),
+                  color: const Color.fromARGB(255, 248, 241, 192),
                 ),
                 borderRadius: BorderRadius.circular(10),
               ),
@@ -179,14 +178,14 @@ class _Home_PageState extends State<Home_Page> {
                 ],
               ),
             ),
-            SizedBox(width: 15), // Add space between containers
+            const SizedBox(width: 15),
             Container(
               width: 100,
               height: 100,
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 248, 241, 192),
+                color: const Color.fromARGB(255, 248, 241, 192),
                 border: Border.all(
-                  color: Color.fromARGB(255, 248, 241, 192),
+                  color: const Color.fromARGB(255, 248, 241, 192),
                 ),
                 borderRadius: BorderRadius.circular(10),
               ),
