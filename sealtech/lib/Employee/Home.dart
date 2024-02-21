@@ -54,8 +54,10 @@ class _Home_PageState extends State<Home_Page> {
             padding: const EdgeInsets.symmetric(horizontal: 15),
             child: Container(
               padding: const EdgeInsets.all(0),
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 color: Color.fromRGBO(250, 193, 113, 1),
+                borderRadius:
+                    BorderRadius.circular(10), // Adjust the radius as needed
               ),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.end,
