@@ -141,8 +141,9 @@ class _Home_PageState extends State<Home_Page> {
               width: 100,
               height: 100,
               decoration: BoxDecoration(
+                color: Color.fromARGB(255, 248, 241, 192),
                 border: Border.all(
-                  color: const Color.fromARGB(255, 245, 214, 87),
+                  color: Color.fromARGB(255, 248, 241, 192),
                 ),
                 borderRadius: BorderRadius.circular(10),
               ),
