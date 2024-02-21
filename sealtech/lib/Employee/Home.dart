@@ -205,6 +205,9 @@ class _Home_PageState extends State<Home_Page> {
           const SizedBox(
             height: 20,
           ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15),
+          ),
         ])));
   }
 }
