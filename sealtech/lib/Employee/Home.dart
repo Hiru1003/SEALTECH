@@ -124,6 +124,7 @@ class _Home_PageState extends State<Home_Page> {
                 fontWeight: FontWeight.w500,
                 color: const Color.fromARGB(255, 70, 66, 68),
               )),
+          SizedBox(height: 10),
           Row(mainAxisAlignment: MainAxisAlignment.center, children: [
             Container(
                 width: 100,
