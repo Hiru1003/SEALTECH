@@ -76,7 +76,7 @@ class _Home_PageState extends State<Home_Page> {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(height: 5),
+                      SizedBox(height: 7),
                       Text(
                         'View more site locations \nand get to know the site \nthat completed and \nongoing\n',
                         style: GoogleFonts.poppins(
