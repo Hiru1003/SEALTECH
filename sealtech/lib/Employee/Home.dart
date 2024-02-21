@@ -117,7 +117,7 @@ class _Home_PageState extends State<Home_Page> {
               ),
             ),
           ),
-          SizedBox(height: 15),
+          SizedBox(height: 20),
           Text('Catergory',
               style: GoogleFonts.poppins(
                 fontSize: 15,
