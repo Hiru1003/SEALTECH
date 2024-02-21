@@ -1,12 +1,16 @@
 # SEALTECH waterproofing company
 
+<div align="center">
+  <img src="https://github.com/Hiru1003/SEALTECH/assets/122656994/3230aaa3-3fdb-4c0c-a7b8-ad2cfd9d9502" align="center" style="width: 75%; height: 25%" />
+</div>
+
+</br>
+
 <a href="https://github.com/Risini-33/SEALTECH/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Risini-33/SEALTECH" />
 </a>
 
-<div align="center">
-  <img src="https://github.com/Hiru1003/SEALTECH/assets/122656994/3230aaa3-3fdb-4c0c-a7b8-ad2cfd9d9502" align="center" style="width: 75%; height: 25%" />
-</div>
+</br>
 
 UI UX Design = https://www.figma.com/file/eQWQXOwH0tP0X5vs9u9y6L/Sealtech?type=design&node-id=30-2&mode=design&t=jRRTaLcAcdqrV57e-0
 ## SEALTECH: waterprofing company e-commerce app for client and employees
