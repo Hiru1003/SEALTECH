@@ -118,6 +118,12 @@ class _Home_PageState extends State<Home_Page> {
             ),
           ),
           SizedBox(height: 15),
+          Text('Catergory',
+              style: GoogleFonts.poppins(
+                fontSize: 15,
+                fontWeight: FontWeight.w500,
+                color: const Color.fromARGB(255, 70, 66, 68),
+              )),
           Row(mainAxisAlignment: MainAxisAlignment.center, children: [
             Container(
                 width: 100,
