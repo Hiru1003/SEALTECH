@@ -207,6 +207,7 @@ class _Home_PageState extends State<Home_Page> {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15),
+            child: Container(),
           ),
         ])));
   }
