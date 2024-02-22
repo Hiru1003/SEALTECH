@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 
-class Bookmark extends StatelessWidget{
+class Search extends StatelessWidget{
   Widget build(BuildContext context) => new Center(
     child:  Container(
-      child: Text('This is bookmark page'),
+      child: Text('This is Search page'),
     )
    
   );

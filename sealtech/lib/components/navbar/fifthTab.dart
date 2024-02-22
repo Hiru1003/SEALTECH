@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 
-class Setting extends StatelessWidget{
+class Profile extends StatelessWidget{
   Widget build(BuildContext context) => new Center(
     child:  Container(
-      child: Text('This is Settings page'),
+      child: Text('This is Profiles page'),
     )
    
   );

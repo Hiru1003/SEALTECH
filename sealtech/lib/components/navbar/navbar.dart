@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:sealtech/components/navbar/fifthTab.dart' as _fifthTab;
-import 'package:sealtech/components/navbar/firstTab.dart' as _firstTab;
-import 'package:sealtech/components/navbar/fourthTab.dart' as _fourthTab;
-import 'package:sealtech/components/navbar/secondTab.dart' as _secondTab;
-import 'package:sealtech/components/navbar/thirdTab.dart' as _thirdTab;
+import 'package:sealtech/components/navbar/fifthTab.dart' as fifthTab;
+import 'package:sealtech/components/navbar/firstTab.dart' as firstTab;
+import 'package:sealtech/components/navbar/fourthTab.dart' as fourthTab;
+import 'package:sealtech/components/navbar/secondTab.dart' as secondTab;
+import 'package:sealtech/components/navbar/thirdTab.dart' as thirdTab;
 import 'package:sealtech/components/theme.dart';
 
 //Initial widget
 class InitalScreenWidget extends StatefulWidget{
+  final bool isClient;
+
+  InitalScreenWidget({required Key key, this.isClient = true}) : super(key: key);
+
   @override
   HomeWidget createState() => HomeWidget();
 }
@@ -17,24 +21,24 @@ class HomeWidget extends State<InitalScreenWidget>{
   int _selectedTab = 0;
 
   //Page controller
-  PageController _navPage = PageController(initialPage: 0);
+  final PageController _navPage = PageController(initialPage: 0);
 
-  Widget build(BuildContext ctx){
+  @override
+  Widget build(BuildContext context){
     return Scaffold(
         body: PageView(
           controller: _navPage,
-          onPageChanged: (int){
+          onPageChanged: (index){
             setState(() {
-              _selectedTab = int;
+              _selectedTab = index;
             });
-            print('Page changes to index $int');
           },
           children: <Widget>[
-            new _firstTab.Home(),
-            new _secondTab.Search(),
-            new _thirdTab.Bookmark(),
-            new _fourthTab.Setting(),
-            new _fifthTab.Setting(),
+            firstTab.Home(),
+            secondTab.Category(),
+            thirdTab.Search(),
+            fourthTab.Cart(),
+            fifthTab.Profile(),
           ],
         ),
       
@@ -44,16 +48,17 @@ class HomeWidget extends State<InitalScreenWidget>{
           
           child: Container(
             height: 60.0,
+            color: bgColor, // Set the background color of the navbar
             child: Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 IconButton(
                   iconSize: 35,
-                  padding: EdgeInsets.only(left: 28.0),
+                  padding: const EdgeInsets.only(left: 28.0),
                   icon: Icon(
-                    _selectedTab == 0 ? Icons.home : Icons.home_outlined,
-                    color: _selectedTab == 0 ? Theme.of(ctx).colorScheme.secondary : null,
+                    _selectedTab == 0 ? (widget.isClient ? Icons.home : Icons.work) : (widget.isClient ? Icons.home_outlined : Icons.work_outline),
+                    color: _selectedTab == 0 ? accentColor : null,
                   ),
                   onPressed: () {
                     setState(() {
@@ -62,18 +67,20 @@ class HomeWidget extends State<InitalScreenWidget>{
                 IconButton(
                   iconSize: 35,
                   icon: Icon(
-                    _selectedTab == 1 ? Icons.search : Icons.search_outlined,
-                    color: _selectedTab == 1 ? Theme.of(ctx).colorScheme.secondary : null,
+                    _selectedTab == 1 ? (widget.isClient ? Icons.category : Icons.business_center) : (widget.isClient ? Icons.category_outlined : Icons.business_center_outlined),
+                    color: _selectedTab == 1 ? accentColor : null,
                   ),
                   onPressed: () {
                     setState(() {
                       _navPage.jumpToPage(1);
-                  });}),
+                    });
+                  },
+                ),
                 IconButton(
                   iconSize: 35,
                   icon: Icon(
-                    _selectedTab == 2 ? Icons.bookmark : Icons.bookmark_border,
-                    color: _selectedTab == 2 ? Theme.of(ctx).colorScheme.secondary : null,
+                    _selectedTab == 2 ? (widget.isClient ? Icons.search : Icons.assignment) : (widget.isClient ? Icons.search_outlined : Icons.assignment_outlined),
+                    color: _selectedTab == 2 ? accentColor : null,
                   ),
                   onPressed: () {
                     setState(() {
@@ -82,8 +89,8 @@ class HomeWidget extends State<InitalScreenWidget>{
                 IconButton(
                   iconSize: 35,
                   icon: Icon(
-                    _selectedTab == 3 ? Icons.settings : Icons.settings_outlined,
-                    color: _selectedTab == 3 ? Theme.of(ctx).colorScheme.secondary : null,
+                    _selectedTab == 3 ? (widget.isClient ? Icons.shopping_cart : Icons.people) : (widget.isClient ? Icons.shopping_cart_outlined : Icons.people_outline),
+                    color: _selectedTab == 3 ? accentColor : null,
                   ),
                   onPressed: () {
                     setState(() {
@@ -91,15 +98,16 @@ class HomeWidget extends State<InitalScreenWidget>{
                   });}),
                 IconButton(
                   iconSize: 35,
-                  padding: EdgeInsets.only(right: 28.0),
                   icon: Icon(
-                    _selectedTab == 4 ? Icons.more_horiz : Icons.more_horiz_outlined,
-                    color: _selectedTab == 4 ? Theme.of(ctx).colorScheme.secondary : null,
+                    _selectedTab == 4 ? (widget.isClient ? Icons.person : Icons.person_outline) : (widget.isClient ? Icons.person_outline : Icons.person),
+                    color: _selectedTab == 4 ? accentColor : null,
                   ),
                   onPressed: () {
                     setState(() {
                       _navPage.jumpToPage(4);
-                  });}),
+                    });
+                  },
+                ),
               ],
             ),
             ),
