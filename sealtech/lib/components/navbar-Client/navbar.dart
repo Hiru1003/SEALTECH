@@ -24,7 +24,7 @@ class HomeWidget extends State<InitalScreenWidget>{
   Widget build(BuildContext context){
     return Scaffold(
         body: Container(
-          color: bgColor, // Set the background color of the screen to bgColor
+          color: bgColor,
           child: PageView(
             controller: _navPage,
             onPageChanged: (index){
@@ -43,16 +43,17 @@ class HomeWidget extends State<InitalScreenWidget>{
         ),
         bottomNavigationBar: BottomAppBar(
           shape: const CircularNotchedRectangle(),
-          color: bgColor, // Set the background color of the navbar to bgColor
+          color: bgColor,
           child: Container(
-            color: bgColor, // Set the background color of the navbar to bgColor
+            color: bgColor,
             child: Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
+
+                //home
                 IconButton(
                   iconSize: 30,
-                  padding: const EdgeInsets.only(left: 28.0),
                   icon: Icon(
                     _selectedTab == 0 ? Icons.home : Icons.home_outlined,
                     color: _selectedTab == 0 ? accentColor : null,
@@ -61,6 +62,8 @@ class HomeWidget extends State<InitalScreenWidget>{
                     setState(() {
                       _navPage.jumpToPage(0);
                   });}),
+
+                //category
                 IconButton(
                   iconSize: 30,
                   icon: Icon(
@@ -73,6 +76,8 @@ class HomeWidget extends State<InitalScreenWidget>{
                     });
                   },
                 ),
+
+                //search
                 IconButton(
                   iconSize: 30,
                   icon: Icon(
@@ -83,6 +88,8 @@ class HomeWidget extends State<InitalScreenWidget>{
                     setState(() {
                       _navPage.jumpToPage(2);
                   });}),
+
+                //cart
                 IconButton(
                   iconSize: 30,
                   icon: Icon(
@@ -93,6 +100,8 @@ class HomeWidget extends State<InitalScreenWidget>{
                     setState(() {
                       _navPage.jumpToPage(3);
                   });}),
+
+                //profile
                 IconButton(
                   iconSize: 30,
                   icon: Icon(
