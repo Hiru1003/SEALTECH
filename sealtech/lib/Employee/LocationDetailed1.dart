@@ -80,37 +80,71 @@ class _LocationDetailed1_PageState extends State<LocationDetailed1_Page> {
                           )),
                     ],
                   ),
-                  Container(
-                    padding: EdgeInsets.all(16.0),
-                    decoration: BoxDecoration(
-                      color: const Color.fromARGB(255, 247, 219, 180),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: const Row(
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Icon(
-                              Icons.calendar_month,
-                              color: Color.fromARGB(255, 59, 57, 57),
-                              size: 20,
-                            ),
-                          ],
-                        ),
-                        SizedBox(width: 25),
-                        Expanded(
-                          child: Text(
-                            'Deadline : 30th of April 2024',
-                            style: TextStyle(
-                              fontSize: 13,
-                              color: Color.fromARGB(255, 96, 94, 94),
-                            ),
+                  Center(
+                    child: Container(
+                      padding: EdgeInsets.all(16.0),
+                      decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 247, 219, 180),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: const Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Icon(
+                                    Icons.calendar_month,
+                                    color: Color.fromARGB(255, 59, 57, 57),
+                                    size: 20,
+                                  ),
+                                ],
+                              ),
+                              SizedBox(width: 25),
+                              Expanded(
+                                child: Text(
+                                  'Deadline : 30th of April 2024',
+                                  style: TextStyle(
+                                    fontSize: 13,
+                                    color: Color.fromARGB(255, 96, 94, 94),
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
-                        ),
-                      ],
+                          SizedBox(height: 10),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Icon(
+                                    Icons.location_city,
+                                    color: Color.fromARGB(255, 59, 57, 57),
+                                    size: 20,
+                                  ),
+                                ],
+                              ),
+                              SizedBox(width: 25),
+                              Expanded(
+                                child: Text(
+                                  'No 230/A, Park Road, Colombo',
+                                  style: TextStyle(
+                                    fontSize: 13,
+                                    color: Color.fromARGB(255, 96, 94, 94),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
+                  )
                 ]))));
   }
 }
