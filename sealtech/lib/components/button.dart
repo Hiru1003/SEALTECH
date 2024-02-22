@@ -54,7 +54,7 @@ class Button extends StatelessWidget {
           ),
           child: SizedBox(
             height: 50,
-            width: 200,
+            width: 400,
             child: Center(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
