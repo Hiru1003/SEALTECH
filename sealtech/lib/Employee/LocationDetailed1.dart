@@ -52,6 +52,7 @@ class _LocationDetailed1_PageState extends State<LocationDetailed1_Page> {
             child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Column(children: [
+                  const SizedBox(height: 15),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
