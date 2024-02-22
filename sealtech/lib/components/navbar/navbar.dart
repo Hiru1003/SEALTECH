@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sealtech/components/navbar/fifthTab.dart' as _fifthTab;
 import 'package:sealtech/components/navbar/firstTab.dart' as _firstTab;
 import 'package:sealtech/components/navbar/fourthTab.dart' as _fourthTab;
 import 'package:sealtech/components/navbar/secondTab.dart' as _secondTab;
@@ -23,38 +24,6 @@ class HomeWidget extends State<InitalScreenWidget>{
 
   Widget build(BuildContext ctx){
     return Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          backgroundColor: Color(0xFFFFFFFF), //white
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Image(
-                //img src: http://icons.iconarchive.com/icons/hopstarter/square-flags/128/sealtech-Flag-icon.png
-                image: AssetImage('assets/idflag.png') ,fit: BoxFit.contain, height: 35,) 
-            ],
-          ),
-         
-          actions: <Widget>[
-            
-            Padding(
-              padding: EdgeInsets.only(right: 28.0),
-              child: GestureDetector(
-                onTap: () {
-                  _navPage.jumpToPage(5);
-                },
-                child: Icon(
-                  Icons.more_vert,
-                  size: 26.0,
-                  color: Colors.black,
-                ) 
-              ),
-            )
-          ],
-         
-          
-        ),
         body: PageView(
           controller: _navPage,
           onPageChanged: (int){
@@ -65,6 +34,7 @@ class HomeWidget extends State<InitalScreenWidget>{
             new _secondTab.Search(),
             new _thirdTab.Bookmark(),
             new _fourthTab.Setting(),
+            new _fifthTab.Setting(),
            
           ],
           // physics: NeverScrollableScrollPhysics(), //to disable Swipe
