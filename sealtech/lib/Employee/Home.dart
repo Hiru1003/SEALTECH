@@ -80,7 +80,7 @@ class _Home_PageState extends State<Home_Page> {
                       Text(
                         'View more site locations \nand get to know the site \nthat completed and \nongoing\n',
                         style: GoogleFonts.poppins(
-                          fontSize: 13,
+                          fontSize: 12,
                           color: const Color.fromARGB(255, 70, 66, 68),
                         ),
                       ),
@@ -93,10 +93,15 @@ class _Home_PageState extends State<Home_Page> {
                               const Color.fromARGB(255, 23, 22, 22),
                           side: const BorderSide(color: Colors.black),
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0),
+                            borderRadius: BorderRadius.circular(17.0),
                           ),
                         ),
-                        child: const Text('View More Details'),
+                        child: const Text(
+                          'View More Details',
+                          style: TextStyle(
+                            fontSize: 13.0,
+                          ),
+                        ),
                       ),
                       const SizedBox(height: 5),
                     ],
@@ -247,10 +252,15 @@ class _Home_PageState extends State<Home_Page> {
                               const Color.fromARGB(255, 23, 22, 22),
                           side: const BorderSide(color: Colors.black),
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0),
+                            borderRadius: BorderRadius.circular(17.0),
                           ),
                         ),
-                        child: const Text('Calculate Now'),
+                        child: const Text(
+                          'Calculate now',
+                          style: TextStyle(
+                            fontSize: 13.0,
+                          ),
+                        ),
                       ),
                       const SizedBox(height: 5),
                     ],
