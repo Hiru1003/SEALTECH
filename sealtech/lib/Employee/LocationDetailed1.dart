@@ -82,7 +82,7 @@ class _LocationDetailed1_PageState extends State<LocationDetailed1_Page> {
                   ),
                   Center(
                     child: Container(
-                      padding: EdgeInsets.all(16.0),
+                      padding: const EdgeInsets.all(20.0),
                       decoration: BoxDecoration(
                         color: const Color.fromARGB(255, 247, 219, 180),
                         borderRadius: BorderRadius.circular(10),
@@ -93,6 +93,7 @@ class _LocationDetailed1_PageState extends State<LocationDetailed1_Page> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
+                              SizedBox(width: 15),
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
@@ -103,7 +104,7 @@ class _LocationDetailed1_PageState extends State<LocationDetailed1_Page> {
                                   ),
                                 ],
                               ),
-                              SizedBox(width: 25),
+                              SizedBox(width: 35),
                               Expanded(
                                 child: Text(
                                   'Deadline : 30th of April 2024',
@@ -119,6 +120,7 @@ class _LocationDetailed1_PageState extends State<LocationDetailed1_Page> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
+                              SizedBox(width: 15),
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
@@ -129,7 +131,7 @@ class _LocationDetailed1_PageState extends State<LocationDetailed1_Page> {
                                   ),
                                 ],
                               ),
-                              SizedBox(width: 25),
+                              SizedBox(width: 35),
                               Expanded(
                                 child: Text(
                                   'No 230/A, Park Road, Colombo',
@@ -145,6 +147,7 @@ class _LocationDetailed1_PageState extends State<LocationDetailed1_Page> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
+                              SizedBox(width: 15),
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
@@ -155,7 +158,7 @@ class _LocationDetailed1_PageState extends State<LocationDetailed1_Page> {
                                   ),
                                 ],
                               ),
-                              SizedBox(width: 25),
+                              SizedBox(width: 35),
                               Expanded(
                                 child: Text(
                                   'Swimming Pool Construction',
@@ -171,6 +174,7 @@ class _LocationDetailed1_PageState extends State<LocationDetailed1_Page> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
+                              SizedBox(width: 15),
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
@@ -181,7 +185,7 @@ class _LocationDetailed1_PageState extends State<LocationDetailed1_Page> {
                                   ),
                                 ],
                               ),
-                              SizedBox(width: 25),
+                              SizedBox(width: 35),
                               Expanded(
                                 child: Text(
                                   'Due Payment',
