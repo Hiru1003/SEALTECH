@@ -49,7 +49,7 @@ class SignUpPage extends StatelessWidget {
                     ),
                     border: const UnderlineInputBorder(),
                     focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: primaryColor),
+                      borderSide: BorderSide(color: accentColor),
                     ),
                   ),
                 ),
@@ -68,7 +68,7 @@ class SignUpPage extends StatelessWidget {
                     ),
                     border: const UnderlineInputBorder(),
                     focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: primaryColor),
+                      borderSide: BorderSide(color: accentColor),
                     ),
                   ),
                 ),
@@ -86,7 +86,7 @@ class SignUpPage extends StatelessWidget {
                     ),
                     border: UnderlineInputBorder(),
                     focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: primaryColor),
+                      borderSide: BorderSide(color: accentColor),
                     ),
                   ),
                 ),
