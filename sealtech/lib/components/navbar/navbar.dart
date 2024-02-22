@@ -26,35 +26,35 @@ class HomeWidget extends State<InitalScreenWidget>{
   @override
   Widget build(BuildContext context){
     return Scaffold(
-        body: PageView(
-          controller: _navPage,
-          onPageChanged: (index){
-            setState(() {
-              _selectedTab = index;
-            });
-          },
-          children: <Widget>[
-            firstTab.Home(),
-            secondTab.Category(),
-            thirdTab.Search(),
-            fourthTab.Cart(),
-            fifthTab.Profile(),
-          ],
+        body: Container(
+          color: bgColor, // Set the background color of the screen to bgColor
+          child: PageView(
+            controller: _navPage,
+            onPageChanged: (index){
+              setState(() {
+                _selectedTab = index;
+              });
+            },
+            children: <Widget>[
+              firstTab.Home(),
+              secondTab.Category(),
+              thirdTab.Search(),
+              fourthTab.Cart(),
+              fifthTab.Profile(),
+            ],
+          ),
         ),
-      
-        backgroundColor: bgColor, //white ivory
         bottomNavigationBar: BottomAppBar(
           shape: const CircularNotchedRectangle(),
-          
+          color: bgColor,
           child: Container(
-            height: 60.0,
-            color: bgColor, // Set the background color of the navbar
+            color: bgColor, // Set the background color of the navbar to bgColor
             child: Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 IconButton(
-                  iconSize: 35,
+                  iconSize: 30,
                   padding: const EdgeInsets.only(left: 28.0),
                   icon: Icon(
                     _selectedTab == 0 ? (widget.isClient ? Icons.home : Icons.work) : (widget.isClient ? Icons.home_outlined : Icons.work_outline),
@@ -65,7 +65,7 @@ class HomeWidget extends State<InitalScreenWidget>{
                       _navPage.jumpToPage(0);
                   });}),
                 IconButton(
-                  iconSize: 35,
+                  iconSize: 30,
                   icon: Icon(
                     _selectedTab == 1 ? (widget.isClient ? Icons.category : Icons.business_center) : (widget.isClient ? Icons.category_outlined : Icons.business_center_outlined),
                     color: _selectedTab == 1 ? accentColor : null,
@@ -77,7 +77,7 @@ class HomeWidget extends State<InitalScreenWidget>{
                   },
                 ),
                 IconButton(
-                  iconSize: 35,
+                  iconSize: 30,
                   icon: Icon(
                     _selectedTab == 2 ? (widget.isClient ? Icons.search : Icons.assignment) : (widget.isClient ? Icons.search_outlined : Icons.assignment_outlined),
                     color: _selectedTab == 2 ? accentColor : null,
@@ -87,7 +87,7 @@ class HomeWidget extends State<InitalScreenWidget>{
                       _navPage.jumpToPage(2);
                   });}),
                 IconButton(
-                  iconSize: 35,
+                  iconSize: 30,
                   icon: Icon(
                     _selectedTab == 3 ? (widget.isClient ? Icons.shopping_cart : Icons.people) : (widget.isClient ? Icons.shopping_cart_outlined : Icons.people_outline),
                     color: _selectedTab == 3 ? accentColor : null,
@@ -97,7 +97,7 @@ class HomeWidget extends State<InitalScreenWidget>{
                       _navPage.jumpToPage(3);
                   });}),
                 IconButton(
-                  iconSize: 35,
+                  iconSize: 30,
                   icon: Icon(
                     _selectedTab == 4 ? (widget.isClient ? Icons.person : Icons.person_outline) : (widget.isClient ? Icons.person_outline : Icons.person),
                     color: _selectedTab == 4 ? accentColor : null,
