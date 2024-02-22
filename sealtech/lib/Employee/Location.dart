@@ -17,9 +17,7 @@ class _Location_PageState extends State<Location_Page> {
     return Scaffold(
         appBar: AppBar(
           title: Padding(
-            padding: const EdgeInsets.only(
-              left: 10,
-            ),
+            padding: const EdgeInsets.only(left: 10, right: 10),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -125,6 +123,17 @@ class _Location_PageState extends State<Location_Page> {
                     ),
                   ),
                 ]),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: Image.asset(
+                          'lib/images/location.png',
+                          height: 200,
+                        ))
+                  ],
+                ),
               ],
             ),
           ),
