@@ -77,8 +77,29 @@ class _LocationDetailed1_PageState extends State<LocationDetailed1_Page> {
                           child: Image.asset(
                             'lib/images/Locationdetailed.png',
                             height: 200,
-                          ))
+                          )),
                     ],
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(16.0),
+                    decoration: BoxDecoration(
+                      color: const Color.fromARGB(255, 247, 219, 180),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: const Row(
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Icon(
+                              Icons.calendar_month,
+                              color: Color.fromARGB(255, 59, 57, 57),
+                              size: 20,
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ]))));
   }
