@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:sealtech/components/navbar/fifthTab.dart' as fifthTab;
-import 'package:sealtech/components/navbar/firstTab.dart' as firstTab;
-import 'package:sealtech/components/navbar/fourthTab.dart' as fourthTab;
-import 'package:sealtech/components/navbar/secondTab.dart' as secondTab;
-import 'package:sealtech/components/navbar/thirdTab.dart' as thirdTab;
+import 'package:sealtech/client/cart.dart' as fourthTab;
+import 'package:sealtech/client/category.dart' as secondTab;
+import 'package:sealtech/client/home.dart' as firstTab;
+import 'package:sealtech/client/profile.dart' as fifthTab;
+import 'package:sealtech/client/search.dart' as thirdTab;
 import 'package:sealtech/components/theme.dart';
 
 //Initial widget
