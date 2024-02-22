@@ -56,6 +56,22 @@ class _LocationDetailed1_PageState extends State<LocationDetailed1_Page> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Padding(
+                        padding: const EdgeInsets.only(left: 0),
+                        child: Text(
+                          'Swimming Pool Construction',
+                          style: GoogleFonts.poppins(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500,
+                            color: const Color.fromARGB(255, 70, 66, 68),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Padding(
                           padding: const EdgeInsets.only(left: 0),
                           child: Image.asset(
                             'lib/images/Locationdetailed.png',
