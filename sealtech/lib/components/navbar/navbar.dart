@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:sealtech/components/navbar/firstTab.dart' as _firstTab;
+import 'package:sealtech/components/navbar/fourthTab.dart' as _fourthTab;
+import 'package:sealtech/components/navbar/secondTab.dart' as _secondTab;
+import 'package:sealtech/components/navbar/thirdTab.dart' as _thirdTab;
 
 //Initial widget
 class InitalScreenWidget extends StatefulWidget{
@@ -27,7 +31,7 @@ class HomeWidget extends State<InitalScreenWidget>{
             mainAxisSize: MainAxisSize.min,
             children: [
               Image(
-                //img src: http://icons.iconarchive.com/icons/hopstarter/square-flags/128/Indonesia-Flag-icon.png
+                //img src: http://icons.iconarchive.com/icons/hopstarter/square-flags/128/sealtech-Flag-icon.png
                 image: AssetImage('assets/idflag.png') ,fit: BoxFit.contain, height: 35,) 
             ],
           ),
@@ -113,16 +117,16 @@ class HomeWidget extends State<InitalScreenWidget>{
             ),
         ),
         floatingActionButton: FloatingActionButton(
-          backgroundColor: Colors.red, 
+          backgroundColor: Colors.red,
           onPressed: () {
-            showDialog(context: context,
-            builder: (BuildContext context){
-              return _alert.Alert();
-            },);
+            // showDialog(context: context,
+            // builder: (BuildContext context){
+            //   return _alert.Alert();
+            // },);
           },
           // onPressed: () => setState(() {
           //   _count++;
-          //   print('You like Indonesia $_count time(s)');
+          //   print('You like sealtech $_count time(s)');
             
           // }),
           child: const Icon(Icons.add),
@@ -131,3 +135,4 @@ class HomeWidget extends State<InitalScreenWidget>{
         
     );
   }
+}
