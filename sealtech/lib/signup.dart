@@ -49,10 +49,9 @@ class SignUpPage extends StatelessWidget {
                     ),
                     border: const UnderlineInputBorder(),
                     focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Theme.of(context).primaryColor),
+                      borderSide: BorderSide(color: primaryColor),
                     ),
                   ),
-                  style: TextStyle(color: Theme.of(context).primaryColor),
                 ),
               ),
               const SizedBox(height: 20),
@@ -69,14 +68,13 @@ class SignUpPage extends StatelessWidget {
                     ),
                     border: const UnderlineInputBorder(),
                     focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Theme.of(context).primaryColor),
+                      borderSide: BorderSide(color: primaryColor),
                     ),
                   ),
-                  style: TextStyle(color: Theme.of(context).primaryColor),
                 ),
               ),
               const SizedBox(height: 20),
-              const Padding(
+              Padding(
                 padding: EdgeInsets.symmetric(horizontal: 16),
                 child: TextField(
                   obscureText: true,
@@ -87,6 +85,9 @@ class SignUpPage extends StatelessWidget {
                       fontSize: 16,
                     ),
                     border: UnderlineInputBorder(),
+                    focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: primaryColor),
+                    ),
                   ),
                 ),
               ),
