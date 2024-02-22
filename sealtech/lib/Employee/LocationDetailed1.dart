@@ -48,6 +48,21 @@ class _LocationDetailed1_PageState extends State<LocationDetailed1_Page> {
           backgroundColor: const Color.fromRGBO(251, 147, 0, 1),
         ),
         backgroundColor: const Color.fromRGBO(255, 252, 245, 1),
-        body: SingleChildScrollView());
+        body: SingleChildScrollView(
+            child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Padding(
+                          padding: const EdgeInsets.only(left: 0),
+                          child: Image.asset(
+                            'lib/images/Locationdetailed.png',
+                            height: 200,
+                          ))
+                    ],
+                  ),
+                ]))));
   }
 }
