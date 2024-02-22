@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sealtech/components/theme.dart';
 
 class Location_Page extends StatefulWidget {
   const Location_Page({
@@ -57,9 +58,9 @@ class _Location_PageState extends State<Location_Page> {
                   width: 90,
                   height: 40,
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 243, 202, 121),
+                    color: primary50,
                     border: Border.all(
-                      color: Color.fromARGB(255, 243, 202, 121),
+                      color: primary50,
                     ),
                     borderRadius: BorderRadius.circular(10),
                   ),
@@ -76,6 +77,28 @@ class _Location_PageState extends State<Location_Page> {
                   ),
                 ),
                 const SizedBox(width: 15),
+                Container(
+                  width: 120,
+                  height: 40,
+                  decoration: BoxDecoration(
+                    color: primary25,
+                    border: Border.all(
+                      color: primary25,
+                    ),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: const Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.rotate_left_rounded,
+                        color: Color.fromARGB(255, 82, 82, 80),
+                      ),
+                      SizedBox(width: 10),
+                      Text('Ongoing'),
+                    ],
+                  ),
+                ),
                 const SizedBox(width: 15),
               ]),
             ],
