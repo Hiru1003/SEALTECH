@@ -6,6 +6,5 @@ class Home extends StatelessWidget{
     child:  Container(
       child: Text('This is homepage'),
     )
-   
   );
 }
