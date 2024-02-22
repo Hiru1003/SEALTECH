@@ -171,6 +171,47 @@ class _Location_PageState extends State<Location_Page> {
                       ),
                     ],
                   ),
+                ),
+                SizedBox(
+                  height: 13,
+                ),
+                Container(
+                  padding: EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    color: primary25,
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(color: primary25),
+                  ),
+                  child: const Row(
+                    children: [
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Swimming Pool Construction',
+                              style: TextStyle(
+                                  fontSize: 15, fontWeight: FontWeight.w500),
+                            ),
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Text(
+                              'Deadline : 30th of April 2024',
+                              style: TextStyle(
+                                  fontSize: 13,
+                                  color: Color.fromARGB(255, 96, 94, 94)),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Icon(
+                        Icons.keyboard_arrow_right_outlined,
+                        color: Color.fromARGB(255, 59, 57, 57),
+                        size: 30,
+                      ),
+                    ],
+                  ),
                 )
               ],
             ),
