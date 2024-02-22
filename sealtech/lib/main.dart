@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sealtech/Employee/Home.dart';
-import 'package:sealtech/Employee/Location.dart';
+import 'package:sealtech/signup.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       //home: SignUpPage(),
-      home: Home_Page(),
+      home: SignUpPage(),
     );
   }
 }
