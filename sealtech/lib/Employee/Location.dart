@@ -50,80 +50,83 @@ class _Location_PageState extends State<Location_Page> {
           backgroundColor: const Color.fromRGBO(251, 147, 0, 1),
         ),
         body: SingleChildScrollView(
-          child: Column(
-            children: [
-              SizedBox(height: 10),
-              Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                Container(
-                  width: 90,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    color: primary50,
-                    border: Border.all(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                SizedBox(height: 10),
+                Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                  Container(
+                    width: 85,
+                    height: 40,
+                    decoration: BoxDecoration(
                       color: primary50,
-                    ),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: const Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.add,
-                        color: Color.fromARGB(255, 82, 82, 80),
+                      border: Border.all(
+                        color: primary50,
                       ),
-                      SizedBox(width: 10),
-                      Text('New'),
-                    ],
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: const Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.add,
+                          color: Color.fromARGB(255, 82, 82, 80),
+                        ),
+                        SizedBox(width: 10),
+                        Text('New'),
+                      ],
+                    ),
                   ),
-                ),
-                const SizedBox(width: 15),
-                Container(
-                  width: 120,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    color: primary25,
-                    border: Border.all(
+                  const SizedBox(width: 10),
+                  Container(
+                    width: 110,
+                    height: 40,
+                    decoration: BoxDecoration(
                       color: primary25,
-                    ),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: const Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.rotate_left_rounded,
-                        color: Color.fromARGB(255, 82, 82, 80),
+                      border: Border.all(
+                        color: primary25,
                       ),
-                      SizedBox(width: 10),
-                      Text('Ongoing'),
-                    ],
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: const Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.rotate_left_rounded,
+                          color: Color.fromARGB(255, 82, 82, 80),
+                        ),
+                        SizedBox(width: 10),
+                        Text('Ongoing'),
+                      ],
+                    ),
                   ),
-                ),
-                const SizedBox(width: 15),
-                Container(
-                  width: 120,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    color: secondaryColor,
-                    border: Border.all(
+                  const SizedBox(width: 10),
+                  Container(
+                    width: 120,
+                    height: 40,
+                    decoration: BoxDecoration(
                       color: secondaryColor,
-                    ),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: const Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.done,
-                        color: Color.fromARGB(255, 82, 82, 80),
+                      border: Border.all(
+                        color: secondaryColor,
                       ),
-                      SizedBox(width: 10),
-                      Text('Completed'),
-                    ],
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: const Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.done,
+                          color: Color.fromARGB(255, 82, 82, 80),
+                        ),
+                        SizedBox(width: 10),
+                        Text('Completed'),
+                      ],
+                    ),
                   ),
-                ),
-              ]),
-            ],
+                ]),
+              ],
+            ),
           ),
         ));
   }
