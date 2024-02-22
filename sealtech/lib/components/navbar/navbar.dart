@@ -4,20 +4,17 @@ import 'package:sealtech/components/navbar/firstTab.dart' as _firstTab;
 import 'package:sealtech/components/navbar/fourthTab.dart' as _fourthTab;
 import 'package:sealtech/components/navbar/secondTab.dart' as _secondTab;
 import 'package:sealtech/components/navbar/thirdTab.dart' as _thirdTab;
+import 'package:sealtech/components/theme.dart';
 
 //Initial widget
 class InitalScreenWidget extends StatefulWidget{
-  // InitialScreenWidget({Key key}) : super(key: key);
-
   @override
   HomeWidget createState() => HomeWidget();
-    
 }
 
 //State<StatefulWidget> action method
 class HomeWidget extends State<InitalScreenWidget>{
-  int _count = 0;
-  Color _iconPressed = Colors.black;
+  int _selectedTab = 0;
 
   //Page controller
   PageController _navPage = PageController(initialPage: 0);
@@ -27,6 +24,9 @@ class HomeWidget extends State<InitalScreenWidget>{
         body: PageView(
           controller: _navPage,
           onPageChanged: (int){
+            setState(() {
+              _selectedTab = int;
+            });
             print('Page changes to index $int');
           },
           children: <Widget>[
@@ -35,12 +35,10 @@ class HomeWidget extends State<InitalScreenWidget>{
             new _thirdTab.Bookmark(),
             new _fourthTab.Setting(),
             new _fifthTab.Setting(),
-           
           ],
-          // physics: NeverScrollableScrollPhysics(), //to disable Swipe
         ),
       
-        backgroundColor: Color(0xFFFFFCFC), //white ivory
+        backgroundColor: bgColor, //white ivory
         bottomNavigationBar: BottomAppBar(
           shape: const CircularNotchedRectangle(),
           
@@ -53,56 +51,59 @@ class HomeWidget extends State<InitalScreenWidget>{
                 IconButton(
                   iconSize: 35,
                   padding: EdgeInsets.only(left: 28.0),
-                  icon: Icon(Icons.home, color: (_iconPressed)), 
-                  onPressed: () { 
+                  icon: Icon(
+                    _selectedTab == 0 ? Icons.home : Icons.home_outlined,
+                    color: _selectedTab == 0 ? Theme.of(ctx).colorScheme.secondary : null,
+                  ),
+                  onPressed: () {
                     setState(() {
                       _navPage.jumpToPage(0);
-                      _iconPressed = Colors.red;
                   });}),
                 IconButton(
                   iconSize: 35,
-                  icon: Icon(Icons.search), 
-                  onPressed: () { 
+                  icon: Icon(
+                    _selectedTab == 1 ? Icons.search : Icons.search_outlined,
+                    color: _selectedTab == 1 ? Theme.of(ctx).colorScheme.secondary : null,
+                  ),
+                  onPressed: () {
                     setState(() {
                       _navPage.jumpToPage(1);
                   });}),
                 IconButton(
                   iconSize: 35,
-                  icon: Icon(Icons.bookmark), 
-                  onPressed: () { 
+                  icon: Icon(
+                    _selectedTab == 2 ? Icons.bookmark : Icons.bookmark_border,
+                    color: _selectedTab == 2 ? Theme.of(ctx).colorScheme.secondary : null,
+                  ),
+                  onPressed: () {
                     setState(() {
                       _navPage.jumpToPage(2);
                   });}),
                 IconButton(
                   iconSize: 35,
-                  padding: EdgeInsets.only(right: 28.0),
-                  icon: Icon(Icons.settings), 
-                  onPressed: () { 
+                  icon: Icon(
+                    _selectedTab == 3 ? Icons.settings : Icons.settings_outlined,
+                    color: _selectedTab == 3 ? Theme.of(ctx).colorScheme.secondary : null,
+                  ),
+                  onPressed: () {
                     setState(() {
                       _navPage.jumpToPage(3);
                   });}),
-                
+                IconButton(
+                  iconSize: 35,
+                  padding: EdgeInsets.only(right: 28.0),
+                  icon: Icon(
+                    _selectedTab == 4 ? Icons.more_horiz : Icons.more_horiz_outlined,
+                    color: _selectedTab == 4 ? Theme.of(ctx).colorScheme.secondary : null,
+                  ),
+                  onPressed: () {
+                    setState(() {
+                      _navPage.jumpToPage(4);
+                  });}),
               ],
             ),
             ),
         ),
-        floatingActionButton: FloatingActionButton(
-          backgroundColor: Colors.red,
-          onPressed: () {
-            // showDialog(context: context,
-            // builder: (BuildContext context){
-            //   return _alert.Alert();
-            // },);
-          },
-          // onPressed: () => setState(() {
-          //   _count++;
-          //   print('You like sealtech $_count time(s)');
-            
-          // }),
-          child: const Icon(Icons.add),
-        ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        
     );
   }
 }
