@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sealtech/Employee/navbarE.dart';
+import 'package:sealtech/signin.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       //home: SignUpPage(),
-      home: NavbarE(),
+      home: SignInPage(),
     );
   }
 }
