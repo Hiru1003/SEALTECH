@@ -49,32 +49,37 @@ class _Location_PageState extends State<Location_Page> {
           backgroundColor: const Color.fromRGBO(251, 147, 0, 1),
         ),
         body: SingleChildScrollView(
-          child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-            Container(
-              width: 90,
-              height: 40,
-              decoration: BoxDecoration(
-                color: Color.fromARGB(255, 243, 202, 121),
-                border: Border.all(
-                  color: Color.fromARGB(255, 243, 202, 121),
-                ),
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: const Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(
-                    Icons.add,
-                    color: Color.fromARGB(255, 82, 82, 80),
+          child: Column(
+            children: [
+              SizedBox(height: 10),
+              Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                Container(
+                  width: 90,
+                  height: 40,
+                  decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 243, 202, 121),
+                    border: Border.all(
+                      color: Color.fromARGB(255, 243, 202, 121),
+                    ),
+                    borderRadius: BorderRadius.circular(10),
                   ),
-                  SizedBox(width: 10),
-                  Text('New'),
-                ],
-              ),
-            ),
-            const SizedBox(width: 15),
-            const SizedBox(width: 15),
-          ]),
+                  child: const Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.add,
+                        color: Color.fromARGB(255, 82, 82, 80),
+                      ),
+                      SizedBox(width: 10),
+                      Text('New'),
+                    ],
+                  ),
+                ),
+                const SizedBox(width: 15),
+                const SizedBox(width: 15),
+              ]),
+            ],
+          ),
         ));
   }
 }
