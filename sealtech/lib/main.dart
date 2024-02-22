@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:sealtech/Employee/Home.dart';
 import 'package:sealtech/signup.dart';
 
 void main() {
   runApp(const MyApp());
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
   @override
@@ -11,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       //home: SignUpPage(),
-      home: SignUpPage(),
+      home: Home_Page(),
     );
   }
 }
