@@ -100,6 +100,28 @@ class _Location_PageState extends State<Location_Page> {
                   ),
                 ),
                 const SizedBox(width: 15),
+                Container(
+                  width: 120,
+                  height: 40,
+                  decoration: BoxDecoration(
+                    color: secondaryColor,
+                    border: Border.all(
+                      color: secondaryColor,
+                    ),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: const Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.done,
+                        color: Color.fromARGB(255, 82, 82, 80),
+                      ),
+                      SizedBox(width: 10),
+                      Text('Completed'),
+                    ],
+                  ),
+                ),
               ]),
             ],
           ),
