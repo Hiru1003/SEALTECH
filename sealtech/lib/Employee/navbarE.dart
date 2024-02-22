@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:sealtech/client/Home.dart' as firstTab;
 import 'package:sealtech/client/cart.dart' as fourthTab;
 import 'package:sealtech/client/category.dart' as secondTab;
 import 'package:sealtech/client/search.dart' as thirdTab;
 import 'package:sealtech/components/theme.dart';
+import 'package:sealtech/employee/Home.dart' as firstTab;
 
 //Initial widget
 class NavbarE extends StatefulWidget{
@@ -32,7 +32,7 @@ class HomeWidget extends State<NavbarE>{
               });
             },
             children: <Widget>[
-              firstTab.Home(),
+              firstTab.Home_Page(),
               secondTab.Category(),
               thirdTab.Search(),
               fourthTab.Cart(),
