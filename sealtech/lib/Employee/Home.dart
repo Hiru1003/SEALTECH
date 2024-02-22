@@ -103,7 +103,7 @@ class _Home_PageState extends State<Home_Page> {
                           ),
                         ),
                       ),
-                      const SizedBox(height: 5),
+                      const SizedBox(height: 10),
                     ],
                   ),
                   Expanded(
@@ -213,6 +213,7 @@ class _Home_PageState extends State<Home_Page> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15),
             child: Container(
+              height: 160,
               padding: const EdgeInsets.all(0),
               decoration: BoxDecoration(
                 color: const Color.fromARGB(255, 247, 219, 180),
@@ -227,6 +228,9 @@ class _Home_PageState extends State<Home_Page> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      const SizedBox(
+                        height: 12,
+                      ),
                       Text(
                         'Salary Calculator',
                         style: GoogleFonts.poppins(
@@ -237,9 +241,9 @@ class _Home_PageState extends State<Home_Page> {
                       ),
                       const SizedBox(height: 9),
                       Text(
-                        'Let’s calculate your salary by \nentering details\n',
+                        'Let’s calculate your \nsalary by entering details\n',
                         style: GoogleFonts.poppins(
-                          fontSize: 13,
+                          fontSize: 12,
                           color: const Color.fromARGB(255, 70, 66, 68),
                         ),
                       ),
@@ -271,7 +275,7 @@ class _Home_PageState extends State<Home_Page> {
                       children: [
                         Image.asset(
                           'lib/images/salary.png',
-                          height: 190,
+                          height: 160,
                         ),
                       ],
                     ),
