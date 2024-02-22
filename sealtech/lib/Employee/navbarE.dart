@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:sealtech/client/Home.dart' as firstTab;
 import 'package:sealtech/client/cart.dart' as fourthTab;
 import 'package:sealtech/client/category.dart' as secondTab;
-import 'package:sealtech/client/home.dart' as firstTab;
-import 'package:sealtech/client/profile.dart' as fifthTab;
 import 'package:sealtech/client/search.dart' as thirdTab;
 import 'package:sealtech/components/theme.dart';
 
 //Initial widget
-class NavbarC extends StatefulWidget{
+class NavbarE extends StatefulWidget{
 
   @override
   HomeWidget createState() => HomeWidget();
 }
 
 //State<StatefulWidget> action method
-class HomeWidget extends State<NavbarC>{
+class HomeWidget extends State<NavbarE>{
   int _selectedTab = 0;
 
   //Page controller
@@ -37,7 +36,6 @@ class HomeWidget extends State<NavbarC>{
               secondTab.Category(),
               thirdTab.Search(),
               fourthTab.Cart(),
-              fifthTab.Profile(),
             ],
           ),
         ),
@@ -63,11 +61,11 @@ class HomeWidget extends State<NavbarC>{
                       _navPage.jumpToPage(0);
                   });}),
 
-                //category
+                //location
                 IconButton(
                   iconSize: 30,
                   icon: Icon(
-                    _selectedTab == 1 ? Icons.category : Icons.category_outlined,
+                    _selectedTab == 1 ? Icons.map : Icons.map_outlined,
                     color: _selectedTab == 1 ? accentColor : null,
                   ),
                   onPressed: () {
@@ -77,11 +75,11 @@ class HomeWidget extends State<NavbarC>{
                   },
                 ),
 
-                //search
+                //salary
                 IconButton(
                   iconSize: 30,
                   icon: Icon(
-                    _selectedTab == 2 ? Icons.search : Icons.search_outlined,
+                    _selectedTab == 2 ? Icons.wallet : Icons.wallet_outlined,
                     color: _selectedTab == 2 ? accentColor : null,
                   ),
                   onPressed: () {
@@ -89,28 +87,16 @@ class HomeWidget extends State<NavbarC>{
                       _navPage.jumpToPage(2);
                   });}),
 
-                //cart
+                //profile
                 IconButton(
                   iconSize: 30,
                   icon: Icon(
-                    _selectedTab == 3 ? Icons.shopping_cart : Icons.shopping_cart_outlined,
+                    _selectedTab == 3 ? Icons.person : Icons.person_outline,
                     color: _selectedTab == 3 ? accentColor : null,
                   ),
                   onPressed: () {
                     setState(() {
                       _navPage.jumpToPage(3);
-                  });}),
-
-                //profile
-                IconButton(
-                  iconSize: 30,
-                  icon: Icon(
-                    _selectedTab == 4 ? Icons.person : Icons.person_outline,
-                    color: _selectedTab == 4 ? accentColor : null,
-                  ),
-                  onPressed: () {
-                    setState(() {
-                      _navPage.jumpToPage(4);
                     });
                   },
                 ),
