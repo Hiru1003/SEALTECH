@@ -149,7 +149,7 @@ class _LocationDetailed1_PageState extends State<LocationDetailed1_Page> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Icon(
-                                    Icons.location_city,
+                                    Icons.construction,
                                     color: Color.fromARGB(255, 59, 57, 57),
                                     size: 20,
                                   ),
@@ -158,7 +158,7 @@ class _LocationDetailed1_PageState extends State<LocationDetailed1_Page> {
                               SizedBox(width: 25),
                               Expanded(
                                 child: Text(
-                                  'No 230/A, Park Road, Colombo',
+                                  'Swimming Pool Construction',
                                   style: TextStyle(
                                     fontSize: 13,
                                     color: Color.fromARGB(255, 96, 94, 94),
