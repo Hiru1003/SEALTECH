@@ -98,6 +98,16 @@ class _LocationDetailed1_PageState extends State<LocationDetailed1_Page> {
                             ),
                           ],
                         ),
+                        SizedBox(width: 25),
+                        Expanded(
+                          child: Text(
+                            'Deadline : 30th of April 2024',
+                            style: TextStyle(
+                              fontSize: 13,
+                              color: Color.fromARGB(255, 96, 94, 94),
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ),
