@@ -295,6 +295,9 @@ class _Location_PageState extends State<Location_Page> {
                     ],
                   ),
                 ),
+                SizedBox(
+                  height: 20,
+                )
               ],
             ),
           ),
