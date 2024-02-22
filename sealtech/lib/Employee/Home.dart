@@ -256,13 +256,13 @@ class _Home_PageState extends State<Home_Page> {
                           ),
                         ),
                         child: const Text(
-                          'Calculate now',
+                          'Calculate Now',
                           style: TextStyle(
                             fontSize: 13.0,
                           ),
                         ),
                       ),
-                      const SizedBox(height: 5),
+                      const SizedBox(height: 15),
                     ],
                   ),
                   Expanded(
@@ -280,6 +280,7 @@ class _Home_PageState extends State<Home_Page> {
               ),
             ),
           ),
+          const SizedBox(height: 25),
         ])));
   }
 }
