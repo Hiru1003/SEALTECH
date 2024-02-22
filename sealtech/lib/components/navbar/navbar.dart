@@ -8,9 +8,6 @@ import 'package:sealtech/components/theme.dart';
 
 //Initial widget
 class InitalScreenWidget extends StatefulWidget{
-  final bool isClient;
-
-  InitalScreenWidget({required Key key, this.isClient = true}) : super(key: key);
 
   @override
   HomeWidget createState() => HomeWidget();
@@ -46,7 +43,7 @@ class HomeWidget extends State<InitalScreenWidget>{
         ),
         bottomNavigationBar: BottomAppBar(
           shape: const CircularNotchedRectangle(),
-          color: bgColor,
+          color: bgColor, // Set the background color of the navbar to bgColor
           child: Container(
             color: bgColor, // Set the background color of the navbar to bgColor
             child: Row(
@@ -57,7 +54,7 @@ class HomeWidget extends State<InitalScreenWidget>{
                   iconSize: 30,
                   padding: const EdgeInsets.only(left: 28.0),
                   icon: Icon(
-                    _selectedTab == 0 ? (widget.isClient ? Icons.home : Icons.work) : (widget.isClient ? Icons.home_outlined : Icons.work_outline),
+                    _selectedTab == 0 ? Icons.home : Icons.home_outlined,
                     color: _selectedTab == 0 ? accentColor : null,
                   ),
                   onPressed: () {
@@ -67,7 +64,7 @@ class HomeWidget extends State<InitalScreenWidget>{
                 IconButton(
                   iconSize: 30,
                   icon: Icon(
-                    _selectedTab == 1 ? (widget.isClient ? Icons.category : Icons.business_center) : (widget.isClient ? Icons.category_outlined : Icons.business_center_outlined),
+                    _selectedTab == 1 ? Icons.category : Icons.category_outlined,
                     color: _selectedTab == 1 ? accentColor : null,
                   ),
                   onPressed: () {
@@ -79,7 +76,7 @@ class HomeWidget extends State<InitalScreenWidget>{
                 IconButton(
                   iconSize: 30,
                   icon: Icon(
-                    _selectedTab == 2 ? (widget.isClient ? Icons.search : Icons.assignment) : (widget.isClient ? Icons.search_outlined : Icons.assignment_outlined),
+                    _selectedTab == 2 ? Icons.search : Icons.search_outlined,
                     color: _selectedTab == 2 ? accentColor : null,
                   ),
                   onPressed: () {
@@ -89,7 +86,7 @@ class HomeWidget extends State<InitalScreenWidget>{
                 IconButton(
                   iconSize: 30,
                   icon: Icon(
-                    _selectedTab == 3 ? (widget.isClient ? Icons.shopping_cart : Icons.people) : (widget.isClient ? Icons.shopping_cart_outlined : Icons.people_outline),
+                    _selectedTab == 3 ? Icons.shopping_cart : Icons.shopping_cart_outlined,
                     color: _selectedTab == 3 ? accentColor : null,
                   ),
                   onPressed: () {
@@ -99,7 +96,7 @@ class HomeWidget extends State<InitalScreenWidget>{
                 IconButton(
                   iconSize: 30,
                   icon: Icon(
-                    _selectedTab == 4 ? (widget.isClient ? Icons.person : Icons.person_outline) : (widget.isClient ? Icons.person_outline : Icons.person),
+                    _selectedTab == 4 ? Icons.person : Icons.person_outline,
                     color: _selectedTab == 4 ? accentColor : null,
                   ),
                   onPressed: () {
