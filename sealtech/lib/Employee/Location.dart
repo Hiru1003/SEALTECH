@@ -205,7 +205,7 @@ class _Location_PageState extends State<Location_Page> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Swimming Pool Construction',
+                                'Filtering Water',
                                 style: TextStyle(
                                   fontSize: 15,
                                   fontWeight: FontWeight.w500,
@@ -213,7 +213,7 @@ class _Location_PageState extends State<Location_Page> {
                               ),
                               SizedBox(height: 8),
                               Text(
-                                'Deadline : 30th of April 2024',
+                                'Deadline : 30th of May 2024',
                                 style: TextStyle(
                                   fontSize: 13,
                                   color: Color.fromARGB(255, 96, 94, 94),
@@ -253,7 +253,7 @@ class _Location_PageState extends State<Location_Page> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Swimming Pool Construction',
+                                'Leakage Construction',
                                 style: TextStyle(
                                   fontSize: 15,
                                   fontWeight: FontWeight.w500,
@@ -261,7 +261,7 @@ class _Location_PageState extends State<Location_Page> {
                               ),
                               SizedBox(height: 8),
                               Text(
-                                'Deadline : 30th of April 2024',
+                                'Deadline : 30th of June 2024',
                                 style: TextStyle(
                                   fontSize: 13,
                                   color: Color.fromARGB(255, 96, 94, 94),
@@ -301,7 +301,7 @@ class _Location_PageState extends State<Location_Page> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Swimming Pool Construction',
+                                'Chemical adding to Swimming Pool',
                                 style: TextStyle(
                                   fontSize: 15,
                                   fontWeight: FontWeight.w500,

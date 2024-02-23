@@ -20,7 +20,6 @@ class _LocationDetailed1_PageState extends State<LocationDetailed1_Page> {
             padding: const EdgeInsets.only(left: 10, right: 10),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 Text(
                   'Ongoing Locations',
