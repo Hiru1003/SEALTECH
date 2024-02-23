@@ -188,8 +188,11 @@ class _Location_PageState extends State<Location_Page> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    // Handle tap action here
-                    // You can navigate to another screen or perform any action
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => LocationDetailed1_Page()),
+                    );
                   },
                   child: Container(
                     padding: EdgeInsets.all(10),
