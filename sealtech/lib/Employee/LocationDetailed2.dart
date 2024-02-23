@@ -68,6 +68,17 @@ class _LocationDetailed2_PageState extends State<LocationDetailed2_Page> {
                       )
                     ],
                   ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Padding(
+                          padding: const EdgeInsets.only(left: 0),
+                          child: Image.asset(
+                            'lib/images/filtering.png',
+                            height: 200,
+                          )),
+                    ],
+                  ),
                 ]))));
   }
 }
