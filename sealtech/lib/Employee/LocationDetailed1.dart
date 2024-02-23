@@ -260,7 +260,9 @@ class _MyCheckBoxContainerState extends State<MyCheckBoxContainer> {
         });
       },
       child: Container(
-        padding: const EdgeInsets.all(8.0),
+        width: 330,
+        height: 45,
+        padding: const EdgeInsets.only(left: 15),
         decoration: BoxDecoration(
           color: bgColor,
           borderRadius: BorderRadius.circular(10),
