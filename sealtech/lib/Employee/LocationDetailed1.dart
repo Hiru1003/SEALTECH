@@ -224,8 +224,9 @@ class _LocationDetailed1_PageState extends State<LocationDetailed1_Page> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         const SizedBox(height: 10),
-                        MyCheckBoxContainer(title: 'Visit Feild'),
+                        MyCheckBoxContainer(title: 'Visit Site'),
                         const SizedBox(height: 10),
+                        MyCheckBoxContainer(title: 'Give Quatation'),
                       ],
                     ),
                   ),
