@@ -227,6 +227,8 @@ class _LocationDetailed1_PageState extends State<LocationDetailed1_Page> {
                         MyCheckBoxContainer(title: 'Visit Site'),
                         const SizedBox(height: 10),
                         MyCheckBoxContainer(title: 'Give Quatation'),
+                        const SizedBox(height: 10),
+                        MyCheckBoxContainer(title: 'Start Work'),
                       ],
                     ),
                   ),
