@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sealtech/client/navbar.dart';
+import 'package:sealtech/client/product.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       //home: SignUpPage(),
-      home: NavbarC(),
+      home: ProductPage(imagePath: 'lib/images/pro1.png', subtitle: 'Service', title: 'Swimming Pool\n(8ft)', price: '2 million LKR +',),
     );
   }
 }
