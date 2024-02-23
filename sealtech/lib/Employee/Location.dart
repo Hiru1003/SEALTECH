@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sealtech/Employee/LocationDetailed1.dart';
+import 'package:sealtech/Employee/LocationDetailed2.dart';
 import 'package:sealtech/components/theme.dart';
 
 class Location_Page extends StatefulWidget {
@@ -191,7 +192,7 @@ class _Location_PageState extends State<Location_Page> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => LocationDetailed1_Page()),
+                          builder: (context) => LocationDetailed2_Page()),
                     );
                   },
                   child: Container(
