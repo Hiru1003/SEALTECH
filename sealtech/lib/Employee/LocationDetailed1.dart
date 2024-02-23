@@ -218,13 +218,14 @@ class _LocationDetailed1_PageState extends State<LocationDetailed1_Page> {
                       ),
                     ],
                   ),
+                  const SizedBox(height: 10),
                   Center(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        SizedBox(height: 10),
+                        const SizedBox(height: 10),
                         MyCheckBoxContainer(title: 'Visit Feild'),
-                        SizedBox(height: 10),
+                        const SizedBox(height: 10),
                       ],
                     ),
                   ),
@@ -252,7 +253,7 @@ class _MyCheckBoxContainerState extends State<MyCheckBoxContainer> {
         });
       },
       child: Container(
-        padding: EdgeInsets.all(5.0),
+        padding: const EdgeInsets.all(8.0),
         decoration: BoxDecoration(
           color: bgColor,
           borderRadius: BorderRadius.circular(10),
@@ -262,24 +263,26 @@ class _MyCheckBoxContainerState extends State<MyCheckBoxContainer> {
         ),
         child: Row(
           children: [
-            SizedBox(width: 30),
+            const SizedBox(width: 25),
             Container(
               width: 25,
               height: 25,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 border: Border.all(
-                  color:
-                      isChecked ? primaryColor : Color.fromRGBO(255, 132, 0, 1),
+                  color: isChecked
+                      ? primaryColor
+                      : const Color.fromRGBO(255, 132, 0, 1),
                   width: 2.0,
                 ),
               ),
               child: CircleAvatar(
                 radius: 15,
-                backgroundColor:
-                    isChecked ? primaryColor : Color.fromRGBO(255, 252, 245, 1),
+                backgroundColor: isChecked
+                    ? primaryColor
+                    : const Color.fromRGBO(255, 252, 245, 1),
                 child: isChecked
-                    ? Icon(
+                    ? const Icon(
                         Icons.check,
                         color: Colors.white,
                         size: 15.0,
@@ -288,10 +291,10 @@ class _MyCheckBoxContainerState extends State<MyCheckBoxContainer> {
               ),
             ),
             //
-            SizedBox(width: 30),
+            const SizedBox(width: 30),
             Text(
               widget.title,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 14,
                 color: Color.fromARGB(255, 96, 94, 94),
               ),
