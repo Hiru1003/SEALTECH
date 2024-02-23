@@ -116,7 +116,7 @@ class HomeWidget extends State<NavbarC>{
                 ),
               ],
             ),
-            ),
+          ),
         ),
     );
   }
