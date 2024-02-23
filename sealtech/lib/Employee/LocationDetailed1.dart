@@ -82,6 +82,7 @@ class _LocationDetailed1_PageState extends State<LocationDetailed1_Page> {
                   ),
                   Center(
                     child: Container(
+                      width: 300,
                       padding: const EdgeInsets.all(20.0),
                       decoration: BoxDecoration(
                         color: const Color.fromARGB(255, 247, 219, 180),
