@@ -211,7 +211,7 @@ class _LocationDetailed1_PageState extends State<LocationDetailed1_Page> {
                         child: Text(
                           'Progress',
                           style: GoogleFonts.poppins(
-                            fontSize: 14,
+                            fontSize: 15,
                             fontWeight: FontWeight.w500,
                             color: const Color.fromARGB(255, 70, 66, 68),
                           ),
