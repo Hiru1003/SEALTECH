@@ -218,6 +218,16 @@ class _LocationDetailed1_PageState extends State<LocationDetailed1_Page> {
                       ),
                     ],
                   ),
+                  Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SizedBox(height: 10),
+                        MyCheckBoxContainer(title: 'Visit Feild'),
+                        SizedBox(height: 10),
+                      ],
+                    ),
+                  ),
                 ]))));
   }
 }
@@ -233,26 +243,52 @@ class MyCheckBoxContainer extends StatefulWidget {
 
 class _MyCheckBoxContainerState extends State<MyCheckBoxContainer> {
   bool isChecked = false;
-
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(16.0),
+      padding: EdgeInsets.all(5.0),
       decoration: BoxDecoration(
-        color: const Color.fromARGB(255, 247, 219, 180),
+        color: bgColor,
         borderRadius: BorderRadius.circular(10),
+        border: Border.all(
+          color: primaryColor,
+        ),
       ),
       child: Row(
         children: [
-          Checkbox(
-            value: isChecked,
-            onChanged: (bool? value) {
-              setState(() {
-                isChecked = value ?? false;
-              });
-            },
+          SizedBox(width: 20),
+          Container(
+            width: 30,
+            height: 30,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: isChecked ? primaryColor : Colors.transparent,
+              border: Border.all(
+                color:
+                    isChecked ? primaryColor : Color.fromRGBO(255, 132, 0, 1),
+              ),
+            ),
+            child: Checkbox(
+              value: isChecked,
+              onChanged: (bool? value) {
+                setState(() {
+                  isChecked = value ?? false;
+                });
+              },
+              materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+              activeColor: Colors.transparent,
+              checkColor: Colors.white,
+              fillColor: MaterialStateProperty.resolveWith<Color>(
+                (Set<MaterialState> states) {
+                  if (states.contains(MaterialState.selected)) {
+                    return primaryColor;
+                  }
+                  return Color.fromRGBO(255, 252, 245, 1);
+                },
+              ),
+            ),
           ),
-          SizedBox(width: 10),
+          SizedBox(width: 20),
           Text(
             widget.title,
             style: TextStyle(
