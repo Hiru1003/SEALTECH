@@ -124,10 +124,10 @@ class _Location_PageState extends State<Location_Page> {
                   ),
                 ]),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Padding(
-                        padding: const EdgeInsets.only(left: 10),
+                        padding: const EdgeInsets.only(left: 0),
                         child: Image.asset(
                           'lib/images/location.png',
                           height: 200,
