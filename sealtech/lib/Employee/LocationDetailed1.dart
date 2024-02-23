@@ -221,3 +221,47 @@ class _LocationDetailed1_PageState extends State<LocationDetailed1_Page> {
                 ]))));
   }
 }
+
+class MyCheckBoxContainer extends StatefulWidget {
+  final String title;
+
+  MyCheckBoxContainer({required this.title});
+
+  @override
+  _MyCheckBoxContainerState createState() => _MyCheckBoxContainerState();
+}
+
+class _MyCheckBoxContainerState extends State<MyCheckBoxContainer> {
+  bool isChecked = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(16.0),
+      decoration: BoxDecoration(
+        color: const Color.fromARGB(255, 247, 219, 180),
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Row(
+        children: [
+          Checkbox(
+            value: isChecked,
+            onChanged: (bool? value) {
+              setState(() {
+                isChecked = value ?? false;
+              });
+            },
+          ),
+          SizedBox(width: 10),
+          Text(
+            widget.title,
+            style: TextStyle(
+              fontSize: 16,
+              color: Color.fromARGB(255, 96, 94, 94),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
