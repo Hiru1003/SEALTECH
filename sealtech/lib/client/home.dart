@@ -15,7 +15,7 @@ class Home extends StatelessWidget {
           children: [
             SizedBox(
               width: double.infinity,
-              height: 160,
+              height: 180,
               child: Container(
                 decoration: BoxDecoration(
                   image: DecorationImage(
@@ -26,7 +26,7 @@ class Home extends StatelessWidget {
                 child: Stack(
                   children: [
                     Positioned(
-                      top: 16,
+                      top: 8,
                       right: 16,
                       child: Align(
                         alignment: Alignment.topRight,
@@ -37,19 +37,18 @@ class Home extends StatelessWidget {
                               'Discover Unrivaled\nWaterproofing Services\nwith SealTech!',
                               style: TextStyle(
                                 color: Colors.black,
-                                fontSize: 24,
+                                fontSize: 20,
                                 fontWeight: FontWeight.bold,
                               ),
                               textAlign: TextAlign.right,
                             ),
-                            SizedBox(height: 16),
                             Button(
                               buttonText: 'More',
                               onPressed: (){},
                               enableIcon: true,
                               color: 'black',
                               isStroked: true,
-                              width: 100, // Decreased width to 100
+                              width: 150,
                             )
                           ],
                         ),
