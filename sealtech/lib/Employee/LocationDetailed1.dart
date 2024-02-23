@@ -245,58 +245,59 @@ class _MyCheckBoxContainerState extends State<MyCheckBoxContainer> {
   bool isChecked = false;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(5.0),
-      decoration: BoxDecoration(
-        color: bgColor,
-        borderRadius: BorderRadius.circular(10),
-        border: Border.all(
-          color: primaryColor,
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          isChecked = !isChecked;
+        });
+      },
+      child: Container(
+        padding: EdgeInsets.all(5.0),
+        decoration: BoxDecoration(
+          color: bgColor,
+          borderRadius: BorderRadius.circular(10),
+          border: Border.all(
+            color: primaryColor,
+          ),
         ),
-      ),
-      child: Row(
-        children: [
-          SizedBox(width: 20),
-          Container(
-            width: 30,
-            height: 30,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: isChecked ? primaryColor : Colors.transparent,
-              border: Border.all(
-                color:
-                    isChecked ? primaryColor : Color.fromRGBO(255, 132, 0, 1),
+        child: Row(
+          children: [
+            SizedBox(width: 30),
+            Container(
+              width: 25,
+              height: 25,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(
+                  color:
+                      isChecked ? primaryColor : Color.fromRGBO(255, 132, 0, 1),
+                  width: 2.0,
+                ),
+              ),
+              child: CircleAvatar(
+                radius: 15,
+                backgroundColor:
+                    isChecked ? primaryColor : Color.fromRGBO(255, 252, 245, 1),
+                child: isChecked
+                    ? Icon(
+                        Icons.check,
+                        color: Colors.white,
+                        size: 15.0,
+                      )
+                    : null,
               ),
             ),
-            child: Checkbox(
-              value: isChecked,
-              onChanged: (bool? value) {
-                setState(() {
-                  isChecked = value ?? false;
-                });
-              },
-              materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-              activeColor: Colors.transparent,
-              checkColor: Colors.white,
-              fillColor: MaterialStateProperty.resolveWith<Color>(
-                (Set<MaterialState> states) {
-                  if (states.contains(MaterialState.selected)) {
-                    return primaryColor;
-                  }
-                  return Color.fromRGBO(255, 252, 245, 1);
-                },
+            //
+            SizedBox(width: 30),
+            Text(
+              widget.title,
+              style: TextStyle(
+                fontSize: 14,
+                color: Color.fromARGB(255, 96, 94, 94),
               ),
             ),
-          ),
-          SizedBox(width: 20),
-          Text(
-            widget.title,
-            style: TextStyle(
-              fontSize: 16,
-              color: Color.fromARGB(255, 96, 94, 94),
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
