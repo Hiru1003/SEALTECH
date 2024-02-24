@@ -66,7 +66,7 @@ class _Holiday_PageState extends State<Holiday_Page> {
                   ),
                   Container(
                     height: 50,
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
                       color: secondaryColor,
                       borderRadius: BorderRadius.circular(10),
@@ -87,12 +87,12 @@ class _Holiday_PageState extends State<Holiday_Page> {
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Container(
                     height: 50,
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
                       color: secondaryColor,
                       borderRadius: BorderRadius.circular(10),
@@ -113,12 +113,12 @@ class _Holiday_PageState extends State<Holiday_Page> {
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Container(
                     height: 50,
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
                       color: secondaryColor,
                       borderRadius: BorderRadius.circular(10),
@@ -139,12 +139,12 @@ class _Holiday_PageState extends State<Holiday_Page> {
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Container(
                     height: 50,
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
                       color: secondaryColor,
                       borderRadius: BorderRadius.circular(10),
@@ -165,12 +165,12 @@ class _Holiday_PageState extends State<Holiday_Page> {
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Container(
                     height: 50,
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
                       color: secondaryColor,
                       borderRadius: BorderRadius.circular(10),
@@ -191,12 +191,12 @@ class _Holiday_PageState extends State<Holiday_Page> {
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Container(
                     height: 50,
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
                       color: secondaryColor,
                       borderRadius: BorderRadius.circular(10),
@@ -217,7 +217,7 @@ class _Holiday_PageState extends State<Holiday_Page> {
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                 ]))));
