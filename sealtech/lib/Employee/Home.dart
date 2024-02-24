@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sealtech/Employee/Holidays.dart';
 import 'package:sealtech/Employee/Location.dart';
 
 class Home_Page extends StatefulWidget {
@@ -145,7 +146,14 @@ class _Home_PageState extends State<Home_Page> {
           ),
           const SizedBox(height: 20),
           Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-            Container(
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Holiday_Page()),
+                );
+              },
+              child: Container(
                 width: 100,
                 height: 100,
                 decoration: BoxDecoration(
@@ -156,15 +164,18 @@ class _Home_PageState extends State<Home_Page> {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: const Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.calendar_month,
-                        color: Color.fromARGB(255, 235, 217, 87),
-                      ),
-                      SizedBox(height: 15),
-                      Text('Holidays'),
-                    ])),
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.calendar_month,
+                      color: Color.fromARGB(255, 235, 217, 87),
+                    ),
+                    SizedBox(height: 15),
+                    Text('Holidays'),
+                  ],
+                ),
+              ),
+            ),
             const SizedBox(width: 15),
             Container(
               width: 100,
