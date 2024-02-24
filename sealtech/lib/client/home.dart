@@ -56,7 +56,7 @@ class Home extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 16,),
+              SizedBox(height: 20,),
               Container(
                 alignment: Alignment.centerLeft,
                 padding: EdgeInsets.only(left: 16), // Add padding for left
@@ -83,9 +83,10 @@ class Home extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 5),
+              SizedBox(height: 5,),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
+                padding: EdgeInsets.only(left: 6), // Add left padding
                 child: Row(
                   children: [
                     ProductPage(imagePath: 'lib/images/pro1.png', title: 'Swimming Pool\n(8ft)', subtitle: 'Service', price: '2 million LKR +'),
@@ -95,6 +96,10 @@ class Home extends StatelessWidget {
                     ProductPage(imagePath: 'lib/images/pro1.png', title: 'Swimming Pool\n(8ft)', subtitle: 'Service', price: '2 million LKR +'),
                   ],
                 ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(left: 16),
+                child: Text('Category', style: GoogleFonts.inter(fontSize: 16, fontWeight: FontWeight.bold)),
               ),
             ],
           ),
