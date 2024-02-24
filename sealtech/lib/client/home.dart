@@ -56,7 +56,7 @@ class Home extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 20,),
+              SizedBox(height: 24,),
               Container(
                 alignment: Alignment.centerLeft,
                 padding: EdgeInsets.only(left: 16), // Add padding for left
@@ -97,6 +97,7 @@ class Home extends StatelessWidget {
                   ],
                 ),
               ),
+              SizedBox(height: 8,),
               Padding(
                 padding: EdgeInsets.only(left: 16),
                 child: Text('Category', style: GoogleFonts.inter(fontSize: 16, fontWeight: FontWeight.bold, color: primaryColor)),
@@ -112,14 +113,13 @@ class Home extends StatelessWidget {
                       color: primary25,
                       borderRadius: BorderRadius.circular(10),
                     ),
-                  ),
-                  SizedBox(width: 20),
-                  Container(
-                    width: 112,
-                    height: 100,
-                    decoration: BoxDecoration(
-                      color: primary25,
-                      borderRadius: BorderRadius.circular(10),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset('lib/images/catService.png'),
+                        SizedBox(height: 5,),
+                        Text('Services'),
+                      ],
                     ),
                   ),
                   SizedBox(width: 20),
@@ -129,6 +129,31 @@ class Home extends StatelessWidget {
                     decoration: BoxDecoration(
                       color: primary25,
                       borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset('lib/images/catTools.png'),
+                        SizedBox(height: 5,),
+                        Text('Tools'),
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 20),
+                  Container(
+                    width: 112,
+                    height: 100,
+                    decoration: BoxDecoration(
+                      color: primary25,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset('lib/images/catChemicals.png'),
+                        SizedBox(height: 5,),
+                        Text('Chemicals'),
+                      ],
                     ),
                   ),
                 ],
