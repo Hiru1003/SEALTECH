@@ -5,6 +5,8 @@ import 'package:sealtech/client/search.dart' as thirdTab;
 import 'package:sealtech/components/theme.dart';
 import 'package:sealtech/Employee/Home.dart' as firstTab;
 
+
+
 //Initial widget
 class NavbarE extends StatefulWidget {
   @override
@@ -36,6 +38,7 @@ class HomeWidget extends State<NavbarE> {
             thirdTab.Search(),
             fourthTab.Cart(),
           ],
+
         ),
       ),
       bottomNavigationBar: BottomAppBar(
