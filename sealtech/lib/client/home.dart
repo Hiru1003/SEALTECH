@@ -15,7 +15,7 @@ class Home extends StatelessWidget {
         ),
         body: SingleChildScrollView(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start, // Add this line
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
                 width: double.infinity,
@@ -59,7 +59,7 @@ class Home extends StatelessWidget {
               SizedBox(height: 24,),
               Container(
                 alignment: Alignment.centerLeft,
-                padding: EdgeInsets.only(left: 16), // Add padding for left
+                padding: EdgeInsets.only(left: 16),
                 child: RichText(
                   text: TextSpan(
                     style: GoogleFonts.inter(
@@ -86,7 +86,7 @@ class Home extends StatelessWidget {
               SizedBox(height: 5,),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
-                padding: EdgeInsets.only(left: 6), // Add left padding
+                padding: EdgeInsets.only(left: 6),
                 child: Row(
                   children: [
                     ProductPage(imagePath: 'lib/images/pro1.png', title: 'Swimming Pool\n(8ft)', subtitle: 'Service', price: '2 million LKR +'),
@@ -102,7 +102,7 @@ class Home extends StatelessWidget {
                 padding: EdgeInsets.only(left: 16),
                 child: Text('Category', style: GoogleFonts.inter(fontSize: 16, fontWeight: FontWeight.bold, color: primaryColor)),
               ),
-              SizedBox(height: 10), // Add this line
+              SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -157,6 +157,11 @@ class Home extends StatelessWidget {
                     ),
                   ),
                 ],
+              ),
+              SizedBox(height: 20),
+              Padding(
+                padding: EdgeInsets.only(left: 16),
+                child: Text('Feedback', style: GoogleFonts.inter(fontSize: 16, fontWeight: FontWeight.bold, color: primaryColor)),
               ),
             ],
           ),
