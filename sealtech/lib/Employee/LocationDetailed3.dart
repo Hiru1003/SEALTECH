@@ -143,6 +143,33 @@ class _LocationDetailed3_PageState extends State<LocationDetailed3_Page> {
                               ),
                             ],
                           ),
+                          SizedBox(height: 10),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              SizedBox(width: 15),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Icon(
+                                    Icons.construction,
+                                    color: Color.fromARGB(255, 59, 57, 57),
+                                    size: 20,
+                                  ),
+                                ],
+                              ),
+                              SizedBox(width: 35),
+                              Expanded(
+                                child: Text(
+                                  'Filtering Water',
+                                  style: TextStyle(
+                                    fontSize: 13,
+                                    color: Color.fromARGB(255, 96, 94, 94),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
                         ],
                       ),
                     ),
