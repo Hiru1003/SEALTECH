@@ -31,10 +31,11 @@ class CustomPage extends StatelessWidget {
               },
               color: 'black',
               isStroked: false,
-            )
+            ),
           ],
         ),
       ),
+      //bottomNavigationBar: Navigation(),
     );
   }
 }
