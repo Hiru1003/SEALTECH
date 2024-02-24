@@ -132,12 +132,93 @@ class _Holiday_PageState extends State<Holiday_Page> {
                               TextStyle(color: Color.fromARGB(255, 75, 74, 74)),
                         ),
                         Text(
-                          '12th March 2024',
+                          '11th March 2024',
                           style:
                               TextStyle(color: Color.fromARGB(255, 75, 74, 74)),
                         ),
                       ],
                     ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Container(
+                    height: 50,
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: secondaryColor,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: const Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'May Day',
+                          style:
+                              TextStyle(color: Color.fromARGB(255, 75, 74, 74)),
+                        ),
+                        Text(
+                          '1st May 2024',
+                          style:
+                              TextStyle(color: Color.fromARGB(255, 75, 74, 74)),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Container(
+                    height: 50,
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: secondaryColor,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: const Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Full Moon Poya Day',
+                          style:
+                              TextStyle(color: Color.fromARGB(255, 75, 74, 74)),
+                        ),
+                        Text(
+                          '20th March 2024',
+                          style:
+                              TextStyle(color: Color.fromARGB(255, 75, 74, 74)),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Container(
+                    height: 50,
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: secondaryColor,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: const Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Full Moon Poya Day',
+                          style:
+                              TextStyle(color: Color.fromARGB(255, 75, 74, 74)),
+                        ),
+                        Text(
+                          '20th June 2024',
+                          style:
+                              TextStyle(color: Color.fromARGB(255, 75, 74, 74)),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10,
                   ),
                 ]))));
   }
