@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sealtech/components/theme.dart';
 
 class Holiday_Page extends StatefulWidget {
   const Holiday_Page({
@@ -63,6 +64,29 @@ class _Holiday_PageState extends State<Holiday_Page> {
                           )),
                     ],
                   ),
+                  Container(
+                    height: 50,
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: secondaryColor,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: const Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Full Moon Poya Day',
+                          style:
+                              TextStyle(color: Color.fromARGB(255, 75, 74, 74)),
+                        ),
+                        Text(
+                          '20th January 2024',
+                          style:
+                              TextStyle(color: Color.fromARGB(255, 75, 74, 74)),
+                        ),
+                      ],
+                    ),
+                  )
                 ]))));
   }
 }
