@@ -201,6 +201,23 @@ class _LocationDetailed3_PageState extends State<LocationDetailed3_Page> {
                       ),
                     ),
                   ),
+                  const SizedBox(height: 25),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 15),
+                        child: Text(
+                          'Progress',
+                          style: GoogleFonts.poppins(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w500,
+                            color: const Color.fromARGB(255, 70, 66, 68),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ]))));
   }
 }
