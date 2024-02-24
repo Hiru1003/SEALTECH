@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sealtech/Employee/LocationDetailed1.dart';
 import 'package:sealtech/Employee/LocationDetailed2.dart';
+import 'package:sealtech/Employee/LocationDetailed3.dart';
 import 'package:sealtech/components/theme.dart';
 
 class Location_Page extends StatefulWidget {
@@ -240,8 +241,11 @@ class _Location_PageState extends State<Location_Page> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    // Handle tap action here
-                    // You can navigate to another screen or perform any action
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => LocationDetailed3_Page()),
+                    );
                   },
                   child: Container(
                     padding: EdgeInsets.all(10),

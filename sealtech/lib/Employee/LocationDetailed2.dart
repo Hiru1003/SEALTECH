@@ -161,7 +161,7 @@ class _LocationDetailed2_PageState extends State<LocationDetailed2_Page> {
                               SizedBox(width: 35),
                               Expanded(
                                 child: Text(
-                                  'Swimming Pool Construction',
+                                  'Filtering Water',
                                   style: TextStyle(
                                     fontSize: 13,
                                     color: Color.fromARGB(255, 96, 94, 94),
