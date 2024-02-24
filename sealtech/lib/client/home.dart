@@ -99,7 +99,39 @@ class Home extends StatelessWidget {
               ),
               Padding(
                 padding: EdgeInsets.only(left: 16),
-                child: Text('Category', style: GoogleFonts.inter(fontSize: 16, fontWeight: FontWeight.bold)),
+                child: Text('Category', style: GoogleFonts.inter(fontSize: 16, fontWeight: FontWeight.bold, color: primaryColor)),
+              ),
+              SizedBox(height: 10), // Add this line
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 112,
+                    height: 100,
+                    decoration: BoxDecoration(
+                      color: primary25,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                  SizedBox(width: 20),
+                  Container(
+                    width: 112,
+                    height: 100,
+                    decoration: BoxDecoration(
+                      color: primary25,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                  SizedBox(width: 20),
+                  Container(
+                    width: 112,
+                    height: 100,
+                    decoration: BoxDecoration(
+                      color: primary25,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
