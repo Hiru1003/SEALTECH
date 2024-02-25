@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sealtech/client/product.dart';
 
 class Service extends StatelessWidget {
   Widget build(BuildContext context) => Scaffold(
@@ -19,32 +20,14 @@ class Service extends StatelessWidget {
         ),
         body: Center(
           child: Container(
-            child: Text('This is Service page'),
-          ),
-        ),
-      );
-}
-
-class DummyPage extends StatelessWidget {
-  Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(
-          leading: IconButton(
-            icon: Icon(Icons.arrow_back),
-            onPressed: () {
-              Navigator.pop(context);
-            },
-          ),
-          title: Text('Dummy Page'),
-          actions: [
-            IconButton(
-              icon: Image.asset('assets/logoIconBlack.png'),
-              onPressed: () {},
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ProductPage(imagePath: 'lib/images/pro1.png', title: 'Swimming Pool\n(8ft)', subtitle: 'Service', price: '2 million LKR +'),
+                ProductPage(imagePath: 'lib/images/pro1.png', title: 'Swimming Pool\n(8ft)', subtitle: 'Service', price: '2 million LKR +'),
+                ProductPage(imagePath: 'lib/images/pro1.png', title: 'Swimming Pool\n(8ft)', subtitle: 'Service', price: '2 million LKR +'),
+              ],
             ),
-          ],
-        ),
-        body: Center(
-          child: Container(
-            child: Text('This is a dummy page'),
           ),
         ),
       );
