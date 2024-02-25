@@ -64,7 +64,6 @@ class _NewLocation_PageState extends State<NewLocation_Page> {
                           )),
                     ],
                   ),
-                  //email and password fields
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16),
                     child: TextField(
