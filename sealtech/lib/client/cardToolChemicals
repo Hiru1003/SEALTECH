@@ -117,7 +117,7 @@ class ToolsChemCardState extends State<ToolsChemCard> {
                     ),
                     SizedBox(height: 16,),
                     Button(
-                      buttonText: 'Contact Us',
+                      buttonText: 'Add to Cart',
                       onPressed: () {},
                       width: 380,
                       isStroked: false,

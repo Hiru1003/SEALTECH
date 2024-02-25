@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sealtech/client/cardToolChemicals.dart';
+import 'package:sealtech/client/cardToolChemicals';
 import 'package:sealtech/client/product.dart';
 
 class Chemical extends StatelessWidget {
