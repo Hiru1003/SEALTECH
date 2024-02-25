@@ -165,7 +165,12 @@ class Home extends StatelessWidget {
                 child: Text('Feedback', style: GoogleFonts.inter(fontSize: 16, fontWeight: FontWeight.bold, color: primaryColor)),
               ),
               SizedBox(height: 10),
-              FeedbackTemplate(title: 'fwh', additionalText: 'additionalText')
+              FeedbackTemplate(
+                title: 'Your title',
+                additionalText: 'Your additional text',
+                stars: [Icons.star, Icons.star, Icons.star, Icons.star_half,Icons.star_border],
+                comment: 'Your comment',
+              )
             ],
           ),
         ),
