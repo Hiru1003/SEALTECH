@@ -26,7 +26,7 @@ class Category extends StatelessWidget {
                 children: [
                   Image.asset(
                         'lib/images/catServiceImage.png',
-                        height: 280,
+                        height: 287,
                         width: 180,
                   ),
                 ],
@@ -44,10 +44,10 @@ class Category extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 16),
-                  Container(
+                  Image.asset(
+                    'lib/images/catChemicalsImage.png',
                     height: 130,
                     width: 180,
-                    color: Colors.green,
                   ),
                 ],
               ),
