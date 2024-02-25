@@ -60,23 +60,32 @@ class ServiceCardState extends State<ServiceCard> {
                 spacing: const EdgeInsets.all(4),
               ),
             ),
-            SizedBox(height:32),
-            Text(
-              'Swimming Pool (8ft)',
-              style: TextStyle(
-                color: primaryColor,
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
+            SizedBox(height: 16,),
+            Padding(
+              padding: EdgeInsets.all(16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    'Swimming Pool (8ft)',
+                    style: TextStyle(
+                      color: primaryColor,
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(height: 10,),
+                  Text(
+                    'Services',
+                    style: TextStyle(
+                      color: accentColor,
+                    ),
+                  ),
+                  SizedBox(height: 10,),
+                  Text('Lorem ipsum dolor sit amet consectetur. Risus sed et cras sit orci erat. Tortor eu nibh in amet tempor sapien. Et justo egestas leo consequat quis ipsum. Praesent bibendum aliquet massa at dignissim lacus lobortis quisque aliquam.\n\nTortor eu nibh in amet tempor sapien. Et justo egestas leo consequat quis ipsum. Praesent bibendum aliquet massa at dignissim lacus lobortis quisque aliquam.'),
+                ],
               ),
             ),
-            SizedBox(height: 10,),
-            Text(
-              'Services',
-              style: TextStyle(
-                color: accentColor,
-              ),
-            ),
-            Text('Third line of text'),
           ],
         ),
       );
