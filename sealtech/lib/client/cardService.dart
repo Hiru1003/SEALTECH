@@ -1,5 +1,6 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:sealtech/components/button.dart';
 import 'package:sealtech/components/theme.dart';
 
@@ -87,15 +88,41 @@ class ServiceCardState extends State<ServiceCard> {
                         color: accentColor,
                       ),
                     ),
+                    
                     SizedBox(height: 10,),
                     Text('Lorem ipsum dolor sit amet consectetur. Risus sed et cras sit orci erat. Tortor eu nibh in amet tempor sapien. Et justo egestas leo consequat quis ipsum. Praesent bibendum aliquet massa at dignissim lacus lobortis quisque aliquam.\n\nTortor eu nibh in amet tempor sapien. Et justo egestas leo consequat quis ipsum. Praesent bibendum aliquet massa at dignissim lacus lobortis quisque aliquam.'),
+                    SizedBox(height: 32,),
+                    RichText(
+                      text: TextSpan(
+                      style: GoogleFonts.inter(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      children: [
+                        TextSpan(
+                          text: 'Est. Price:',
+                          style: TextStyle(
+                            color: Colors.black,
+                          ),
+                        ),
+                        WidgetSpan(child: SizedBox(width: 20,)),
+                        TextSpan(
+                          text: '2 million LKR +',
+                          style: TextStyle(
+                            color: primaryColor,
+                          ),
+                        ),
+                      ],
+                    ),
+                    ),
+                    SizedBox(height: 16,),
                     Button(
-                                      buttonText: 'Contact Us',
-                                      onPressed: () {},
-                                      width: 380,
-                                      isStroked: false,
-                                      color: 'orange',
-                                    ),
+                      buttonText: 'Contact Us',
+                      onPressed: () {},
+                      width: 380,
+                      isStroked: false,
+                      color: 'orange',
+                    ),
                   ],
                 ),
               ),
