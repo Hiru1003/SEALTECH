@@ -22,7 +22,7 @@ class Category extends StatelessWidget {
           child: Container(
             child: Column(
               children: [
-                SizedBox(height: 16,),
+                const SizedBox(height: 16,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -86,7 +86,7 @@ class Category extends StatelessWidget {
                                   'Tools',
                                   style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: 24, // Increase the font size
+                                    fontSize: 24,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
@@ -139,7 +139,7 @@ class Category extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 16),
+                const SizedBox(height: 16),
                 Padding(
                   padding: const EdgeInsets.only(right: 336),
                   child: Text('Tools', style: GoogleFonts.inter(fontSize: 16, fontWeight: FontWeight.bold, color: primaryColor)),
@@ -158,7 +158,7 @@ class Category extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 16),
+                const SizedBox(height: 16),
                 Padding(
                   padding: const EdgeInsets.only(right: 296),
                   child: Text('Chemicals', style: GoogleFonts.inter(fontSize: 16, fontWeight: FontWeight.bold, color: primaryColor)),
