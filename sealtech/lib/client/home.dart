@@ -162,9 +162,35 @@ class Home extends StatelessWidget {
               SizedBox(height: 20),
               Padding(
                 padding: EdgeInsets.only(left: 16),
+                child: Text('Featured', style: GoogleFonts.inter(fontSize: 16, fontWeight: FontWeight.bold, color: primaryColor)),
+              ),
+              SizedBox(height: 10),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                padding: EdgeInsets.only(left: 6),
+                child: Row(
+                  children: [
+                    ProductPage(imagePath: 'lib/images/pro1.png', title: 'Waterproofing\nSolution', subtitle: 'Product', price: '1 million LKR +'),
+                    ProductPage(imagePath: 'lib/images/pro1.png', title: 'Waterproofing\nSolution', subtitle: 'Product', price: '1 million LKR +'),
+                    ProductPage(imagePath: 'lib/images/pro1.png', title: 'Waterproofing\nSolution', subtitle: 'Product', price: '1 million LKR +'),
+                    ProductPage(imagePath: 'lib/images/pro1.png', title: 'Waterproofing\nSolution', subtitle: 'Product', price: '1 million LKR +'),
+                    ProductPage(imagePath: 'lib/images/pro1.png', title: 'Waterproofing\nSolution', subtitle: 'Product', price: '1 million LKR +'),
+                  ],
+                ),
+              ),
+              SizedBox(height: 20),
+              Padding(
+                padding: EdgeInsets.only(left: 16),
                 child: Text('Feedback', style: GoogleFonts.inter(fontSize: 16, fontWeight: FontWeight.bold, color: primaryColor)),
               ),
               SizedBox(height: 10),
+              FeedbackTemplate(
+                title: 'Your title',
+                additionalText: 'Your additional text',
+                stars: [Icons.star, Icons.star, Icons.star, Icons.star_half,Icons.star_border],
+                comment: 'Your comment',
+              ),
+              SizedBox(height: 16,),
               FeedbackTemplate(
                 title: 'Your title',
                 additionalText: 'Your additional text',
