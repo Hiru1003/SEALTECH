@@ -17,9 +17,38 @@ class Category extends StatelessWidget {
             ),
           ],
         ),
-        body: Center(
-          child: Container(
-            child: Text('This is Category page'),
+        body: Container(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    height: 280,
+                    width: 180,
+                    color: Colors.blue,
+                  ),
+                ],
+              ),
+              SizedBox(width: 16),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    height: 130,
+                    width: 180,
+                    color: Colors.red,
+                  ),
+                  SizedBox(height: 16),
+                  Container(
+                    height: 130,
+                    width: 180,
+                    color: Colors.green,
+                  ),
+                ],
+              ),
+            ],
           ),
         ),
       );
