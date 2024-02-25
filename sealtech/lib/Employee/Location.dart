@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sealtech/Employee/Addnewlocation.dart';
 import 'package:sealtech/Employee/LocationDetailed1.dart';
 import 'package:sealtech/Employee/LocationDetailed2.dart';
 import 'package:sealtech/Employee/LocationDetailed3.dart';
@@ -58,26 +59,35 @@ class _Location_PageState extends State<Location_Page> {
               children: [
                 SizedBox(height: 10),
                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  Container(
-                    width: 85,
-                    height: 40,
-                    decoration: BoxDecoration(
-                      color: primary50,
-                      border: Border.all(
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => NewLocation_Page()),
+                      );
+                    },
+                    child: Container(
+                      width: 85,
+                      height: 40,
+                      decoration: BoxDecoration(
                         color: primary50,
-                      ),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: const Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(
-                          Icons.add,
-                          color: Color.fromARGB(255, 82, 82, 80),
+                        border: Border.all(
+                          color: primary50,
                         ),
-                        SizedBox(width: 10),
-                        Text('New'),
-                      ],
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: const Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.add,
+                            color: Color.fromARGB(255, 82, 82, 80),
+                          ),
+                          SizedBox(width: 10),
+                          Text('New'),
+                        ],
+                      ),
                     ),
                   ),
                   const SizedBox(width: 10),
