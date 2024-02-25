@@ -160,9 +160,31 @@ class Home extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 20),
-              Padding(
+              Container(
+                alignment: Alignment.centerLeft,
                 padding: EdgeInsets.only(left: 16),
-                child: Text('Featured', style: GoogleFonts.inter(fontSize: 16, fontWeight: FontWeight.bold, color: primaryColor)),
+                child: RichText(
+                  text: TextSpan(
+                    style: GoogleFonts.inter(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    children: [
+                      TextSpan(
+                        text: 'Featured',
+                        style: TextStyle(
+                          color: primaryColor,
+                        ),
+                      ),
+                      TextSpan(
+                        text: ' Services and Essentials',
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ),
               SizedBox(height: 10),
               SingleChildScrollView(
