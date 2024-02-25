@@ -17,6 +17,14 @@ class Button extends StatelessWidget {
     this.width = 400,
   });
 
+  Button.white({ // Add a new constructor for white color button
+    required this.buttonText,
+    this.enableIcon = true,
+    required this.onPressed,
+    this.isStroked = false,
+    this.width = 400,
+  }) : color = 'white';
+
   @override
   Widget build(BuildContext context) {
     Color buttonColor;
@@ -25,8 +33,8 @@ class Button extends StatelessWidget {
       buttonColor = Colors.black;
       borderColor = Colors.black;
     } else {
-      buttonColor = Color(0xFFFF8400);
-      borderColor = Color(0xFFFF8400);
+      buttonColor = color == 'white' ? Colors.white : Color(0xFFFF8400);
+      borderColor = color == 'white' ? Colors.white : Color(0xFFFF8400);
     }
 
     return Padding(
@@ -44,14 +52,25 @@ class Button extends StatelessWidget {
           ),
           child: SizedBox(
             height: 50,
-            width: width, // Use the width parameter here
+            width: width,
             child: Center(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Text(buttonText, style: TextStyle(color: isStroked ? buttonColor : Colors.white, fontSize: 16, fontWeight: FontWeight.w500)),
+                  Text(
+                    buttonText,
+                    style: TextStyle(
+                      color: isStroked ? buttonColor : Colors.white,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
                   if (enableIcon) SizedBox(width: 10),
-                  if (enableIcon) Icon(Icons.arrow_forward, color: isStroked ? buttonColor : Colors.white),
+                  if (enableIcon)
+                    Icon(
+                      Icons.arrow_forward,
+                      color: isStroked ? buttonColor : Colors.white,
+                    ),
                 ],
               ),
             ),

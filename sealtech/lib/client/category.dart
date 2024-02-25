@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sealtech/components/button.dart';
 
 class Category extends StatelessWidget {
   Widget build(BuildContext context) => Scaffold(
@@ -24,10 +25,41 @@ class Category extends StatelessWidget {
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset(
+                  Stack(
+                    children: [
+                      Image.asset(
                         'lib/images/catServiceImage.png',
                         height: 287,
                         width: 180,
+                      ),
+                      Positioned(
+                        bottom: 16,
+                        left: 16,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Service',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 24, // Increase the font size
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            SizedBox(height: 8),
+                            Text(
+                              'Contact us',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                              ),
+                            ),
+                            SizedBox(height: 8),
+                            Button(buttonText: 'Contact Us', onPressed: (){}, width: 150, isStroked: true, color: 'white'),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),
@@ -38,16 +70,48 @@ class Category extends StatelessWidget {
                   Container(
                     height: 130,
                     width: 180,
-                    child: Image.asset(
-                      'lib/images/catToolsImage.png',
-                      fit: BoxFit.cover,
+                    child: Stack(
+                      children: [
+                        Image.asset(
+                          'lib/images/catToolsImage.png',
+                          fit: BoxFit.cover,
+                        ),
+                        Positioned(
+                          bottom: 16,
+                          left: 16,
+                          child: Text(
+                            'Tools',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 24, // Increase the font size
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                   SizedBox(height: 16),
-                  Image.asset(
-                    'lib/images/catChemicalsImage.png',
-                    height: 130,
-                    width: 180,
+                  Stack(
+                    children: [
+                      Image.asset(
+                        'lib/images/catChemicalsImage.png',
+                        height: 130,
+                        width: 180,
+                      ),
+                      Positioned(
+                        bottom: 16,
+                        left: 16,
+                        child: Text(
+                          'Chemicals',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),
