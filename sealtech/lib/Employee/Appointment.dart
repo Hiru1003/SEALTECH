@@ -3,16 +3,16 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:sealtech/components/button.dart';
 import 'package:sealtech/components/theme.dart';
 
-class NewLocation_Page extends StatefulWidget {
-  const NewLocation_Page({
+class Appoinment_Page extends StatefulWidget {
+  const Appoinment_Page({
     super.key,
   });
 
   @override
-  State<NewLocation_Page> createState() => _NewLocation_PageState();
+  State<Appoinment_Page> createState() => _Appoinment_PageState();
 }
 
-class _NewLocation_PageState extends State<NewLocation_Page> {
+class _Appoinment_PageState extends State<Appoinment_Page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +23,7 @@ class _NewLocation_PageState extends State<NewLocation_Page> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Text(
-                  'Ongoing Locations',
+                  'Appointment',
                   style: GoogleFonts.poppins(
                       textStyle: Theme.of(context).textTheme.displayLarge,
                       color: const Color.fromARGB(255, 70, 66, 68),
@@ -59,7 +59,7 @@ class _NewLocation_PageState extends State<NewLocation_Page> {
                       Padding(
                           padding: const EdgeInsets.only(left: 0),
                           child: Image.asset(
-                            'lib/images/Locationdetailed.png',
+                            'lib/images/Appointment.png',
                             height: 200,
                           )),
                     ],
@@ -68,7 +68,7 @@ class _NewLocation_PageState extends State<NewLocation_Page> {
                     padding: const EdgeInsets.symmetric(horizontal: 16),
                     child: TextField(
                       decoration: InputDecoration(
-                        labelText: '   Title of the construction',
+                        labelText: ' Your Name',
                         labelStyle: const TextStyle(
                           color: Colors.grey,
                           fontSize: 16,
@@ -86,7 +86,7 @@ class _NewLocation_PageState extends State<NewLocation_Page> {
                     child: TextField(
                       obscureText: true,
                       decoration: InputDecoration(
-                        labelText: '   Deadline',
+                        labelText: ' Who do you want to make appointment with?',
                         labelStyle: const TextStyle(
                           color: Colors.grey,
                           fontSize: 16,
@@ -100,11 +100,11 @@ class _NewLocation_PageState extends State<NewLocation_Page> {
                   ),
                   const SizedBox(height: 20),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    padding: EdgeInsets.symmetric(horizontal: 16),
                     child: TextField(
                       obscureText: true,
                       decoration: InputDecoration(
-                        labelText: '   Location of site',
+                        labelText: ' Available date',
                         labelStyle: const TextStyle(
                           color: Colors.grey,
                           fontSize: 16,
@@ -118,11 +118,11 @@ class _NewLocation_PageState extends State<NewLocation_Page> {
                   ),
                   const SizedBox(height: 20),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    padding: EdgeInsets.symmetric(horizontal: 16),
                     child: TextField(
                       obscureText: true,
                       decoration: InputDecoration(
-                        labelText: '   Due payment',
+                        labelText: ' Available time',
                         labelStyle: const TextStyle(
                           color: Colors.grey,
                           fontSize: 16,
@@ -135,7 +135,24 @@ class _NewLocation_PageState extends State<NewLocation_Page> {
                     ),
                   ),
                   const SizedBox(height: 20),
-                  //sign in button
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 16),
+                    child: TextField(
+                      obscureText: true,
+                      decoration: InputDecoration(
+                        labelText: ' Duration',
+                        labelStyle: const TextStyle(
+                          color: Colors.grey,
+                          fontSize: 16,
+                        ),
+                        border: const UnderlineInputBorder(),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: primaryColor),
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 20),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16),
                     child: Button(
