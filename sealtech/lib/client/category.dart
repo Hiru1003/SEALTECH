@@ -24,10 +24,10 @@ class Category extends StatelessWidget {
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                    height: 280,
-                    width: 180,
-                    color: Colors.blue,
+                  Image.asset(
+                        'lib/images/catServiceImage.png',
+                        height: 280,
+                        width: 180,
                   ),
                 ],
               ),
