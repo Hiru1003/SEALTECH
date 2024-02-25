@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sealtech/client/chemicals.dart';
 import 'package:sealtech/client/feedback.dart';
 import 'package:sealtech/client/product.dart';
+import 'package:sealtech/client/services.dart';
+import 'package:sealtech/client/tools.dart';
 import 'package:sealtech/components/button.dart';
 import 'package:sealtech/components/theme.dart';
 
@@ -107,54 +110,78 @@ class Home extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                    width: 112,
-                    height: 100,
-                    decoration: BoxDecoration(
-                      color: primary25,
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset('lib/images/catService.png'),
-                        const SizedBox(height: 5,),
-                        const Text('Services'),
-                      ],
-                    ),
-                  ),
-                  const SizedBox(width: 20),
-                  Container(
-                    width: 112,
-                    height: 100,
-                    decoration: BoxDecoration(
-                      color: primary25,
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset('lib/images/catTools.png'),
-                        const SizedBox(height: 5,),
-                        const Text('Tools'),
-                      ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Service()),
+                      );
+                    },
+                    child: Container(
+                      width: 112,
+                      height: 100,
+                      decoration: BoxDecoration(
+                        color: primary25,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset('lib/images/catService.png'),
+                          const SizedBox(height: 5,),
+                          const Text('Services'),
+                        ],
+                      ),
                     ),
                   ),
                   const SizedBox(width: 20),
-                  Container(
-                    width: 112,
-                    height: 100,
-                    decoration: BoxDecoration(
-                      color: primary25,
-                      borderRadius: BorderRadius.circular(10),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Tool()),
+                      );
+                    },
+                    child: Container(
+                      width: 112,
+                      height: 100,
+                      decoration: BoxDecoration(
+                        color: primary25,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset('lib/images/catTools.png'),
+                          const SizedBox(height: 5,),
+                          const Text('Tools'),
+                        ],
+                      ),
                     ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset('lib/images/catChemicals.png'),
-                        const SizedBox(height: 5,),
-                        const Text('Chemicals'),
-                      ],
+                  ),
+                  const SizedBox(width: 20),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Chemical()),
+                      );
+                    },
+                    child: Container(
+                      width: 112,
+                      height: 100,
+                      decoration: BoxDecoration(
+                        color: primary25,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset('lib/images/catChemicals.png'),
+                          const SizedBox(height: 5,),
+                          const Text('Chemicals'),
+                        ],
+                      ),
                     ),
                   ),
                 ],
