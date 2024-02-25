@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sealtech/client/feedback.dart';
+import 'package:sealtech/client/product.dart';
 import 'package:sealtech/components/button.dart';
 import 'package:sealtech/components/theme.dart';
 
@@ -12,8 +14,9 @@ class Home extends StatelessWidget {
           ),
           backgroundColor: primary75,
         ),
-        body: Container(
+        body: SingleChildScrollView(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
                 width: double.infinity,
@@ -54,10 +57,10 @@ class Home extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 16,),
+              SizedBox(height: 24,),
               Container(
                 alignment: Alignment.centerLeft,
-                padding: EdgeInsets.only(left: 16), // Add padding for left
+                padding: EdgeInsets.only(left: 16),
                 child: RichText(
                   text: TextSpan(
                     style: GoogleFonts.inter(
@@ -81,6 +84,88 @@ class Home extends StatelessWidget {
                   ),
                 ),
               ),
+              SizedBox(height: 5,),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                padding: EdgeInsets.only(left: 6),
+                child: Row(
+                  children: [
+                    ProductPage(imagePath: 'lib/images/pro1.png', title: 'Swimming Pool\n(8ft)', subtitle: 'Service', price: '2 million LKR +'),
+                    ProductPage(imagePath: 'lib/images/pro1.png', title: 'Swimming Pool\n(8ft)', subtitle: 'Service', price: '2 million LKR +'),
+                    ProductPage(imagePath: 'lib/images/pro1.png', title: 'Swimming Pool\n(8ft)', subtitle: 'Service', price: '2 million LKR +'),
+                    ProductPage(imagePath: 'lib/images/pro1.png', title: 'Swimming Pool\n(8ft)', subtitle: 'Service', price: '2 million LKR +'),
+                    ProductPage(imagePath: 'lib/images/pro1.png', title: 'Swimming Pool\n(8ft)', subtitle: 'Service', price: '2 million LKR +'),
+                  ],
+                ),
+              ),
+              SizedBox(height: 8,),
+              Padding(
+                padding: EdgeInsets.only(left: 16),
+                child: Text('Category', style: GoogleFonts.inter(fontSize: 16, fontWeight: FontWeight.bold, color: primaryColor)),
+              ),
+              SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 112,
+                    height: 100,
+                    decoration: BoxDecoration(
+                      color: primary25,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset('lib/images/catService.png'),
+                        SizedBox(height: 5,),
+                        Text('Services'),
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 20),
+                  Container(
+                    width: 112,
+                    height: 100,
+                    decoration: BoxDecoration(
+                      color: primary25,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset('lib/images/catTools.png'),
+                        SizedBox(height: 5,),
+                        Text('Tools'),
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 20),
+                  Container(
+                    width: 112,
+                    height: 100,
+                    decoration: BoxDecoration(
+                      color: primary25,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset('lib/images/catChemicals.png'),
+                        SizedBox(height: 5,),
+                        Text('Chemicals'),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 20),
+              Padding(
+                padding: EdgeInsets.only(left: 16),
+                child: Text('Feedback', style: GoogleFonts.inter(fontSize: 16, fontWeight: FontWeight.bold, color: primaryColor)),
+              ),
+              SizedBox(height: 10),
+              FeedbackTemplate(title: 'fwh', additionalText: 'additionalText')
             ],
           ),
         ),
