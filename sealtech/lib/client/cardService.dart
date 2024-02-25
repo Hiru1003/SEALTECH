@@ -61,9 +61,16 @@ class ServiceCardState extends State<ServiceCard> {
               ),
             ),
             SizedBox(height:32),
-             Text('First line of text'),
-             Text('Third line of text'),
-             Text('Third line of text'),
+            Text(
+              'Swimming Pool (8ft)',
+              style: TextStyle(
+                color: primaryColor,
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Text('Third line of text'),
+            Text('Third line of text'),
           ],
         ),
       );
