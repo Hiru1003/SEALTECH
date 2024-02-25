@@ -153,6 +153,17 @@ class _Appoinment_PageState extends State<Appoinment_Page> {
                     ),
                   ),
                   const SizedBox(height: 20),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    child: Button(
+                      buttonText: 'Submit',
+                      onPressed: () {},
+                      color: 'orange',
+                      enableIcon: false,
+                      isStroked: false,
+                    ),
+                  ),
+                  const SizedBox(height: 20),
                 ]))));
   }
 }
