@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sealtech/client/product.dart';
 import 'package:sealtech/client/services.dart';
+import 'package:sealtech/client/tools.dart';
 import 'package:sealtech/components/button.dart';
 import 'package:sealtech/components/theme.dart';
 
@@ -85,28 +86,36 @@ class Category extends StatelessWidget {
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Container(
-                          height: 130,
-                          width: 180,
-                          child: Stack(
-                            children: [
-                              Image.asset(
-                                'lib/images/catToolsImage.png',
-                                fit: BoxFit.cover,
-                              ),
-                              const Positioned(
-                                bottom: 16,
-                                left: 16,
-                                child: Text(
-                                  'Tools',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 24,
-                                    fontWeight: FontWeight.bold,
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => Tool()),
+                          );
+                          },
+                          child: Container(
+                            height: 130,
+                            width: 180,
+                            child: Stack(
+                              children: [
+                                Image.asset(
+                                  'lib/images/catToolsImage.png',
+                                  fit: BoxFit.cover,
+                                ),
+                                const Positioned(
+                                  bottom: 16,
+                                  left: 16,
+                                  child: Text(
+                                    'Tools',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 24,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                         const SizedBox(height: 16),
