@@ -38,7 +38,10 @@ class Category extends StatelessWidget {
                   Container(
                     height: 130,
                     width: 180,
-                    color: Colors.red,
+                    child: Image.asset(
+                      'lib/images/catToolsImage.png',
+                      fit: BoxFit.cover,
+                    ),
                   ),
                   SizedBox(height: 16),
                   Container(
