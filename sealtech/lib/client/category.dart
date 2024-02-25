@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sealtech/client/chemicals.dart';
 import 'package:sealtech/client/product.dart';
 import 'package:sealtech/client/services.dart';
 import 'package:sealtech/client/tools.dart';
@@ -52,7 +53,7 @@ class Category extends StatelessWidget {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     const Text(
-                                      'Service',
+                                      'Services',
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontSize: 24,
@@ -91,7 +92,7 @@ class Category extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(builder: (context) => Tool()),
-                          );
+                            );
                           },
                           child: Container(
                             height: 130,
@@ -119,26 +120,34 @@ class Category extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(height: 16),
-                        Stack(
-                          children: [
-                            Image.asset(
-                              'lib/images/catChemicalsImage.png',
-                              height: 130,
-                              width: 180,
-                            ),
-                            const Positioned(
-                              bottom: 16,
-                              left: 16,
-                              child: Text(
-                                'Chemicals',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 24,
-                                  fontWeight: FontWeight.bold,
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => Chemical()),
+                            );
+                          },
+                          child: Stack(
+                            children: [
+                              Image.asset(
+                                'lib/images/catChemicalsImage.png',
+                                height: 130,
+                                width: 180,
+                              ),
+                              const Positioned(
+                                bottom: 16,
+                                left: 16,
+                                child: Text(
+                                  'Chemicals',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ],
                     ),
