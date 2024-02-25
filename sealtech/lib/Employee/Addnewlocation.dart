@@ -87,11 +87,29 @@ class _NewLocation_PageState extends State<NewLocation_Page> {
                       obscureText: true,
                       decoration: InputDecoration(
                         labelText: '   Deadline',
-                        labelStyle: TextStyle(
+                        labelStyle: const TextStyle(
                           color: Colors.grey,
                           fontSize: 16,
                         ),
-                        border: UnderlineInputBorder(),
+                        border: const UnderlineInputBorder(),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: primaryColor),
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 20),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    child: TextField(
+                      obscureText: true,
+                      decoration: InputDecoration(
+                        labelText: '   Location of site',
+                        labelStyle: const TextStyle(
+                          color: Colors.grey,
+                          fontSize: 16,
+                        ),
+                        border: const UnderlineInputBorder(),
                         focusedBorder: UnderlineInputBorder(
                           borderSide: BorderSide(color: primaryColor),
                         ),
