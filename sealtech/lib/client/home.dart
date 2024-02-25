@@ -21,7 +21,7 @@ class Home extends StatelessWidget {
               Container(
                 width: double.infinity,
                 height: 180,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage('lib/images/home_client.png',),
                     fit: BoxFit.cover,
@@ -30,11 +30,11 @@ class Home extends StatelessWidget {
                 child: Align(
                   alignment: Alignment.topRight,
                   child: Padding(
-                    padding: EdgeInsets.only(right: 16),
+                    padding: const EdgeInsets.only(right: 16),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
-                        SizedBox(height: 8,),
+                        const SizedBox(height: 8,),
                         Text(
                           'Discover Unrivaled\nWaterproofing Services\nwith SealTech!',
                           style: GoogleFonts.inter(
@@ -57,10 +57,10 @@ class Home extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 24,),
+              const SizedBox(height: 24,),
               Container(
                 alignment: Alignment.centerLeft,
-                padding: EdgeInsets.only(left: 16),
+                padding: const EdgeInsets.only(left: 16),
                 child: RichText(
                   text: TextSpan(
                     style: GoogleFonts.inter(
@@ -74,7 +74,7 @@ class Home extends StatelessWidget {
                           color: primaryColor,
                         ),
                       ),
-                      TextSpan(
+                      const TextSpan(
                         text: ' Services and Essentials',
                         style: TextStyle(
                           color: Colors.black,
@@ -84,8 +84,8 @@ class Home extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 5,),
-              SingleChildScrollView(
+              const SizedBox(height: 5,),
+              const SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 padding: EdgeInsets.only(left: 6),
                 child: Row(
@@ -98,12 +98,12 @@ class Home extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 8,),
+              const SizedBox(height: 8,),
               Padding(
-                padding: EdgeInsets.only(left: 16),
+                padding: const EdgeInsets.only(left: 16),
                 child: Text('Category', style: GoogleFonts.inter(fontSize: 16, fontWeight: FontWeight.bold, color: primaryColor)),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -118,12 +118,12 @@ class Home extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Image.asset('lib/images/catService.png'),
-                        SizedBox(height: 5,),
-                        Text('Services'),
+                        const SizedBox(height: 5,),
+                        const Text('Services'),
                       ],
                     ),
                   ),
-                  SizedBox(width: 20),
+                  const SizedBox(width: 20),
                   Container(
                     width: 112,
                     height: 100,
@@ -135,12 +135,12 @@ class Home extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Image.asset('lib/images/catTools.png'),
-                        SizedBox(height: 5,),
-                        Text('Tools'),
+                        const SizedBox(height: 5,),
+                        const Text('Tools'),
                       ],
                     ),
                   ),
-                  SizedBox(width: 20),
+                  const SizedBox(width: 20),
                   Container(
                     width: 112,
                     height: 100,
@@ -152,20 +152,73 @@ class Home extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Image.asset('lib/images/catChemicals.png'),
-                        SizedBox(height: 5,),
-                        Text('Chemicals'),
+                        const SizedBox(height: 5,),
+                        const Text('Chemicals'),
                       ],
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
+              Container(
+                alignment: Alignment.centerLeft,
+                padding: const EdgeInsets.only(left: 16),
+                child: RichText(
+                  text: TextSpan(
+                    style: GoogleFonts.inter(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    children: [
+                      TextSpan(
+                        text: 'Featured',
+                        style: TextStyle(
+                          color: primaryColor,
+                        ),
+                      ),
+                      const TextSpan(
+                        text: ' Services and Essentials',
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(height: 10),
+              const SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                padding: EdgeInsets.only(left: 6),
+                child: Row(
+                  children: [
+                    ProductPage(imagePath: 'lib/images/pro1.png', title: 'Waterproofing\nSolution', subtitle: 'Product', price: '1 million LKR +'),
+                    ProductPage(imagePath: 'lib/images/pro1.png', title: 'Waterproofing\nSolution', subtitle: 'Product', price: '1 million LKR +'),
+                    ProductPage(imagePath: 'lib/images/pro1.png', title: 'Waterproofing\nSolution', subtitle: 'Product', price: '1 million LKR +'),
+                    ProductPage(imagePath: 'lib/images/pro1.png', title: 'Waterproofing\nSolution', subtitle: 'Product', price: '1 million LKR +'),
+                    ProductPage(imagePath: 'lib/images/pro1.png', title: 'Waterproofing\nSolution', subtitle: 'Product', price: '1 million LKR +'),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 20),
               Padding(
-                padding: EdgeInsets.only(left: 16),
+                padding: const EdgeInsets.only(left: 16),
                 child: Text('Feedback', style: GoogleFonts.inter(fontSize: 16, fontWeight: FontWeight.bold, color: primaryColor)),
               ),
-              SizedBox(height: 10),
-              FeedbackTemplate(title: 'fwh', additionalText: 'additionalText')
+              const SizedBox(height: 10),
+              FeedbackTemplate(
+                title: 'Your title',
+                additionalText: 'Your additional text',
+                stars: [Icons.star, Icons.star, Icons.star, Icons.star_half,Icons.star_border],
+                comment: 'Your comment',
+              ),
+              const SizedBox(height: 16,),
+              FeedbackTemplate(
+                title: 'Your title',
+                additionalText: 'Your additional text',
+                stars: [Icons.star, Icons.star, Icons.star, Icons.star_half,Icons.star_border],
+                comment: 'Your comment',
+              )
             ],
           ),
         ),
