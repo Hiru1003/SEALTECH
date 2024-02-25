@@ -6,6 +6,5 @@ class Cart extends StatelessWidget{
     child:  Container(
       child: Text('This is Carts page'),
     )
-   
   );
 }
