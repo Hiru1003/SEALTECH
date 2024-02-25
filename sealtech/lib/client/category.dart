@@ -46,16 +46,15 @@ class Category extends StatelessWidget {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            SizedBox(height: 8),
                             Text(
-                              'Contact us',
+                              'Contact SEALTECH\nfor unbeatable\nwaterproofing solutions',
                               style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 16,
+                                fontSize: 11,
                               ),
                             ),
-                            SizedBox(height: 8),
                             Button(buttonText: 'Contact Us', onPressed: (){}, width: 150, isStroked: true, color: 'white'),
+                            SizedBox(height: 16,)
                           ],
                         ),
                       ),
