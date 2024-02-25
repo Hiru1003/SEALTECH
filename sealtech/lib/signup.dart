@@ -118,7 +118,7 @@ class SignUpPage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: Button(
-                  buttonText: 'Sign In',
+                  buttonText: 'Sign Up',
                   onPressed: () {
                     
                   },
