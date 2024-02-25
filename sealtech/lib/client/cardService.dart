@@ -18,8 +18,21 @@ class ServiceCard extends StatelessWidget {
           ],
         ),
         body: Center(
-          child: Container(
-            child: Text('This is ServiceCards page'),
+          child: Column(
+            children: [
+              Expanded(
+                child: PageView(
+                  children: [
+                    Image.asset('lib/images/proInfo.png'),
+                    Image.asset('lib/images/proInfo.png'),
+                    Image.asset('lib/images/proInfo.png'),
+                  ],
+                ),
+              ),
+              Container(
+                child: Text('This is ServiceCards page'),
+              ),
+            ],
           ),
         ),
       );
