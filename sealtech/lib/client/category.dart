@@ -119,7 +119,7 @@ class Category extends StatelessWidget {
                             ),
                           ),
                         ),
-                        const SizedBox(height: 16),
+                        const SizedBox(height: 12),
                         GestureDetector(
                           onTap: () {
                             Navigator.push(
