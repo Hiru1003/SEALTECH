@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sealtech/Employee/Addnewlocation.dart';
+import 'package:sealtech/Employee/LocationDetailed1.dart';
+import 'package:sealtech/Employee/LocationDetailed2.dart';
+import 'package:sealtech/Employee/LocationDetailed3.dart';
+import 'package:sealtech/Employee/LocationDetailed4.dart';
 import 'package:sealtech/components/theme.dart';
 
 class Location_Page extends StatefulWidget {
@@ -54,26 +59,35 @@ class _Location_PageState extends State<Location_Page> {
               children: [
                 SizedBox(height: 10),
                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  Container(
-                    width: 85,
-                    height: 40,
-                    decoration: BoxDecoration(
-                      color: primary50,
-                      border: Border.all(
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => NewLocation_Page()),
+                      );
+                    },
+                    child: Container(
+                      width: 85,
+                      height: 40,
+                      decoration: BoxDecoration(
                         color: primary50,
-                      ),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: const Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(
-                          Icons.add,
-                          color: Color.fromARGB(255, 82, 82, 80),
+                        border: Border.all(
+                          color: primary50,
                         ),
-                        SizedBox(width: 10),
-                        Text('New'),
-                      ],
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: const Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.add,
+                            color: Color.fromARGB(255, 82, 82, 80),
+                          ),
+                          SizedBox(width: 10),
+                          Text('New'),
+                        ],
+                      ),
                     ),
                   ),
                   const SizedBox(width: 10),
@@ -124,178 +138,218 @@ class _Location_PageState extends State<Location_Page> {
                   ),
                 ]),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Padding(
-                        padding: const EdgeInsets.only(left: 10),
+                        padding: const EdgeInsets.only(left: 0),
                         child: Image.asset(
                           'lib/images/location.png',
                           height: 200,
                         ))
                   ],
                 ),
-                Container(
-                  padding: EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    color: primary25,
-                    borderRadius: BorderRadius.circular(10),
-                    border: Border.all(color: primary25),
-                  ),
-                  child: const Row(
-                    children: [
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Swimming Pool Construction',
-                              style: TextStyle(
-                                  fontSize: 15, fontWeight: FontWeight.w500),
-                            ),
-                            SizedBox(
-                              height: 8,
-                            ),
-                            Text(
-                              'Deadline : 30th of April 2024',
-                              style: TextStyle(
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => LocationDetailed1_Page()),
+                    );
+                  },
+                  child: Container(
+                    padding: const EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: primary25,
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: primary25),
+                    ),
+                    child: const Row(
+                      children: [
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Swimming Pool Construction',
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                              SizedBox(height: 8),
+                              Text(
+                                'Deadline : 30th of April 2024',
+                                style: TextStyle(
                                   fontSize: 13,
-                                  color: Color.fromARGB(255, 96, 94, 94)),
-                            ),
-                          ],
+                                  color: Color.fromARGB(255, 96, 94, 94),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
-                      ),
-                      Icon(
-                        Icons.keyboard_arrow_right_outlined,
-                        color: Color.fromARGB(255, 59, 57, 57),
-                        size: 30,
-                      ),
-                    ],
+                        Icon(
+                          Icons.keyboard_arrow_right_outlined,
+                          color: Color.fromARGB(255, 59, 57, 57),
+                          size: 30,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 13,
                 ),
-                Container(
-                  padding: EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    color: secondaryColor,
-                    borderRadius: BorderRadius.circular(10),
-                    border: Border.all(color: secondaryColor),
-                  ),
-                  child: const Row(
-                    children: [
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Swimming Pool Construction',
-                              style: TextStyle(
-                                  fontSize: 15, fontWeight: FontWeight.w500),
-                            ),
-                            SizedBox(
-                              height: 8,
-                            ),
-                            Text(
-                              'Deadline : 30th of April 2024',
-                              style: TextStyle(
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => LocationDetailed2_Page()),
+                    );
+                  },
+                  child: Container(
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: primary25,
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: primary25),
+                    ),
+                    child: const Row(
+                      children: [
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Filtering Water',
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                              SizedBox(height: 8),
+                              Text(
+                                'Deadline : 30th of May 2024',
+                                style: TextStyle(
                                   fontSize: 13,
-                                  color: Color.fromARGB(255, 96, 94, 94)),
-                            ),
-                          ],
+                                  color: Color.fromARGB(255, 96, 94, 94),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
-                      ),
-                      Icon(
-                        Icons.keyboard_arrow_right_outlined,
-                        color: Color.fromARGB(255, 59, 57, 57),
-                        size: 30,
-                      ),
-                    ],
+                        Icon(
+                          Icons.keyboard_arrow_right_outlined,
+                          color: Color.fromARGB(255, 59, 57, 57),
+                          size: 30,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 13,
                 ),
-                Container(
-                  padding: EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    color: primary25,
-                    borderRadius: BorderRadius.circular(10),
-                    border: Border.all(color: primary25),
-                  ),
-                  child: const Row(
-                    children: [
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Swimming Pool Construction',
-                              style: TextStyle(
-                                  fontSize: 15, fontWeight: FontWeight.w500),
-                            ),
-                            SizedBox(
-                              height: 8,
-                            ),
-                            Text(
-                              'Deadline : 30th of April 2024',
-                              style: TextStyle(
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => LocationDetailed3_Page()),
+                    );
+                  },
+                  child: Container(
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: primary25,
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: primary25),
+                    ),
+                    child: const Row(
+                      children: [
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Leakage Construction',
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                              SizedBox(height: 8),
+                              Text(
+                                'Deadline : 30th of June 2024',
+                                style: TextStyle(
                                   fontSize: 13,
-                                  color: Color.fromARGB(255, 96, 94, 94)),
-                            ),
-                          ],
+                                  color: Color.fromARGB(255, 96, 94, 94),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
-                      ),
-                      Icon(
-                        Icons.keyboard_arrow_right_outlined,
-                        color: Color.fromARGB(255, 59, 57, 57),
-                        size: 30,
-                      ),
-                    ],
+                        Icon(
+                          Icons.keyboard_arrow_right_outlined,
+                          color: Color.fromARGB(255, 59, 57, 57),
+                          size: 30,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 13,
                 ),
-                Container(
-                  padding: EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    color: primary25,
-                    borderRadius: BorderRadius.circular(10),
-                    border: Border.all(color: primary25),
-                  ),
-                  child: const Row(
-                    children: [
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Swimming Pool Construction',
-                              style: TextStyle(
-                                  fontSize: 15, fontWeight: FontWeight.w500),
-                            ),
-                            SizedBox(
-                              height: 8,
-                            ),
-                            Text(
-                              'Deadline : 30th of April 2024',
-                              style: TextStyle(
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => LocationDetailed4_Page()),
+                    );
+                  },
+                  child: Container(
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: primary25,
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(color: primary25),
+                    ),
+                    child: const Row(
+                      children: [
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Chemical adding to Swimming Pool',
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                              SizedBox(height: 8),
+                              Text(
+                                'Deadline : 30th of April 2024',
+                                style: TextStyle(
                                   fontSize: 13,
-                                  color: Color.fromARGB(255, 96, 94, 94)),
-                            ),
-                          ],
+                                  color: Color.fromARGB(255, 96, 94, 94),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
-                      ),
-                      Icon(
-                        Icons.keyboard_arrow_right_outlined,
-                        color: Color.fromARGB(255, 59, 57, 57),
-                        size: 30,
-                      ),
-                    ],
+                        Icon(
+                          Icons.keyboard_arrow_right_outlined,
+                          color: Color.fromARGB(255, 59, 57, 57),
+                          size: 30,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 )
               ],
