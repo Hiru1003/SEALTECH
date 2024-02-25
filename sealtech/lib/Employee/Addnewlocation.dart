@@ -116,6 +116,24 @@ class _NewLocation_PageState extends State<NewLocation_Page> {
                       ),
                     ),
                   ),
+                  const SizedBox(height: 20),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    child: TextField(
+                      obscureText: true,
+                      decoration: InputDecoration(
+                        labelText: '   Due payment',
+                        labelStyle: const TextStyle(
+                          color: Colors.grey,
+                          fontSize: 16,
+                        ),
+                        border: const UnderlineInputBorder(),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: primaryColor),
+                        ),
+                      ),
+                    ),
+                  ),
                 ]))));
   }
 }
