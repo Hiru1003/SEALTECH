@@ -69,7 +69,13 @@ class ServiceCardState extends State<ServiceCard> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            Text('Third line of text'),
+            SizedBox(height: 10,),
+            Text(
+              'Services',
+              style: TextStyle(
+                color: accentColor,
+              ),
+            ),
             Text('Third line of text'),
           ],
         ),
