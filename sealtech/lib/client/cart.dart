@@ -37,6 +37,35 @@ class Cart extends StatelessWidget {
                   productDescription: 'Service',
                   productPrice: '3 million LKR +',
                 ),
+                SizedBox(height: 20,),
+                Row(
+                  children: [
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 16.0),
+                        child: Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            'Sub Total',
+                            style: TextStyle(
+                              fontSize: 16,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: Align(
+                        alignment: Alignment.centerRight,
+                        child: Padding(
+                          padding: const EdgeInsets.only(right: 16.0),
+                          child: Text('Text 2'),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                
               ],
             ),
           ),
