@@ -6,13 +6,15 @@ class CartItem extends StatefulWidget {
   final String imageAsset;
   final String productName;
   final String productDescription;
-  final String productPrice;
+  final double productPrice;
+  final Function(int) onQuantityChanged;
 
   CartItem({
     required this.imageAsset,
     required this.productName,
     required this.productDescription,
     required this.productPrice,
+    required this.onQuantityChanged,
   });
 
   @override
@@ -26,6 +28,7 @@ class _CartItemState extends State<CartItem> {
     setState(() {
       quantity++;
     });
+    widget.onQuantityChanged(quantity);
   }
 
   void decrementQuantity() {
@@ -34,6 +37,7 @@ class _CartItemState extends State<CartItem> {
         quantity--;
       }
     });
+    widget.onQuantityChanged(quantity);
   }
 
   void removeProduct() {
@@ -108,7 +112,7 @@ class _CartItemState extends State<CartItem> {
                             child: SizedBox(width: 13),
                           ),
                           TextSpan(
-                            text: widget.productPrice,
+                            text: '${widget.productPrice} LKR',
                             style: TextStyle(
                               color: primaryColor,
                             ),
