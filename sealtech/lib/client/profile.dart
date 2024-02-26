@@ -36,6 +36,30 @@ class Profile extends StatelessWidget {
                   fontWeight: FontWeight.normal,
                 ),
               ),
+              SizedBox(height: 16.0),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                child: ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.white,
+                    onPrimary: Colors.black,
+                    side: BorderSide(color: Colors.black, width: 0.4),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    elevation: 0,
+                    minimumSize: Size(120, 40),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('Edit Profile'),
+                      Icon(Icons.arrow_forward),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),
