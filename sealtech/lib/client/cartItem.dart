@@ -36,88 +36,112 @@ class _CartItemState extends State<CartItem> {
     });
   }
 
+  void removeProduct() {
+    // TODO: Implement product removal logic
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.all(16.0),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          SizedBox(
-            width: 110,
-            height: 95,
-            child: Image.asset(widget.imageAsset, fit: BoxFit.cover),
+    return Dismissible(
+      key: Key(widget.productName),
+      direction: DismissDirection.endToStart,
+      onDismissed: (direction) {
+        removeProduct();
+      },
+      background: Container(
+        color: ternaryRed50,
+        child: Align(
+          alignment: Alignment.centerRight,
+          child: Padding(
+            padding: EdgeInsets.only(right: 16),
+            child: Icon(
+              Icons.delete_outline,
+              color: ternaryRed,
+            ),
           ),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(left: 16),
-                  child: Text(
-                    widget.productName,
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: 16),
-                  child: Text(widget.productDescription),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: 16),
-                  child: RichText(
-                    text: TextSpan(
-                      style: GoogleFonts.inter(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
-                      children: [
-                        TextSpan(
-                          text: 'Price:',
-                          style: TextStyle(
-                            color: Colors.black,
-                          ),
-                        ),
-                        WidgetSpan(
-                          child: SizedBox(width: 13),
-                        ),
-                        TextSpan(
-                          text: widget.productPrice,
-                          style: TextStyle(
-                            color: primaryColor,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    IconButton(
-                      icon: Icon(Icons.remove),
-                      onPressed: decrementQuantity,
-                    ),
-                    Text(
-                      quantity.toString(),
+        ),
+      ),
+      child: Padding(
+        padding: EdgeInsets.all(16.0),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(
+              width: 110,
+              height: 95,
+              child: Image.asset(widget.imageAsset, fit: BoxFit.cover),
+            ),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(left: 16),
+                    child: Text(
+                      widget.productName,
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    IconButton(
-                      icon: Icon(Icons.add),
-                      onPressed: incrementQuantity,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 16),
+                    child: Text(widget.productDescription),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 16),
+                    child: RichText(
+                      text: TextSpan(
+                        style: GoogleFonts.inter(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        children: [
+                          TextSpan(
+                            text: 'Price:',
+                            style: TextStyle(
+                              color: Colors.black,
+                            ),
+                          ),
+                          WidgetSpan(
+                            child: SizedBox(width: 13),
+                          ),
+                          TextSpan(
+                            text: widget.productPrice,
+                            style: TextStyle(
+                              color: primaryColor,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
-                  ],
-                ),
-              ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      IconButton(
+                        icon: Icon(Icons.remove),
+                        onPressed: decrementQuantity,
+                      ),
+                      Text(
+                        quantity.toString(),
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      IconButton(
+                        icon: Icon(Icons.add),
+                        onPressed: incrementQuantity,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
