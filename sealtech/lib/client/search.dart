@@ -10,5 +10,19 @@ class Search extends StatelessWidget {
           ),
           backgroundColor: bgColor,
         ),
-  );
+        body: Column(
+          children: [
+            Padding(
+              padding: EdgeInsets.all(16),
+              child: TextField(
+                decoration: InputDecoration(
+                  hintText: 'Search',
+                  prefixIcon: Icon(Icons.search),
+                  border: OutlineInputBorder(),
+                ),
+              ),
+            ),
+          ],
+        ),
+      );
 }
