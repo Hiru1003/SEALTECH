@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sealtech/client/addFeedback.dart';
 import 'package:sealtech/client/chat.dart';
 import 'package:sealtech/client/editProfile.dart';
 import 'package:sealtech/client/orderHistory.dart';
@@ -134,7 +135,10 @@ class Profile extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: ElevatedButton(
                     onPressed: () {
-                      // Add your button logic here
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => FeedbackForm()),
+                      );
                     },
                     style: ElevatedButton.styleFrom(
                       primary: Colors.white,
