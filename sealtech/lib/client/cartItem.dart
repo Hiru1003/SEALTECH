@@ -3,6 +3,18 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:sealtech/components/theme.dart';
 
 class CartItem extends StatelessWidget {
+  final String imageAsset;
+  final String productName;
+  final String productDescription;
+  final String productPrice;
+
+  CartItem({
+    required this.imageAsset,
+    required this.productName,
+    required this.productDescription,
+    required this.productPrice,
+  });
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,7 +26,7 @@ class CartItem extends StatelessWidget {
             SizedBox(
               width: 100,
               height: 110,
-              child: Image.asset('lib/images/pro1.png', fit: BoxFit.cover),
+              child: Image.asset(imageAsset, fit: BoxFit.cover),
             ),
             SizedBox(width: 16),
             Expanded(
@@ -22,14 +34,14 @@ class CartItem extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Swimming Pool (8ft)',
+                    productName,
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   SizedBox(height: 16),
-                  Text('Lorem ipsum dolor sit\namet consectetur...'),
+                  Text(productDescription),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -50,7 +62,7 @@ class CartItem extends StatelessWidget {
                               child: SizedBox(width: 13),
                             ),
                             TextSpan(
-                              text: '6,200 LKR',
+                              text: productPrice,
                               style: TextStyle(
                                 color: primaryColor,
                               ),
