@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sealtech/components/theme.dart';
 
 class OrderHistory extends StatefulWidget {
   @override
@@ -25,7 +26,10 @@ class _OrderHistoryState extends State<OrderHistory> {
           return ListTile(
             title: Text('Order ID: ${_orders[index]['id']}'),
             subtitle: Text('Date: ${_orders[index]['date']}'),
-            trailing: Text('Total: \$${_orders[index]['total']}'),
+            trailing: Text(
+              'Total: \$${_orders[index]['total']}',
+              style: TextStyle(color: primaryColor),
+            ),
           );
         },
       ),
