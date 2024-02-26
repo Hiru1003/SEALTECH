@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sealtech/components/button.dart';
 import 'package:sealtech/components/theme.dart';
+import 'package:sealtech/signin.dart';
 
 class Profile_Page extends StatefulWidget {
   const Profile_Page({
@@ -215,7 +216,13 @@ class _Profile_PageState extends State<Profile_Page> {
                     padding: const EdgeInsets.symmetric(horizontal: 16),
                     child: Button(
                       buttonText: 'Log Out',
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => (SignInPage())),
+                        );
+                      },
                       color: 'orange',
                       enableIcon: false,
                       isStroked: false,
