@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sealtech/client/addFeedback.dart';
 import 'package:sealtech/client/chat.dart';
 import 'package:sealtech/client/editProfile.dart';
+import 'package:sealtech/client/inviteFriends.dart';
 import 'package:sealtech/client/orderHistory.dart';
 import 'package:sealtech/client/payMethod.dart';
 import 'package:sealtech/components/button.dart';
@@ -153,7 +154,7 @@ class Profile extends StatelessWidget {
                     child: const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text('Give us a Feedback'),
+                        Text('Give us Feedback'),
                         Icon(Icons.arrow_forward),
                       ],
                     ),
@@ -164,7 +165,10 @@ class Profile extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: ElevatedButton(
                     onPressed: () {
-                      // Add your button logic here
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => InviteFriends()),
+                      );
                     },
                     style: ElevatedButton.styleFrom(
                       primary: Colors.white,
