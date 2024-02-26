@@ -1,7 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:sealtech/components/theme.dart';
 
-class Search extends StatelessWidget {
+class Search extends StatefulWidget {
+  @override
+  _SearchState createState() => _SearchState();
+}
+
+class _SearchState extends State<Search> {
+  bool showAdditionalRow = true;
+
+  void removeAdditionalRow() {
+    setState(() {
+      showAdditionalRow = false;
+    });
+  }
+
+  @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
           toolbarHeight: 100,
@@ -51,7 +65,29 @@ class Search extends StatelessWidget {
                 ),
               ],
             ),
+            if (showAdditionalRow)
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(left: 16),
+                    child: Text(
+                      'Additional Row',
+                      textAlign: TextAlign.left,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(right: 16),
+                    child: IconButton(
+                      icon: Icon(Icons.close, size: 18,),
+                      onPressed: removeAdditionalRow,
+                    ),
+                  ),
+                ],
+              ),
           ],
         ),
       );
 }
+                      
+            
