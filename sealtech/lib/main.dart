@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sealtech/client/navbar.dart';
+import 'package:sealtech/client/cartItem.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,9 +11,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      //home: SignUpPage(),
-      home: NavbarC(),
-      //home: ServiceCard(),
+      //home: NavbarC(),
+      home: CartItem(),
       //home: NavbarE(),
     );
   }
