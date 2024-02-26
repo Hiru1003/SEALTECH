@@ -24,55 +24,58 @@ class CartItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              width: 100,
-              height: 110,
+              width: 110,
+              height: 95,
               child: Image.asset(imageAsset, fit: BoxFit.cover),
             ),
-            SizedBox(width: 16),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    productName,
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
+                  Padding(
+                    padding: EdgeInsets.only(left: 16),
+                    child: Text(
+                      productName,
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
-                  SizedBox(height: 16),
-                  Text(productDescription),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      RichText(
-                        text: TextSpan(
-                          style: GoogleFonts.inter(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                          ),
-                          children: [
-                            TextSpan(
-                              text: 'Price:',
-                              style: TextStyle(
-                                color: Colors.black,
-                              ),
-                            ),
-                            WidgetSpan(
-                              child: SizedBox(width: 13),
-                            ),
-                            TextSpan(
-                              text: productPrice,
-                              style: TextStyle(
-                                color: primaryColor,
-                              ),
-                            ),
-                          ],
+                  Padding(
+                    padding: EdgeInsets.only(left: 16),
+                    child: Text(productDescription),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 16),
+                    child: RichText(
+                      text: TextSpan(
+                        style: GoogleFonts.inter(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
                         ),
+                        children: [
+                          TextSpan(
+                            text: 'Price:',
+                            style: TextStyle(
+                              color: Colors.black,
+                            ),
+                          ),
+                          WidgetSpan(
+                            child: SizedBox(width: 13),
+                          ),
+                          TextSpan(
+                            text: productPrice,
+                            style: TextStyle(
+                              color: primaryColor,
+                            ),
+                          ),
+                        ],
                       ),
-                      SizedBox(width: 18,),
+                    ),
+                  ),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           IconButton(
                             icon: Icon(Icons.remove),
@@ -93,11 +96,11 @@ class CartItem extends StatelessWidget {
                       ),
                     ],
                   ),
-                ],
+                
               ),
-            ),
+            
           ],
-        ),
+      ),
       ),
     );
   }
