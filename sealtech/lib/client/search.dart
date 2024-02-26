@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sealtech/client/product.dart';
 import 'package:sealtech/components/theme.dart';
 
 class Search extends StatefulWidget {
@@ -35,75 +36,106 @@ class _SearchState extends State<Search> {
           ),
           backgroundColor: bgColor,
         ),
-        body: Column(
-          children: [
-            Padding(
-              padding: EdgeInsets.all(16),
-              child: TextField(
-                decoration: InputDecoration(
-                  hintText: 'Search by Names, Categories or Keywords',
-                  hintStyle: TextStyle(fontSize: 14),
-                  prefixIcon: Icon(Icons.search),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12),
-                    borderSide: BorderSide.none,
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Padding(
+                padding: EdgeInsets.all(16),
+                child: TextField(
+                  decoration: InputDecoration(
+                    hintText: 'Search by Names, Categories or Keywords',
+                    hintStyle: TextStyle(fontSize: 14),
+                    prefixIcon: Icon(Icons.search),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                      borderSide: BorderSide.none,
+                    ),
+                    filled: true,
+                    fillColor: secondaryColor,
+                    contentPadding: EdgeInsets.symmetric(vertical: 8),
                   ),
-                  filled: true,
-                  fillColor: secondaryColor,
-                  contentPadding: EdgeInsets.symmetric(vertical: 8),
                 ),
               ),
-            ),
-            SizedBox(height: 16,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(left: 16),
-                  child: Text(
-                    'Popular Searches',
-                    textAlign: TextAlign.left,
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                ),
-                GestureDetector(
-                  onTap: removeAllRows,
-                  child: Padding(
-                    padding: EdgeInsets.only(right: 16),
+              SizedBox(height: 16,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(left: 16),
                     child: Text(
-                      'Clear All',
-                      textAlign: TextAlign.right,
-                      style: TextStyle(fontWeight: FontWeight.bold, color: primaryColor),
+                      'Popular Searches',
+                      textAlign: TextAlign.left,
+                      style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                   ),
-                ),
-              ],
-            ),
-            ListView.builder(
-              shrinkWrap: true,
-              itemCount: additionalRows.length,
-              itemBuilder: (context, index) {
-                return Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(left: 16),
+                  GestureDetector(
+                    onTap: removeAllRows,
+                    child: Padding(
+                      padding: EdgeInsets.only(right: 16),
                       child: Text(
-                        additionalRows[index],
-                        textAlign: TextAlign.left,
+                        'Clear All',
+                        textAlign: TextAlign.right,
+                        style: TextStyle(fontWeight: FontWeight.bold, color: primaryColor),
                       ),
                     ),
-                    IconButton(
-                      icon: Icon(Icons.close, size: 18,),
-                      onPressed: () {
-                        removeRow(index);
-                      },
-                    ),
+                  ),
+                ],
+              ),
+              ListView.builder(
+                shrinkWrap: true,
+                physics: NeverScrollableScrollPhysics(),
+                itemCount: additionalRows.length,
+                itemBuilder: (context, index) {
+                  return Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(left: 16),
+                        child: Text(
+                          additionalRows[index],
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
+                      IconButton(
+                        icon: Icon(Icons.close, size: 18,),
+                        onPressed: () {
+                          removeRow(index);
+                        },
+                      ),
+                    ],
+                  );
+                },
+              ),
+              const SizedBox(height: 8,),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                padding: EdgeInsets.only(left: 6),
+                child: Row(
+                  children: [
+                    ProductPage(imagePath: 'lib/images/pro1.png', title: 'Swimming Pool\n(8ft)', subtitle: 'Service', price: '2 million LKR +'),
+                    ProductPage(imagePath: 'lib/images/pro1.png', title: 'Swimming Pool\n(8ft)', subtitle: 'Service', price: '2 million LKR +'),
+                    ProductPage(imagePath: 'lib/images/pro1.png', title: 'Swimming Pool\n(8ft)', subtitle: 'Service', price: '2 million LKR +'),
+                    ProductPage(imagePath: 'lib/images/pro1.png', title: 'Swimming Pool\n(8ft)', subtitle: 'Service', price: '2 million LKR +'),
+                    ProductPage(imagePath: 'lib/images/pro1.png', title: 'Swimming Pool\n(8ft)', subtitle: 'Service', price: '2 million LKR +'),
                   ],
-                );
-              },
-            ),
-          ],
+                ),
+              ),
+              const SizedBox(height: 8,),
+              const SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                padding: EdgeInsets.only(left: 6),
+                child: Row(
+                  children: [
+                    ProductPage(imagePath: 'lib/images/pro1.png', title: 'Swimming Pool\n(8ft)', subtitle: 'Service', price: '2 million LKR +'),
+                    ProductPage(imagePath: 'lib/images/pro1.png', title: 'Swimming Pool\n(8ft)', subtitle: 'Service', price: '2 million LKR +'),
+                    ProductPage(imagePath: 'lib/images/pro1.png', title: 'Swimming Pool\n(8ft)', subtitle: 'Service', price: '2 million LKR +'),
+                    ProductPage(imagePath: 'lib/images/pro1.png', title: 'Swimming Pool\n(8ft)', subtitle: 'Service', price: '2 million LKR +'),
+                    ProductPage(imagePath: 'lib/images/pro1.png', title: 'Swimming Pool\n(8ft)', subtitle: 'Service', price: '2 million LKR +'),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       );
 }
