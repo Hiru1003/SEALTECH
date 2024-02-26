@@ -1,5 +1,7 @@
 // feedback.dart
 import 'package:flutter/material.dart';
+import 'package:sealtech/components/button.dart';
+import 'package:sealtech/components/theme.dart';
 
 class FeedbackForm extends StatefulWidget {
   @override
@@ -30,7 +32,22 @@ class _FeedbackFormState extends State<FeedbackForm> {
           child: Column(
             children: <Widget>[
               TextFormField(
-                decoration: InputDecoration(labelText: 'Feedback'),
+                decoration: InputDecoration(
+                  labelText: 'Feedback',
+                  labelStyle: TextStyle(color: primaryColor),
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: primaryColor),
+                  ),
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: primaryColor),
+                  ),
+                  focusedErrorBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: primaryColor),
+                  ),
+                  errorBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: primaryColor),
+                  ),
+                ),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Please enter your feedback';
@@ -42,10 +59,8 @@ class _FeedbackFormState extends State<FeedbackForm> {
                 },
                 maxLines: 5,
               ),
-              ElevatedButton(
-                onPressed: _submit,
-                child: Text('Submit'),
-              ),
+              SizedBox(height: 32),
+              Button(buttonText: 'Submit', onPressed: () {}, color: 'orange', enableIcon: false,)
             ],
           ),
         ),
