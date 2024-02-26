@@ -23,12 +23,15 @@ class Category extends StatelessWidget {
         ),
         body: SingleChildScrollView(
           child: Container(
+            alignment: Alignment.centerLeft,
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(height: 16,),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
+                    SizedBox(width: 18,),
                     GestureDetector(
                       onTap: () {
                         Navigator.push(
@@ -37,7 +40,7 @@ class Category extends StatelessWidget {
                         );
                       },
                       child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Stack(
                             children: [
@@ -85,7 +88,7 @@ class Category extends StatelessWidget {
                     ),
                     const SizedBox(width: 16),
                     Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         GestureDetector(
                           onTap: () {
@@ -155,7 +158,7 @@ class Category extends StatelessWidget {
                 ),
                 const SizedBox(height: 16),
                 Padding(
-                  padding: const EdgeInsets.only(right: 316),
+                  padding: const EdgeInsets.only(left: 16),
                   child: Text('Service', style: GoogleFonts.inter(fontSize: 16, fontWeight: FontWeight.bold, color: primaryColor)),
                 ),
                 const SizedBox(height: 5,),
@@ -174,7 +177,7 @@ class Category extends StatelessWidget {
                 ),
                 const SizedBox(height: 16),
                 Padding(
-                  padding: const EdgeInsets.only(right: 336),
+                  padding: const EdgeInsets.only(left: 16),
                   child: Text('Tools', style: GoogleFonts.inter(fontSize: 16, fontWeight: FontWeight.bold, color: primaryColor)),
                 ),
                 const SizedBox(height: 5,),
@@ -193,7 +196,7 @@ class Category extends StatelessWidget {
                 ),
                 const SizedBox(height: 16),
                 Padding(
-                  padding: const EdgeInsets.only(right: 296),
+                  padding: const EdgeInsets.only(left: 16),
                   child: Text('Chemicals', style: GoogleFonts.inter(fontSize: 16, fontWeight: FontWeight.bold, color: primaryColor)),
                 ),
                 const SizedBox(height: 5,),
