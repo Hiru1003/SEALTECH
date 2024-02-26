@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sealtech/components/theme.dart';
 
 class Salary_Page extends StatefulWidget {
   const Salary_Page({
@@ -61,6 +62,24 @@ class _Salary_PageState extends State<Salary_Page> {
                             height: 180,
                           )),
                     ],
+                  ),
+                  const SizedBox(height: 20),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 16),
+                    child: TextField(
+                      obscureText: true,
+                      decoration: InputDecoration(
+                        labelText: ' Enter basic salary',
+                        labelStyle: const TextStyle(
+                          color: Colors.grey,
+                          fontSize: 16,
+                        ),
+                        border: const UnderlineInputBorder(),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: primaryColor),
+                        ),
+                      ),
+                    ),
                   ),
                 ]))));
   }
