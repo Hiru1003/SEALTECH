@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sealtech/components/button.dart';
 import 'package:sealtech/components/theme.dart';
 
 class Profile extends StatelessWidget {
@@ -217,6 +218,8 @@ class Profile extends StatelessWidget {
                   ),
                 ),
               ),
+              SizedBox(height: 36.0),
+              Button(buttonText: 'Logout', onPressed: () {}, color: 'orange', width: 380,)
               ],
             ),
           ),
