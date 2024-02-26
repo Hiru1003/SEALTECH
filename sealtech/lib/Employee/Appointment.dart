@@ -118,7 +118,7 @@ class _Appoinment_PageState extends State<Appoinment_Page> {
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 16),
                     child: TextField(
-                      obscureText: true,
+                      obscureText: false,
                       decoration: InputDecoration(
                         labelText: ' Available time',
                         labelStyle: const TextStyle(
@@ -136,7 +136,7 @@ class _Appoinment_PageState extends State<Appoinment_Page> {
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 16),
                     child: TextField(
-                      obscureText: true,
+                      obscureText: false,
                       decoration: InputDecoration(
                         labelText: ' Duration',
                         labelStyle: const TextStyle(

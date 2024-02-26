@@ -91,7 +91,7 @@ class _Salary_PageState extends State<Salary_Page> {
                       basicSalary = double.tryParse(value) ?? 0.0;
                     });
                   },
-                  obscureText: true,
+                  obscureText: false,
                   decoration: InputDecoration(
                     labelText: ' Enter basic salary',
                     labelStyle: const TextStyle(
@@ -114,7 +114,7 @@ class _Salary_PageState extends State<Salary_Page> {
                       overtimeHours = double.tryParse(value) ?? 0.0;
                     });
                   },
-                  obscureText: true,
+                  obscureText: false,
                   decoration: InputDecoration(
                     labelText: ' Enter no:of hours of overtime',
                     labelStyle: const TextStyle(
