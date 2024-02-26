@@ -16,6 +16,16 @@ class _SearchState extends State<Search> {
     'Additional Row 5',
   ];
 
+  List<String> originalRows = [
+    'Additional Row 1',
+    'Additional Row 2',
+    'Additional Row 3',
+    'Additional Row 4',
+    'Additional Row 5',
+  ];
+
+  bool isCleared = false;
+
   void removeRow(int index) {
     setState(() {
       additionalRows.removeAt(index);
@@ -25,6 +35,14 @@ class _SearchState extends State<Search> {
   void removeAllRows() {
     setState(() {
       additionalRows.clear();
+      isCleared = true;
+    });
+  }
+
+  void showAllRows() {
+    setState(() {
+      additionalRows = List.from(originalRows);
+      isCleared = false;
     });
   }
 
@@ -69,11 +87,11 @@ class _SearchState extends State<Search> {
                     ),
                   ),
                   GestureDetector(
-                    onTap: removeAllRows,
+                    onTap: isCleared ? showAllRows : removeAllRows,
                     child: Padding(
                       padding: EdgeInsets.only(right: 16),
                       child: Text(
-                        'Clear All',
+                        isCleared ? 'Show All' : 'Clear All',
                         textAlign: TextAlign.right,
                         style: TextStyle(fontWeight: FontWeight.bold, color: primaryColor),
                       ),
@@ -106,7 +124,7 @@ class _SearchState extends State<Search> {
                   );
                 },
               ),
-              const SizedBox(height: 8,),
+              const SizedBox(height: 16,),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 padding: EdgeInsets.only(left: 6),
