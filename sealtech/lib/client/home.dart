@@ -118,8 +118,8 @@ class Home extends StatelessWidget {
                       );
                     },
                     child: Container(
-                      width: 112,
-                      height: 100,
+                      width: MediaQuery.of(context).size.width * 0.275,
+                      height: MediaQuery.of(context).size.height * 0.14,
                       decoration: BoxDecoration(
                         color: primary25,
                         borderRadius: BorderRadius.circular(10),
@@ -143,8 +143,8 @@ class Home extends StatelessWidget {
                       );
                     },
                     child: Container(
-                      width: 112,
-                      height: 100,
+                      width: MediaQuery.of(context).size.width * 0.275,
+                      height: MediaQuery.of(context).size.height * 0.14,
                       decoration: BoxDecoration(
                         color: primary25,
                         borderRadius: BorderRadius.circular(10),
@@ -168,8 +168,8 @@ class Home extends StatelessWidget {
                       );
                     },
                     child: Container(
-                      width: 112,
-                      height: 100,
+                      width: MediaQuery.of(context).size.width * 0.275,
+                      height: MediaQuery.of(context).size.height * 0.14,
                       decoration: BoxDecoration(
                         color: primary25,
                         borderRadius: BorderRadius.circular(10),
