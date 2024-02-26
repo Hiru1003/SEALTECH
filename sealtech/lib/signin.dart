@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sealtech/components/button.dart';
 import 'package:sealtech/components/theme.dart';
+import 'package:sealtech/signup.dart';
 
 class SignInPage extends StatelessWidget {
   @override
@@ -49,7 +50,7 @@ class SignInPage extends StatelessWidget {
                     ),
                     border: const UnderlineInputBorder(),
                     focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: primaryColor),
+                      borderSide: BorderSide(color: accentColor),
                     ),
                   ),
                 ),
@@ -67,7 +68,7 @@ class SignInPage extends StatelessWidget {
                     ),
                     border: UnderlineInputBorder(),
                     focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: primaryColor),
+                      borderSide: BorderSide(color: accentColor),
                     ),
                   ),
                 ),
@@ -123,7 +124,10 @@ class SignInPage extends StatelessWidget {
                     ),
                     TextButton(
                       onPressed: () {
-                        
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => SignUpPage()),
+                        );
                       },
                       child: const Text(
                         'Sign Up',

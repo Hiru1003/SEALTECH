@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sealtech/Employee/navbarE.dart';
 import 'package:sealtech/client/navbar.dart';
 
 void main() {
@@ -13,8 +12,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       //home: SignUpPage(),
-      //home: NavbarC(),
-      home: NavbarE(),
+      home: NavbarC(),
+      //home: ServiceCard(),
+      //home: NavbarE(),
     );
   }
 }
