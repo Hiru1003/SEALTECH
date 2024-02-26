@@ -16,11 +16,29 @@ class Cart extends StatelessWidget {
           ],
         ),
         body: Container(
-          child: CartItem(
-            imageAsset: 'lib/images/pro1.png',
-            productName: 'Swimming Pool (8ft)',
-            productDescription: 'Service',
-            productPrice: '2 million LKR +',
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                CartItem(
+                  imageAsset: 'lib/images/pro1.png',
+                  productName: 'Swimming Pool (8ft)',
+                  productDescription: 'Service',
+                  productPrice: '2 million LKR +',
+                ),
+                CartItem(
+                  imageAsset: 'lib/images/pro1.png',
+                  productName: 'Garden Landscaping',
+                  productDescription: 'Service',
+                  productPrice: '1.5 million LKR +',
+                ),
+                CartItem(
+                  imageAsset: 'lib/images/pro1.png',
+                  productName: 'Home Renovation',
+                  productDescription: 'Service',
+                  productPrice: '3 million LKR +',
+                ),
+              ],
+            ),
           ),
         ),
       );
