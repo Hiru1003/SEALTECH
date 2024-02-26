@@ -21,6 +21,12 @@ class _SearchState extends State<Search> {
     });
   }
 
+  void removeAllRows() {
+    setState(() {
+      additionalRows.clear();
+    });
+  }
+
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
           toolbarHeight: 100,
@@ -60,12 +66,15 @@ class _SearchState extends State<Search> {
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ),
-                Padding(
-                  padding: EdgeInsets.only(right: 16),
-                  child: Text(
-                    'Clear All',
-                    textAlign: TextAlign.right,
-                    style: TextStyle(fontWeight: FontWeight.bold, color: primaryColor),
+                GestureDetector(
+                  onTap: removeAllRows,
+                  child: Padding(
+                    padding: EdgeInsets.only(right: 16),
+                    child: Text(
+                      'Clear All',
+                      textAlign: TextAlign.right,
+                      style: TextStyle(fontWeight: FontWeight.bold, color: primaryColor),
+                    ),
                   ),
                 ),
               ],
