@@ -82,9 +82,8 @@ class _Appoinment_PageState extends State<Appoinment_Page> {
                   ),
                   const SizedBox(height: 20),
                   Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 16),
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
                     child: TextField(
-                      obscureText: true,
                       decoration: InputDecoration(
                         labelText: ' Who do you want to make appointment with?',
                         labelStyle: const TextStyle(
@@ -100,9 +99,8 @@ class _Appoinment_PageState extends State<Appoinment_Page> {
                   ),
                   const SizedBox(height: 20),
                   Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 16),
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
                     child: TextField(
-                      obscureText: true,
                       decoration: InputDecoration(
                         labelText: ' Available date',
                         labelStyle: const TextStyle(
@@ -120,7 +118,7 @@ class _Appoinment_PageState extends State<Appoinment_Page> {
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 16),
                     child: TextField(
-                      obscureText: true,
+                      obscureText: false,
                       decoration: InputDecoration(
                         labelText: ' Available time',
                         labelStyle: const TextStyle(
@@ -138,7 +136,7 @@ class _Appoinment_PageState extends State<Appoinment_Page> {
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 16),
                     child: TextField(
-                      obscureText: true,
+                      obscureText: false,
                       decoration: InputDecoration(
                         labelText: ' Duration',
                         labelStyle: const TextStyle(
