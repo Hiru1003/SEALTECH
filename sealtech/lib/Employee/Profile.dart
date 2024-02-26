@@ -144,6 +144,72 @@ class _Profile_PageState extends State<Profile_Page> {
                       ],
                     ),
                   ),
+                  const SizedBox(height: 10),
+                  Container(
+                    width: 330,
+                    height: 50,
+                    padding: const EdgeInsets.only(left: 15, right: 15),
+                    decoration: BoxDecoration(
+                      color: bgColor,
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(
+                        color: primaryColor,
+                      ),
+                    ),
+                    child: const Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            SizedBox(width: 10),
+                            Text(
+                              'Notification',
+                              style: TextStyle(
+                                color: Color.fromARGB(255, 84, 82, 82),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          color: Color.fromARGB(255, 84, 82, 82),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  Container(
+                    width: 330,
+                    height: 50,
+                    padding: const EdgeInsets.only(left: 15, right: 15),
+                    decoration: BoxDecoration(
+                      color: bgColor,
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(
+                        color: primaryColor,
+                      ),
+                    ),
+                    child: const Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            SizedBox(width: 10),
+                            Text(
+                              'Delete my account',
+                              style: TextStyle(
+                                color: Color.fromARGB(255, 84, 82, 82),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          color: Color.fromARGB(255, 84, 82, 82),
+                        ),
+                      ],
+                    ),
+                  ),
                 ]))));
   }
 }
