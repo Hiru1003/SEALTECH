@@ -28,11 +28,11 @@ class _InviteFriendsState extends State<InviteFriends> {
         padding: const EdgeInsets.all(16.0),
         child: Theme(
           data: Theme.of(context).copyWith(
-            cardColor: primaryColor,
+            cardColor: accentColor,
             inputDecorationTheme: InputDecorationTheme(
-              labelStyle: TextStyle(color: primaryColor),
+              labelStyle: TextStyle(color: accentColor),
               focusedBorder: UnderlineInputBorder(
-                borderSide: BorderSide(color: primaryColor),
+                borderSide: BorderSide(color: accentColor),
               ),
             ),
           ),

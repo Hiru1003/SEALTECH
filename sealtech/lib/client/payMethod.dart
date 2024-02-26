@@ -35,16 +35,16 @@ class _PaymentMethodState extends State<PaymentMethod> {
               Theme(
                 data: theme.copyWith(
                   inputDecorationTheme: theme.inputDecorationTheme.copyWith(
-                    labelStyle: TextStyle(color: primaryColor),
+                    labelStyle: TextStyle(color: accentColor),
                     focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: primaryColor),
+                      borderSide: BorderSide(color: accentColor),
                     ),
                   ),
                 ),
                 child: DropdownButtonFormField(
                   decoration: InputDecoration(
                     labelText: 'Payment Method',
-                    fillColor: primaryColor,
+                    fillColor: accentColor,
                   ),
                   value: _selectedPaymentMethod,
                   items: <String>['Credit Card', 'Debit Card', 'PayPal', 'Bank Transfer']

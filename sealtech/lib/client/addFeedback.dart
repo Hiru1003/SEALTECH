@@ -34,18 +34,18 @@ class _FeedbackFormState extends State<FeedbackForm> {
               TextFormField(
                 decoration: InputDecoration(
                   labelText: 'Feedback',
-                  labelStyle: TextStyle(color: primaryColor),
+                  labelStyle: TextStyle(color: accentColor),
                   focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: primaryColor),
+                    borderSide: BorderSide(color: accentColor),
                   ),
                   enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: primaryColor),
+                    borderSide: BorderSide(color: accentColor),
                   ),
                   focusedErrorBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: primaryColor),
+                    borderSide: BorderSide(color: accentColor),
                   ),
                   errorBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: primaryColor),
+                    borderSide: BorderSide(color: accentColor),
                   ),
                 ),
                 validator: (value) {

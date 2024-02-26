@@ -28,7 +28,7 @@ class _OrderHistoryState extends State<OrderHistory> {
             subtitle: Text('Date: ${_orders[index]['date']}'),
             trailing: Text(
               'Total: \$${_orders[index]['total']}',
-              style: TextStyle(color: primaryColor),
+              style: TextStyle(color: accentColor),
             ),
           );
         },
