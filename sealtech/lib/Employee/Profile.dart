@@ -111,6 +111,19 @@ class _Profile_PageState extends State<Profile_Page> {
                           )),
                     ],
                   ),
+                  const SizedBox(height: 15),
+                  Container(
+                      width: 330,
+                      height: 45,
+                      padding: const EdgeInsets.only(left: 15),
+                      decoration: BoxDecoration(
+                        color: bgColor,
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(
+                          color: primaryColor,
+                        ),
+                      ),
+                      child: Row(children: [Text('Privacy and Security')])),
                 ]))));
   }
 }
