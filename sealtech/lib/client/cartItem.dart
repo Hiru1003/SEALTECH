@@ -53,7 +53,7 @@ class _CartItemState extends State<CartItem> {
         child: Align(
           alignment: Alignment.centerRight,
           child: Padding(
-            padding: EdgeInsets.only(right: 16),
+            padding: const EdgeInsets.only(right: 16),
             child: Icon(
               Icons.delete_outline,
               color: ternaryRed,
@@ -62,7 +62,7 @@ class _CartItemState extends State<CartItem> {
         ),
       ),
       child: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -76,21 +76,21 @@ class _CartItemState extends State<CartItem> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(left: 16),
+                    padding: const EdgeInsets.only(left: 16),
                     child: Text(
                       widget.productName,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left: 16),
+                    padding: const EdgeInsets.only(left: 16),
                     child: Text(widget.productDescription),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left: 16),
+                    padding: const EdgeInsets.only(left: 16),
                     child: RichText(
                       text: TextSpan(
                         style: GoogleFonts.inter(
@@ -98,13 +98,13 @@ class _CartItemState extends State<CartItem> {
                           fontWeight: FontWeight.bold,
                         ),
                         children: [
-                          TextSpan(
+                          const TextSpan(
                             text: 'Price:',
                             style: TextStyle(
                               color: Colors.black,
                             ),
                           ),
-                          WidgetSpan(
+                          const WidgetSpan(
                             child: SizedBox(width: 13),
                           ),
                           TextSpan(
@@ -121,18 +121,18 @@ class _CartItemState extends State<CartItem> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       IconButton(
-                        icon: Icon(Icons.remove),
+                        icon: const Icon(Icons.remove),
                         onPressed: decrementQuantity,
                       ),
                       Text(
                         quantity.toString(),
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       IconButton(
-                        icon: Icon(Icons.add),
+                        icon: const Icon(Icons.add),
                         onPressed: incrementQuantity,
                       ),
                     ],
