@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:sealtech/components/button.dart';
+import 'package:sealtech/components/theme.dart';
 
 class InviteFriends extends StatefulWidget {
   @override
@@ -24,27 +26,43 @@ class _InviteFriendsState extends State<InviteFriends> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: Form(
-          key: _formKey,
-          child: Column(
-            children: <Widget>[
-              TextFormField(
-                decoration: InputDecoration(labelText: 'Friend\'s Email'),
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'Please enter your friend\'s email';
-                  }
-                  return null;
-                },
-                onSaved: (value) {
-                  _friendEmail = value!;
-                },
+        child: Theme(
+          data: Theme.of(context).copyWith(
+            cardColor: primaryColor,
+            inputDecorationTheme: InputDecorationTheme(
+              labelStyle: TextStyle(color: primaryColor),
+              focusedBorder: UnderlineInputBorder(
+                borderSide: BorderSide(color: primaryColor),
               ),
-              ElevatedButton(
-                onPressed: _submit,
-                child: Text('Send Invitation'),
-              ),
-            ],
+            ),
+          ),
+          child: Form(
+            key: _formKey,
+            child: Column(
+              children: <Widget>[
+                TextFormField(
+                  decoration: InputDecoration(
+                    labelText: 'Friend\'s Email',
+                  ),
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter your friend\'s email';
+                    }
+                    return null;
+                  },
+                  onSaved: (value) {
+                    _friendEmail = value!;
+                  },
+                ),
+                SizedBox(height: 32),
+                Button(
+                  buttonText: 'Submit',
+                  onPressed: () {},
+                  color: 'orange',
+                  enableIcon: false,
+                )
+              ],
+            ),
           ),
         ),
       ),
