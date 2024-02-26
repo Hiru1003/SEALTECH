@@ -7,15 +7,20 @@ class Search extends StatefulWidget {
 }
 
 class _SearchState extends State<Search> {
-  bool showAdditionalRow = true;
+  List<String> additionalRows = [
+    'Additional Row 1',
+    'Additional Row 2',
+    'Additional Row 3',
+    'Additional Row 4',
+    'Additional Row 5',
+  ];
 
-  void removeAdditionalRow() {
+  void removeRow(int index) {
     setState(() {
-      showAdditionalRow = false;
+      additionalRows.removeAt(index);
     });
   }
 
-  @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
           toolbarHeight: 100,
@@ -65,29 +70,31 @@ class _SearchState extends State<Search> {
                 ),
               ],
             ),
-            if (showAdditionalRow)
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(left: 16),
-                    child: Text(
-                      'Additional Row',
-                      textAlign: TextAlign.left,
+            ListView.builder(
+              shrinkWrap: true,
+              itemCount: additionalRows.length,
+              itemBuilder: (context, index) {
+                return Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(left: 16),
+                      child: Text(
+                        additionalRows[index],
+                        textAlign: TextAlign.left,
+                      ),
                     ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(right: 16),
-                    child: IconButton(
+                    IconButton(
                       icon: Icon(Icons.close, size: 18,),
-                      onPressed: removeAdditionalRow,
+                      onPressed: () {
+                        removeRow(index);
+                      },
                     ),
-                  ),
-                ],
-              ),
+                  ],
+                );
+              },
+            ),
           ],
         ),
       );
 }
-                      
-            
