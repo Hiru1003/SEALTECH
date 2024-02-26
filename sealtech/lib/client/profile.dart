@@ -21,8 +21,21 @@ class Profile extends StatelessWidget {
             children: [
               Icon(Icons.person, size: 100, color: primaryColor,),
               SizedBox(height: 8.0),
-              Text('John Doe'),
-              Text('Software Developer'),
+              Text(
+                'John Doe',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: 8.0),
+              Text(
+                'Software Developer',
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.normal,
+                ),
+              ),
             ],
           ),
         ),
