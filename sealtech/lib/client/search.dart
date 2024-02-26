@@ -58,27 +58,27 @@ class _SearchState extends State<Search> {
           child: Column(
             children: [
               Padding(
-                padding: EdgeInsets.all(16),
+                padding: const EdgeInsets.all(16),
                 child: TextField(
                   decoration: InputDecoration(
                     hintText: 'Search by Names, Categories or Keywords',
-                    hintStyle: TextStyle(fontSize: 14),
-                    prefixIcon: Icon(Icons.search),
+                    hintStyle: const TextStyle(fontSize: 14),
+                    prefixIcon: const Icon(Icons.search),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(12),
                       borderSide: BorderSide.none,
                     ),
                     filled: true,
                     fillColor: secondaryColor,
-                    contentPadding: EdgeInsets.symmetric(vertical: 8),
+                    contentPadding: const EdgeInsets.symmetric(vertical: 8),
                   ),
                 ),
               ),
-              SizedBox(height: 16,),
+              const SizedBox(height: 16,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.only(left: 16),
                     child: Text(
                       'Popular Searches',
@@ -89,7 +89,7 @@ class _SearchState extends State<Search> {
                   GestureDetector(
                     onTap: isCleared ? showAllRows : removeAllRows,
                     child: Padding(
-                      padding: EdgeInsets.only(right: 16),
+                      padding: const EdgeInsets.only(right: 16),
                       child: Text(
                         isCleared ? 'Show All' : 'Clear All',
                         textAlign: TextAlign.right,
@@ -101,21 +101,21 @@ class _SearchState extends State<Search> {
               ),
               ListView.builder(
                 shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
+                physics: const NeverScrollableScrollPhysics(),
                 itemCount: additionalRows.length,
                 itemBuilder: (context, index) {
                   return Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Padding(
-                        padding: EdgeInsets.only(left: 16),
+                        padding: const EdgeInsets.only(left: 16),
                         child: Text(
                           additionalRows[index],
                           textAlign: TextAlign.left,
                         ),
                       ),
                       IconButton(
-                        icon: Icon(Icons.close, size: 18,),
+                        icon: const Icon(Icons.close, size: 18,),
                         onPressed: () {
                           removeRow(index);
                         },
@@ -125,7 +125,7 @@ class _SearchState extends State<Search> {
                 },
               ),
               const SizedBox(height: 16,),
-              SingleChildScrollView(
+              const SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 padding: EdgeInsets.only(left: 6),
                 child: Row(
