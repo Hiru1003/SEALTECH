@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:sealtech/components/button.dart';
+import 'package:sealtech/components/theme.dart';
 
 class PaymentMethod extends StatefulWidget {
   @override
@@ -18,6 +20,8 @@ class _PaymentMethodState extends State<PaymentMethod> {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context); // Get the theme
+
     return Scaffold(
       appBar: AppBar(
         title: Text('Choose Payment Method'),
@@ -28,35 +32,46 @@ class _PaymentMethodState extends State<PaymentMethod> {
           key: _formKey,
           child: Column(
             children: <Widget>[
-              DropdownButtonFormField(
-                decoration: InputDecoration(labelText: 'Payment Method'),
-                value: _selectedPaymentMethod,
-                items: <String>['Credit Card', 'Debit Card', 'PayPal', 'Bank Transfer']
-                    .map<DropdownMenuItem<String>>((String value) {
-                  return DropdownMenuItem<String>(
-                    value: value,
-                    child: Text(value),
-                  );
-                }).toList(),
-                onChanged: (String? newValue) {
-                  setState(() {
-                    _selectedPaymentMethod = newValue!;
-                  });
-                },
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'Please select a payment method';
-                  }
-                  return null;
-                },
-                onSaved: (value) {
-                  _selectedPaymentMethod = value!;
-                },
+              Theme(
+                data: theme.copyWith(
+                  inputDecorationTheme: theme.inputDecorationTheme.copyWith(
+                    labelStyle: TextStyle(color: primaryColor),
+                    focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: primaryColor),
+                    ),
+                  ),
+                ),
+                child: DropdownButtonFormField(
+                  decoration: InputDecoration(
+                    labelText: 'Payment Method',
+                    fillColor: primaryColor,
+                  ),
+                  value: _selectedPaymentMethod,
+                  items: <String>['Credit Card', 'Debit Card', 'PayPal', 'Bank Transfer']
+                      .map<DropdownMenuItem<String>>((String value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Text(value),
+                    );
+                  }).toList(),
+                  onChanged: (String? newValue) {
+                    setState(() {
+                      _selectedPaymentMethod = newValue!;
+                    });
+                  },
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please select a payment method';
+                    }
+                    return null;
+                  },
+                  onSaved: (value) {
+                    _selectedPaymentMethod = value!;
+                  },
+                ),
               ),
-              ElevatedButton(
-                onPressed: _submit,
-                child: Text('Submit'),
-              ),
+              SizedBox(height: 32),
+              Button(buttonText: 'Submit', onPressed: () {}, color: 'orange', enableIcon: false,)
             ],
           ),
         ),
