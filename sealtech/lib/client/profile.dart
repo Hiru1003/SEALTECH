@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sealtech/components/theme.dart';
 
 class Profile extends StatelessWidget {
   Widget build(BuildContext context) => Scaffold(
@@ -14,5 +15,16 @@ class Profile extends StatelessWidget {
             ),
           ],
         ),
-  );
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(Icons.person, size: 100, color: primaryColor,),
+              SizedBox(height: 8.0),
+              Text('John Doe'),
+              Text('Software Developer'),
+            ],
+          ),
+        ),
+      );
 }
