@@ -99,6 +99,18 @@ class _Profile_PageState extends State<Profile_Page> {
                       ),
                     ],
                   ),
+                  const SizedBox(height: 15),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Padding(
+                          padding: const EdgeInsets.only(left: 0),
+                          child: Image.asset(
+                            'lib/images/profile2.png',
+                            height: 120,
+                          )),
+                    ],
+                  ),
                 ]))));
   }
 }
