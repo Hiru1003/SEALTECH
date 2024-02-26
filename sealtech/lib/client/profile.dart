@@ -37,7 +37,7 @@ class Profile extends StatelessWidget {
                     fontWeight: FontWeight.normal,
                   ),
                 ),
-                SizedBox(height: 16.0),
+                SizedBox(height: 36.0),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: ElevatedButton(
