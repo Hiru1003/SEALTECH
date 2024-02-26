@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sealtech/client/cart.dart' as fourthTab;
 import 'package:sealtech/client/category.dart' as secondTab;
+import 'package:sealtech/client/chat.dart';
 import 'package:sealtech/client/home.dart' as firstTab;
 import 'package:sealtech/client/profile.dart' as fifthTab;
 import 'package:sealtech/client/search.dart' as thirdTab;
@@ -117,6 +118,16 @@ class HomeWidget extends State<NavbarC>{
               ],
             ),
             ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Chat()),
+            );
+          },
+          child: Icon(Icons.message, color: primary25),
+          backgroundColor: primaryColor,
         ),
     );
   }

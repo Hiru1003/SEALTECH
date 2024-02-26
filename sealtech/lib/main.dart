@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       //home: SignUpPage(),
       home: NavbarC(),
+      //home: ServiceCard(),
       //home: NavbarE(),
     );
   }

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
 
-class Cart extends StatelessWidget{
+class Chat extends StatelessWidget{
   Widget build(BuildContext context) => new Center(
     child:  Container(
-      child: Text('This is Carts page'),
+      child: Text('This is Chats page'),
     )
+   
   );
 }

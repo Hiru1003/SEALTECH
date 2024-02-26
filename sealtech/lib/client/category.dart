@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sealtech/client/chemicals.dart';
 import 'package:sealtech/client/product.dart';
+import 'package:sealtech/client/services.dart';
+import 'package:sealtech/client/tools.dart';
 import 'package:sealtech/components/button.dart';
 import 'package:sealtech/components/theme.dart';
 
@@ -26,64 +29,116 @@ class Category extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Service()),
+                        );
+                      },
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Stack(
+                            children: [
+                              Image.asset(
+                                'lib/images/catServiceImage.png',
+                                height: 287,
+                                width: 180,
+                              ),
+                              Positioned(
+                                bottom: 16,
+                                left: 16,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    const Text(
+                                      'Services',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 24,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    const Text(
+                                      'Contact SEALTECH\nfor unbeatable\nwaterproofing solutions',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 11,
+                                      ),
+                                    ),
+                                    Button(
+                                      buttonText: 'Contact Us',
+                                      onPressed: () {},
+                                      width: 150,
+                                      isStroked: true,
+                                      color: 'white',
+                                    ),
+                                    const SizedBox(height: 16,),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(width: 16),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Stack(
-                          children: [
-                            Image.asset(
-                              'lib/images/catServiceImage.png',
-                              height: 287,
-                              width: 180,
-                            ),
-                            Positioned(
-                              bottom: 16,
-                              left: 16,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  const Text(
-                                    'Service',
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => Tool()),
+                            );
+                          },
+                          child: Container(
+                            height: 130,
+                            width: 180,
+                            child: Stack(
+                              children: [
+                                Image.asset(
+                                  'lib/images/catToolsImage.png',
+                                  fit: BoxFit.cover,
+                                ),
+                                const Positioned(
+                                  bottom: 16,
+                                  left: 16,
+                                  child: Text(
+                                    'Tools',
                                     style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 24,
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
-                                  const Text(
-                                    'Contact SEALTECH\nfor unbeatable\nwaterproofing solutions',
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 11,
-                                    ),
-                                  ),
-                                  Button(buttonText: 'Contact Us', onPressed: (){}, width: 150, isStroked: true, color: 'white'),
-                                  const SizedBox(height: 16,)
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
-                          ],
+                          ),
                         ),
-                      ],
-                    ),
-                    const SizedBox(width: 16),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          height: 130,
-                          width: 180,
+                        const SizedBox(height: 12),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => Chemical()),
+                            );
+                          },
                           child: Stack(
                             children: [
                               Image.asset(
-                                'lib/images/catToolsImage.png',
-                                fit: BoxFit.cover,
+                                'lib/images/catChemicalsImage.png',
+                                height: 130,
+                                width: 180,
                               ),
                               const Positioned(
                                 bottom: 16,
                                 left: 16,
                                 child: Text(
-                                  'Tools',
+                                  'Chemicals',
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 24,
@@ -93,28 +148,6 @@ class Category extends StatelessWidget {
                               ),
                             ],
                           ),
-                        ),
-                        const SizedBox(height: 16),
-                        Stack(
-                          children: [
-                            Image.asset(
-                              'lib/images/catChemicalsImage.png',
-                              height: 130,
-                              width: 180,
-                            ),
-                            const Positioned(
-                              bottom: 16,
-                              left: 16,
-                              child: Text(
-                                'Chemicals',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 24,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
-                          ],
                         ),
                       ],
                     ),
