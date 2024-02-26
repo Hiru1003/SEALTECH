@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sealtech/client/cart.dart' as fourthTab;
+import 'package:sealtech/Employee/Profile.dart' as fourthTab;
 import 'package:sealtech/Employee/Location.dart' as secondTab;
 import 'package:sealtech/Employee/SalaryCalculator.dart' as thirdTab;
 import 'package:sealtech/components/theme.dart';
@@ -30,11 +30,11 @@ class HomeWidget extends State<NavbarE> {
               _selectedTab = index;
             });
           },
-          children: <Widget>[
+          children: const <Widget>[
             firstTab.Home_Page(),
             secondTab.Location_Page(),
             thirdTab.Salary_Page(),
-            fourthTab.Cart(),
+            fourthTab.Profile_Page(),
           ],
         ),
       ),
