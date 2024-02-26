@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sealtech/components/button.dart';
 
 class EditProfile extends StatefulWidget {
   @override
@@ -67,10 +68,8 @@ class _EditProfileState extends State<EditProfile> {
                 },
                 obscureText: true,
               ),
-              ElevatedButton(
-                onPressed: _submit,
-                child: Text('Submit'),
-              ),
+              SizedBox(height: 32,),
+              Button(buttonText: 'Submit', onPressed: (){}, color: 'orange', enableIcon: false,)
             ],
           ),
         ),
