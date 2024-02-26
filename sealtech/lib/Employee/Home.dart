@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:sealtech/Employee/Appointment.dart';
 import 'package:sealtech/Employee/Holidays.dart';
 import 'package:sealtech/Employee/Location.dart';
+import 'package:sealtech/Employee/SalaryCalculator.dart';
 
 class Home_Page extends StatefulWidget {
   const Home_Page({
@@ -274,7 +275,11 @@ class _Home_PageState extends State<Home_Page> {
                       ),
                       OutlinedButton(
                         onPressed: () {
-                          // Handle button press
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Salary_Page()),
+                          );
                         },
                         style: OutlinedButton.styleFrom(
                           foregroundColor:
