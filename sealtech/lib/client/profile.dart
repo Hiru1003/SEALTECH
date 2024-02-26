@@ -22,23 +22,23 @@ class Profile extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(Icons.person, size: 100, color: primaryColor,),
-                SizedBox(height: 8.0),
-                Text(
+                const SizedBox(height: 8.0),
+                const Text(
                   'John Doe',
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(height: 8.0),
-                Text(
+                const SizedBox(height: 8.0),
+                const Text(
                   'aarruwanthie@gmail.com',
                   style: TextStyle(
                     fontSize: 13,
                     fontWeight: FontWeight.normal,
                   ),
                 ),
-                SizedBox(height: 36.0),
+                const SizedBox(height: 36.0),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: ElevatedButton(
@@ -46,14 +46,14 @@ class Profile extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       primary: Colors.white,
                       onPrimary: Colors.black,
-                      side: BorderSide(color: Colors.black, width: 0.4),
+                      side: const BorderSide(color: Colors.black, width: 0.4),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
                       ),
                       elevation: 0,
-                      minimumSize: Size(120, 40),
+                      minimumSize: const Size(120, 40),
                     ),
-                    child: Row(
+                    child: const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text('Edit Profile'),
@@ -62,7 +62,7 @@ class Profile extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 16.0),
+                const SizedBox(height: 16.0),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: ElevatedButton(
@@ -72,14 +72,14 @@ class Profile extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       primary: Colors.white,
                       onPrimary: Colors.black,
-                      side: BorderSide(color: Colors.black, width: 0.4),
+                      side: const BorderSide(color: Colors.black, width: 0.4),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
                       ),
                       elevation: 0,
-                      minimumSize: Size(120, 40),
+                      minimumSize: const Size(120, 40),
                     ),
-                    child: Row(
+                    child: const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text('Payment Method'),
@@ -88,7 +88,7 @@ class Profile extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 16.0),
+                const SizedBox(height: 16.0),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: ElevatedButton(
@@ -98,14 +98,14 @@ class Profile extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       primary: Colors.white,
                       onPrimary: Colors.black,
-                      side: BorderSide(color: Colors.black, width: 0.4),
+                      side: const BorderSide(color: Colors.black, width: 0.4),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
                       ),
                       elevation: 0,
-                      minimumSize: Size(120, 40),
+                      minimumSize: const Size(120, 40),
                     ),
-                    child: Row(
+                    child: const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text('Order History'),
@@ -114,7 +114,7 @@ class Profile extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 16.0),
+                const SizedBox(height: 16.0),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: ElevatedButton(
@@ -124,14 +124,14 @@ class Profile extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       primary: Colors.white,
                       onPrimary: Colors.black,
-                      side: BorderSide(color: Colors.black, width: 0.4),
+                      side: const BorderSide(color: Colors.black, width: 0.4),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
                       ),
                       elevation: 0,
-                      minimumSize: Size(120, 40),
+                      minimumSize: const Size(120, 40),
                     ),
-                    child: Row(
+                    child: const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text('Give us a Feedback'),
@@ -140,7 +140,7 @@ class Profile extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 16.0),
+                const SizedBox(height: 16.0),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: ElevatedButton(
@@ -150,14 +150,14 @@ class Profile extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       primary: Colors.white,
                       onPrimary: Colors.black,
-                      side: BorderSide(color: Colors.black, width: 0.4),
+                      side: const BorderSide(color: Colors.black, width: 0.4),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
                       ),
                       elevation: 0,
-                      minimumSize: Size(120, 40),
+                      minimumSize: const Size(120, 40),
                     ),
-                    child: Row(
+                    child: const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text('Invite Friends'),
@@ -166,7 +166,7 @@ class Profile extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 16.0),
+                const SizedBox(height: 16.0),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: ElevatedButton(
@@ -176,14 +176,14 @@ class Profile extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       primary: Colors.white,
                       onPrimary: Colors.black,
-                      side: BorderSide(color: Colors.black, width: 0.4),
+                      side: const BorderSide(color: Colors.black, width: 0.4),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
                       ),
                       elevation: 0,
-                      minimumSize: Size(120, 40),
+                      minimumSize: const Size(120, 40),
                     ),
-                    child: Row(
+                    child: const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text('Help Center'),
@@ -192,7 +192,7 @@ class Profile extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 16.0),
+                const SizedBox(height: 16.0),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: ElevatedButton(
@@ -202,14 +202,14 @@ class Profile extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                     primary: Colors.white,
                     onPrimary: Colors.black,
-                    side: BorderSide(color: Colors.black, width: 0.4),
+                    side: const BorderSide(color: Colors.black, width: 0.4),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8),
                     ),
                     elevation: 0,
-                    minimumSize: Size(120, 40),
+                    minimumSize: const Size(120, 40),
                   ),
-                  child: Row(
+                  child: const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text('About Us'),
@@ -218,7 +218,7 @@ class Profile extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 36.0),
+              const SizedBox(height: 36.0),
               Button(buttonText: 'Logout', onPressed: () {}, color: 'orange', width: 380,)
               ],
             ),
