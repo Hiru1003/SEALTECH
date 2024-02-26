@@ -135,7 +135,6 @@ class _NewLocation_PageState extends State<NewLocation_Page> {
                     ),
                   ),
                   const SizedBox(height: 20),
-                  //sign in button
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16),
                     child: Button(
