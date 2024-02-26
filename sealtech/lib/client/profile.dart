@@ -30,9 +30,9 @@ class Profile extends StatelessWidget {
               ),
               SizedBox(height: 8.0),
               Text(
-                'Software Developer',
+                'aarruwanthie@gmail.com',
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 13,
                   fontWeight: FontWeight.normal,
                 ),
               ),
