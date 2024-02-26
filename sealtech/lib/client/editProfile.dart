@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sealtech/components/button.dart';
+import 'package:sealtech/components/theme.dart';
 
 class EditProfile extends StatefulWidget {
   @override
@@ -32,7 +33,14 @@ class _EditProfileState extends State<EditProfile> {
           child: Column(
             children: <Widget>[
               TextFormField(
-                decoration: InputDecoration(labelText: 'Name'),
+                decoration: InputDecoration(
+                  labelText: 'Name',
+                  focusColor: accentColor,
+                  labelStyle: TextStyle(color: accentColor),
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: accentColor),
+                  ),
+                ),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Please enter your name';
@@ -44,7 +52,14 @@ class _EditProfileState extends State<EditProfile> {
                 },
               ),
               TextFormField(
-                decoration: InputDecoration(labelText: 'Email'),
+                decoration: InputDecoration(
+                  labelText: 'Email',
+                  focusColor: accentColor,
+                  labelStyle: TextStyle(color: accentColor),
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: accentColor),
+                  ),
+                ),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Please enter your email';
@@ -56,7 +71,14 @@ class _EditProfileState extends State<EditProfile> {
                 },
               ),
               TextFormField(
-                decoration: InputDecoration(labelText: 'Password'),
+                decoration: InputDecoration(
+                  labelText: 'Password',
+                  focusColor: accentColor,
+                  labelStyle: TextStyle(color: accentColor),
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: accentColor),
+                  ),
+                ),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Please enter your password';
