@@ -100,6 +100,18 @@ class _Salary_PageState extends State<Salary_Page> {
                       ),
                     ),
                   ),
+                  const SizedBox(height: 20),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    child: Button(
+                      buttonText: 'Calculate',
+                      onPressed: () {},
+                      color: 'orange',
+                      enableIcon: false,
+                      isStroked: false,
+                    ),
+                  ),
+                  const SizedBox(height: 20),
                 ]))));
   }
 }
