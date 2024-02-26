@@ -16,9 +16,15 @@ class Search extends StatelessWidget {
               padding: EdgeInsets.all(16),
               child: TextField(
                 decoration: InputDecoration(
-                  hintText: 'Search',
+                  hintText: 'Search by Names, Categories or Keywords',
                   prefixIcon: Icon(Icons.search),
-                  border: OutlineInputBorder(),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    borderSide: BorderSide.none,
+                  ),
+                  filled: true,
+                  fillColor: primary25,
+                  contentPadding: EdgeInsets.symmetric(vertical: 8),
                 ),
               ),
             ),
