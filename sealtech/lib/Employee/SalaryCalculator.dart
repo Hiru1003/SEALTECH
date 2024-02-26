@@ -13,19 +13,19 @@ class Salary_Page extends StatefulWidget {
 }
 
 class _Salary_PageState extends State<Salary_Page> {
-  double basicSalary = 0.0;
-  double overtimeHours = 0.0;
-  double calculatedSalary = 0.0;
+  double basicSalary = 0.00;
+  double overtimeHours = 0.00;
+  double calculatedSalary = 0.00;
 
   void calculateSalary() {
-    if (overtimeHours < 5) {
-      calculatedSalary = basicSalary * 1000;
-    } else if (overtimeHours < 10) {
-      calculatedSalary = basicSalary * 1300;
-    } else if (overtimeHours < 15) {
-      calculatedSalary = basicSalary * 1600;
+    if (overtimeHours <= 5) {
+      calculatedSalary = basicSalary + 1000.00 * overtimeHours;
+    } else if (overtimeHours <= 10) {
+      calculatedSalary = basicSalary + 1300.00 * overtimeHours;
+    } else if (overtimeHours <= 15) {
+      calculatedSalary = basicSalary + 1600.00 * overtimeHours;
     } else {
-      calculatedSalary = basicSalary * 2500; // Maximum multiplier
+      calculatedSalary = basicSalary + 2000.00 * overtimeHours;
     }
   }
 
@@ -145,11 +145,11 @@ class _Salary_PageState extends State<Salary_Page> {
               ),
               const SizedBox(height: 20),
               Text(
-                'Calculated Salary: $calculatedSalary',
+                'Calculated Salary: \Rs ${calculatedSalary.toStringAsFixed(2)}',
                 style: const TextStyle(
-                  fontSize: 18,
+                  fontSize: 16,
                   fontWeight: FontWeight.bold,
-                  color: Colors.green,
+                  color: Color.fromARGB(255, 76, 78, 76),
                 ),
               ),
               const SizedBox(height: 20),
