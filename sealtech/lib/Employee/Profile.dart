@@ -113,7 +113,7 @@ class _Profile_PageState extends State<Profile_Page> {
                   ),
                   const SizedBox(height: 20),
                   Container(
-                    width: 330,
+                    width: 310,
                     height: 50,
                     padding: const EdgeInsets.only(left: 15, right: 15),
                     decoration: BoxDecoration(
@@ -146,7 +146,7 @@ class _Profile_PageState extends State<Profile_Page> {
                   ),
                   const SizedBox(height: 10),
                   Container(
-                    width: 330,
+                    width: 310,
                     height: 50,
                     padding: const EdgeInsets.only(left: 15, right: 15),
                     decoration: BoxDecoration(
@@ -179,7 +179,7 @@ class _Profile_PageState extends State<Profile_Page> {
                   ),
                   const SizedBox(height: 10),
                   Container(
-                    width: 330,
+                    width: 310,
                     height: 50,
                     padding: const EdgeInsets.only(left: 15, right: 15),
                     decoration: BoxDecoration(
@@ -210,6 +210,18 @@ class _Profile_PageState extends State<Profile_Page> {
                       ],
                     ),
                   ),
+                  const SizedBox(height: 10),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    child: Button(
+                      buttonText: 'Log Out',
+                      onPressed: () {},
+                      color: 'orange',
+                      enableIcon: false,
+                      isStroked: false,
+                    ),
+                  ),
+                  const SizedBox(height: 20),
                 ]))));
   }
 }
