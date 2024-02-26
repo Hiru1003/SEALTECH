@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sealtech/client/chat.dart';
 import 'package:sealtech/components/button.dart';
 import 'package:sealtech/components/theme.dart';
 
@@ -171,7 +172,10 @@ class Profile extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: ElevatedButton(
                     onPressed: () {
-                      // Add your button logic here
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Chat()),
+                      );
                     },
                     style: ElevatedButton.styleFrom(
                       primary: Colors.white,
