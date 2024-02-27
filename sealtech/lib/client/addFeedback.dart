@@ -1,5 +1,5 @@
-// feedback.dart
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:sealtech/components/button.dart';
 import 'package:sealtech/components/theme.dart';
 
@@ -11,11 +11,12 @@ class FeedbackForm extends StatefulWidget {
 class _FeedbackFormState extends State<FeedbackForm> {
   final _formKey = GlobalKey<FormState>();
   String _feedback = '';
+  double _rating = 0;
 
   void _submit() {
     if (_formKey.currentState!.validate()) {
       _formKey.currentState!.save();
-      // TODO: Implement the logic to submit the feedback
+      // TODO: Implement the logic to submit the feedback and rating
     }
   }
 
@@ -30,6 +31,7 @@ class _FeedbackFormState extends State<FeedbackForm> {
         child: Form(
           key: _formKey,
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               TextFormField(
                 decoration: InputDecoration(
@@ -60,7 +62,39 @@ class _FeedbackFormState extends State<FeedbackForm> {
                 maxLines: 5,
               ),
               SizedBox(height: 32),
-              Button(buttonText: 'Submit', onPressed: () {}, color: 'orange', enableIcon: false,)
+              Text(
+                'Rate Us',
+                style: TextStyle(
+                  fontSize: 16,
+                  color: accentColor,
+                ),
+                textAlign: TextAlign.left,
+              ),
+              SizedBox(height: 16),
+              RatingBar.builder(
+                initialRating: _rating,
+                minRating: 1,
+                direction: Axis.horizontal,
+                allowHalfRating: true,
+                itemCount: 5,
+                itemSize: 36,
+                itemBuilder: (context, _) => Icon(
+                  Icons.star,
+                  color: primaryColor,
+                ),
+                onRatingUpdate: (rating) {
+                  setState(() {
+                    _rating = rating;
+                  });
+                },
+              ),
+              SizedBox(height: 32),
+              Button(
+                buttonText: 'Submit',
+                onPressed: _submit,
+                color: 'orange',
+                enableIcon: false,
+              ),
             ],
           ),
         ),
