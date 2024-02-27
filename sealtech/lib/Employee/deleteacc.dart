@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sealtech/components/button.dart';
 import 'package:sealtech/components/theme.dart';
 
 class DeleteAccountPage extends StatelessWidget {
@@ -106,24 +107,16 @@ class DeleteAccountPage extends StatelessWidget {
             ),
             const SizedBox(height: 30),
             SizedBox(
-              width: 200,
-              height: 50,
-              child: ElevatedButton(
+              width: 300,
+              height: 70,
+              child: Button(
+                buttonText: 'Save Preferences',
                 onPressed: () {
-                  // Call the function to simulate deleting the account
                   _deleteAccount(context);
                 },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: primaryColor, // Change button color to red
-                ),
-                child: const Text(
-                  'Delete My Account',
-                  style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    color: Color.fromARGB(255, 255, 255, 255),
-                    fontSize: 14,
-                  ),
-                ),
+                color: 'orange',
+                enableIcon: false,
+                isStroked: false,
               ),
             )
           ],
