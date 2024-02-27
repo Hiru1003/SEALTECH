@@ -58,6 +58,7 @@ class _NotificationSettingsPageState extends State<NotificationSettingsPage> {
         elevation: 0.00,
         backgroundColor: const Color.fromRGBO(251, 147, 0, 1),
       ),
+      backgroundColor: const Color.fromRGBO(255, 252, 245, 1),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
