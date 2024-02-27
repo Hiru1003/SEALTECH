@@ -18,29 +18,30 @@ class _NewLocation_PageState extends State<NewLocation_Page> {
   final TextEditingController locationController = TextEditingController();
   final TextEditingController duePaymentController = TextEditingController();
 
-  void _showSuccessDialog(BuildContext context) {
+  void _showValidationDialog(BuildContext context) {
     showDialog(
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text(
-            'Success',
+          title: const Text(
+            'Missing Information',
             style: TextStyle(
-                color: const Color.fromARGB(255, 94, 95, 94), fontSize: 22),
+                color: Color.fromARGB(255, 94, 95, 94),
+                fontSize: 20), // Change title color
           ),
-          content: Text(
-            'Location added successfully!',
-            style: TextStyle(color: const Color.fromARGB(255, 94, 95, 94)),
+          content: const Text(
+            'Please fill out all fields before continuing.',
+            style:
+                TextStyle(color: Color.fromARGB(255, 94, 95, 94), fontSize: 14),
           ),
           backgroundColor: secondary50,
           actions: [
             TextButton(
               onPressed: () {
-                Navigator.of(context).pop(); // Close the dialog
-                Navigator.of(context).pop(); // Go back to the home page
+                Navigator.of(context).pop(); // Close the validation dialog
               },
-              child: Text(
-                'Back to Home',
+              child: const Text(
+                'OK',
                 style: TextStyle(color: Color.fromARGB(255, 68, 68, 68)),
               ),
             ),
@@ -48,6 +49,54 @@ class _NewLocation_PageState extends State<NewLocation_Page> {
         );
       },
     );
+  }
+
+  void _showSuccessDialog(BuildContext context) {
+    // Validation check before showing the success dialog
+    String title = titleController.text;
+    String deadline = deadlineController.text;
+    String location = locationController.text;
+    String duePayment = duePaymentController.text;
+
+    if (title.isEmpty ||
+        deadline.isEmpty ||
+        location.isEmpty ||
+        duePayment.isEmpty) {
+      // Show validation error dialog
+      _showValidationDialog(context);
+    } else {
+      // All fields are filled, show success dialog
+      showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: const Text(
+              'Success',
+              style: TextStyle(
+                  color: Color.fromARGB(255, 94, 95, 94), fontSize: 22),
+            ),
+            content: const Text(
+              'Location added successfully!',
+              style: TextStyle(
+                  color: Color.fromARGB(255, 94, 95, 94), fontSize: 14),
+            ),
+            backgroundColor: secondary50,
+            actions: [
+              TextButton(
+                onPressed: () {
+                  Navigator.of(context).pop(); // Close the dialog
+                  Navigator.of(context).pop(); // Go back to the home page
+                },
+                child: const Text(
+                  'Back to Home',
+                  style: TextStyle(color: Color.fromARGB(255, 68, 68, 68)),
+                ),
+              ),
+            ],
+          );
+        },
+      );
+    }
   }
 
   @override
