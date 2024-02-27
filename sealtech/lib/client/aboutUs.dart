@@ -195,12 +195,73 @@ class _AboutUsState extends State<AboutUs> {
                         'Projects Done',
                         style: TextStyle(
                           fontSize: 20,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     ],
                   ),
                 ),
+              ),
+              SizedBox(height: 20,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Expanded(
+                    child: Container(
+                      padding: EdgeInsets.all(16.0),
+                      decoration: BoxDecoration(
+                        color: primary50,
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      child: Column(
+                        children: [
+                          Icon(
+                            Icons.check_circle,
+                            color: primaryColor,
+                            size: 40,
+                          ),
+                          SizedBox(height: 10,),
+                          Text(
+                            'Quality Assurance',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 20,),
+                  Expanded(
+                    child: Container(
+                      padding: EdgeInsets.all(16.0),
+                      decoration: BoxDecoration(
+                      ),
+                      child: Column(
+                        children: [
+                          Icon(
+                            Icons.star,
+                            color: primaryColor,
+                            size: 40,
+                          ),
+                          SizedBox(height: 10,),
+                          Text(
+                            'Customer Satisfaction',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
               ),
               SizedBox(height: 20,),
             ],
