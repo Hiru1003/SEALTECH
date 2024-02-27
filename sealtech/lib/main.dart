@@ -11,9 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      //home: SignUpPage(),
       home: NavbarC(),
-      //home: ServiceCard(),
       //home: NavbarE(),
     );
   }

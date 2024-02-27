@@ -119,7 +119,7 @@ class HomeWidget extends State<NavbarC>{
             ),
             ),
         ),
-        floatingActionButton: FloatingActionButton(
+        floatingActionButton: _selectedTab == 3 || _selectedTab == 4 ? null : FloatingActionButton(
           onPressed: () {
             Navigator.push(
               context,
