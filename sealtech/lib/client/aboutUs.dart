@@ -33,6 +33,14 @@ class AboutUs extends StatelessWidget {
             ),
             SizedBox(height: 20,),
             Image.asset('lib/images/aboutus1.png'),
+            SizedBox(height: 20,),
+            Text(
+              "At SEALTECH, we pride ourselves on being a pioneering force in the waterproofing industry, dedicated to delivering top-notch solutions that exceed our clients' expectations. Established in 1995, SEALTECH emerged from humble beginnings with a vision to revolutionize waterproofing practices across residential, commercial, and industrial sectors.",
+              textAlign: TextAlign.justify,
+              style: TextStyle(
+                fontWeight: FontWeight.w500,
+              ),
+            )
           ],
         ),
       ),
