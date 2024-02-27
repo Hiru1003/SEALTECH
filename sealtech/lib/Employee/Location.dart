@@ -261,9 +261,9 @@ class _Location_PageState extends State<Location_Page> {
                   child: Container(
                     padding: EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                      color: primary25,
+                      color: secondaryColor,
                       borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: primary25),
+                      border: Border.all(color: secondaryColor),
                     ),
                     child: const Row(
                       children: [

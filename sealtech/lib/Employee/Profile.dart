@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sealtech/Employee/Noitification.dart';
+import 'package:sealtech/Employee/deleteacc.dart';
 import 'package:sealtech/components/button.dart';
 import 'package:sealtech/components/theme.dart';
+import 'package:sealtech/privacypolicy.dart';
+import 'package:sealtech/signin.dart';
 
 class Profile_Page extends StatefulWidget {
   const Profile_Page({
@@ -112,102 +116,130 @@ class _Profile_PageState extends State<Profile_Page> {
                     ],
                   ),
                   const SizedBox(height: 20),
-                  Container(
-                    width: 310,
-                    height: 50,
-                    padding: const EdgeInsets.only(left: 15, right: 15),
-                    decoration: BoxDecoration(
-                      color: bgColor,
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(
-                        color: primaryColor,
+                  GestureDetector(
+                    onTap: () {
+                      // Navigate to the Privacy and Security page
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => PrivacyPolicyPage()),
+                      );
+                    },
+                    child: Container(
+                      width: 310,
+                      height: 50,
+                      padding: const EdgeInsets.only(left: 15, right: 15),
+                      decoration: BoxDecoration(
+                        color: bgColor,
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(
+                          color: primaryColor,
+                        ),
                       ),
-                    ),
-                    child: const Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            SizedBox(width: 10),
-                            Text(
-                              'Privacy and Security',
-                              style: TextStyle(
-                                color: Color.fromARGB(255, 84, 82, 82),
+                      child: const Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              SizedBox(width: 10),
+                              Text(
+                                'Privacy and Security',
+                                style: TextStyle(
+                                  color: Color.fromARGB(255, 84, 82, 82),
+                                ),
                               ),
-                            ),
-                          ],
-                        ),
-                        Icon(
-                          Icons.arrow_forward_ios,
-                          color: Color.fromARGB(255, 84, 82, 82),
-                        ),
-                      ],
+                            ],
+                          ),
+                          Icon(
+                            Icons.arrow_forward_ios,
+                            color: Color.fromARGB(255, 84, 82, 82),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   const SizedBox(height: 10),
-                  Container(
-                    width: 310,
-                    height: 50,
-                    padding: const EdgeInsets.only(left: 15, right: 15),
-                    decoration: BoxDecoration(
-                      color: bgColor,
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(
-                        color: primaryColor,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => NotificationSettingsPage()),
+                      );
+                    },
+                    child: Container(
+                      width: 310,
+                      height: 50,
+                      padding: const EdgeInsets.only(left: 15, right: 15),
+                      decoration: BoxDecoration(
+                        color: bgColor,
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(
+                          color: primaryColor,
+                        ),
                       ),
-                    ),
-                    child: const Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            SizedBox(width: 10),
-                            Text(
-                              'Notification',
-                              style: TextStyle(
-                                color: Color.fromARGB(255, 84, 82, 82),
+                      child: const Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              SizedBox(width: 10),
+                              Text(
+                                'Notification',
+                                style: TextStyle(
+                                  color: Color.fromARGB(255, 84, 82, 82),
+                                ),
                               ),
-                            ),
-                          ],
-                        ),
-                        Icon(
-                          Icons.arrow_forward_ios,
-                          color: Color.fromARGB(255, 84, 82, 82),
-                        ),
-                      ],
+                            ],
+                          ),
+                          Icon(
+                            Icons.arrow_forward_ios,
+                            color: Color.fromARGB(255, 84, 82, 82),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   const SizedBox(height: 10),
-                  Container(
-                    width: 310,
-                    height: 50,
-                    padding: const EdgeInsets.only(left: 15, right: 15),
-                    decoration: BoxDecoration(
-                      color: bgColor,
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(
-                        color: primaryColor,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => DeleteAccountPage()),
+                      );
+                    },
+                    child: Container(
+                      width: 310,
+                      height: 50,
+                      padding: const EdgeInsets.only(left: 15, right: 15),
+                      decoration: BoxDecoration(
+                        color: bgColor,
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(
+                          color: primaryColor,
+                        ),
                       ),
-                    ),
-                    child: const Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            SizedBox(width: 10),
-                            Text(
-                              'Delete my account',
-                              style: TextStyle(
-                                color: Color.fromARGB(255, 84, 82, 82),
+                      child: const Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              SizedBox(width: 10),
+                              Text(
+                                'Delete my account',
+                                style: TextStyle(
+                                  color: Color.fromARGB(255, 84, 82, 82),
+                                ),
                               ),
-                            ),
-                          ],
-                        ),
-                        Icon(
-                          Icons.arrow_forward_ios,
-                          color: Color.fromARGB(255, 84, 82, 82),
-                        ),
-                      ],
+                            ],
+                          ),
+                          Icon(
+                            Icons.arrow_forward_ios,
+                            color: Color.fromARGB(255, 84, 82, 82),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   const SizedBox(height: 10),
@@ -215,7 +247,13 @@ class _Profile_PageState extends State<Profile_Page> {
                     padding: const EdgeInsets.symmetric(horizontal: 16),
                     child: Button(
                       buttonText: 'Log Out',
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => (SignInPage())),
+                        );
+                      },
                       color: 'orange',
                       enableIcon: false,
                       isStroked: false,
