@@ -1,8 +1,71 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:sealtech/components/theme.dart';
 
-class AboutUs extends StatelessWidget {
+class AboutUs extends StatefulWidget {
   const AboutUs({Key? key}) : super(key: key);
+
+  @override
+  _AboutUsState createState() => _AboutUsState();
+}
+
+class _AboutUsState extends State<AboutUs> {
+  late ScrollController _scrollController;
+  bool _counterStarted = false;
+  int _count = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    _scrollController = ScrollController();
+    _scrollController.addListener(_startCounter);
+  }
+
+  @override
+  void dispose() {
+    _scrollController.removeListener(_startCounter);
+    _scrollController.dispose();
+    super.dispose();
+  }
+
+  void _startCounter() {
+    if (!_counterStarted &&
+        _isBoxVisible(
+          MediaQuery.of(context).size.height -
+              kToolbarHeight -
+              kBottomNavigationBarHeight,
+        )) {
+      setState(() {
+        _counterStarted = true;
+      });
+      _startCounting();
+    }
+  }
+
+  bool _isBoxVisible(double screenHeight) {
+    RenderBox? renderBox =
+        context.findRenderObject() as RenderBox; // Find the render object
+    double boxPosition = renderBox.localToGlobal(Offset.zero).dy;
+    return boxPosition < screenHeight;
+  }
+
+  void _startCounting() {
+    const countDuration = Duration(seconds: 1);
+    const totalCount = 500;
+    final interval = countDuration ~/ totalCount;
+    int currentCount = 0;
+
+    Timer.periodic(interval, (timer) {
+      if (currentCount < totalCount) {
+        setState(() {
+          _count = currentCount++;
+        });
+      } else {
+        timer.cancel();
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -17,8 +80,9 @@ class AboutUs extends StatelessWidget {
         ],
       ),
       body: SingleChildScrollView(
+        controller: _scrollController,
         child: Padding(
-          padding: EdgeInsets.only(left: 16.0, right: 16.0,),
+          padding: EdgeInsets.symmetric(horizontal: 16.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -33,9 +97,9 @@ class AboutUs extends StatelessWidget {
                 textAlign: TextAlign.left,
                 style: TextStyle(fontWeight: FontWeight.w900, fontSize: 20),
               ),
-              SizedBox(height: 20,),
+              SizedBox(height: 30,),
               Image.asset('lib/images/aboutus1.png'),
-              SizedBox(height: 20,),
+              SizedBox(height: 30,),
               Text.rich(
                 TextSpan(
                   children: [
@@ -56,9 +120,9 @@ class AboutUs extends StatelessWidget {
                 ),
                 textAlign: TextAlign.justify,
               ),
-              SizedBox(height: 20,),
+              SizedBox(height: 30,),
               Image.asset('lib/images/aboutus2.png'),
-              SizedBox(height: 20,),
+              SizedBox(height: 30,),
               Text.rich(
                 TextSpan(
                   children: [
@@ -79,7 +143,7 @@ class AboutUs extends StatelessWidget {
                 ),
                 textAlign: TextAlign.justify,
               ),
-              SizedBox(height: 10,),
+              SizedBox(height: 20,),
               Text.rich(
                 TextSpan(
                   children: [
@@ -99,6 +163,44 @@ class AboutUs extends StatelessWidget {
                   ],
                 ),
                 textAlign: TextAlign.justify,
+              ),
+              SizedBox(height: 30,),
+              Center(
+                child: Container(
+                  width: double.infinity,
+                  padding: EdgeInsets.all(16.0),
+                  decoration: BoxDecoration(
+                    color: primary25,
+                    borderRadius: BorderRadius.circular(10.0),
+                    boxShadow: [
+                      BoxShadow(
+                        color: const Color.fromARGB(255, 209, 209, 209).withOpacity(0.5),
+                        spreadRadius: 5,
+                        blurRadius: 7,
+                        offset: Offset(0, 3),
+                      ),
+                    ],
+                  ),
+                  child: Column(
+                    children: [
+                      Text(
+                        _count.toString(),
+                        style: TextStyle(
+                          color: primaryColor,
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Text(
+                        'Projects Done',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ),
               SizedBox(height: 20,),
             ],
