@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sealtech/components/button.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -78,15 +79,14 @@ class _NotificationSettingsPageState extends State<NotificationSettingsPage> {
               smsController,
             ),
             const SizedBox(height: 20),
-            ElevatedButton(
+            Button(
+              buttonText: 'Save Preferences',
               onPressed: () {
                 _saveNotificationPreferences();
               },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Color.fromRGBO(255, 132, 0, 1),
-              ),
-              child: const Text('Save Preferences',
-                  style: TextStyle(color: Color.fromARGB(255, 255, 255, 255))),
+              color: 'orange',
+              enableIcon: false,
+              isStroked: false,
             ),
           ],
         ),
