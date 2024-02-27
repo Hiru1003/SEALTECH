@@ -37,7 +37,7 @@ class _AttendancePageState extends State<AttendancePage> {
     ];
 
     // Set up a timer to update the time every second
-    _timer = Timer.periodic(Duration(seconds: 1), (timer) {
+    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
       setState(() {
         _currentTime = DateTime.now();
       });
@@ -55,10 +55,10 @@ class _AttendancePageState extends State<AttendancePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Attendance Page'),
+        title: const Text('Attendance Page'),
         actions: [
           IconButton(
-            icon: Icon(Icons.history),
+            icon: const Icon(Icons.history),
             onPressed: () {
               _viewAttendanceRecords();
             },
@@ -90,13 +90,13 @@ class _AttendancePageState extends State<AttendancePage> {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 IconButton(
-                  icon: Icon(Icons.add),
+                  icon: const Icon(Icons.add),
                   onPressed: () {
                     _addEmployee();
                   },
                 ),
                 IconButton(
-                  icon: Icon(Icons.history),
+                  icon: const Icon(Icons.history),
                   onPressed: () {
                     _viewAttendanceRecords();
                   },
@@ -127,12 +127,12 @@ class _AttendancePageState extends State<AttendancePage> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text(
+          title: const Text(
             'Present Employees',
             style:
                 TextStyle(color: Color.fromARGB(255, 94, 95, 94), fontSize: 22),
           ),
-          content: Container(
+          content: SizedBox(
             width: double.maxFinite,
             child: ListView.builder(
               itemCount: presentEmployees.length,
@@ -170,28 +170,28 @@ class _AttendancePageState extends State<AttendancePage> {
       builder: (BuildContext context) {
         String newEmployeeName = '';
         return AlertDialog(
-          title: Text(
+          title: const Text(
             'Add Employee',
             style:
                 TextStyle(color: Color.fromARGB(255, 94, 95, 94), fontSize: 22),
           ),
           content: TextField(
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               labelText: 'Employee Name',
               labelStyle: TextStyle(
-                  color: const Color.fromARGB(
+                  color: Color.fromARGB(
                       255, 94, 95, 94)), // Change label text color
               focusedBorder: UnderlineInputBorder(
                 borderSide: BorderSide(
-                    color: const Color.fromARGB(
+                    color: Color.fromARGB(
                         255, 94, 95, 94)), // Change focused border color
               ),
             ),
             onChanged: (value) {
               newEmployeeName = value;
             },
-            style: TextStyle(
-                color: const Color.fromARGB(255, 94, 95, 94),
+            style: const TextStyle(
+                color: Color.fromARGB(255, 94, 95, 94),
                 fontSize: 14), // Change input text color
           ),
           backgroundColor: secondary25,
@@ -200,7 +200,7 @@ class _AttendancePageState extends State<AttendancePage> {
               onPressed: () {
                 Navigator.of(context).pop(); // Close the add employee dialog
               },
-              child: Text(
+              child: const Text(
                 'Cancel',
                 style: TextStyle(
                     color: Color.fromARGB(255, 94, 95, 94), fontSize: 14),
@@ -210,7 +210,7 @@ class _AttendancePageState extends State<AttendancePage> {
               onPressed: () {
                 _submitEmployee(newEmployeeName);
               },
-              child: Text(
+              child: const Text(
                 'Add',
                 style: TextStyle(
                     color: Color.fromARGB(255, 94, 95, 94), fontSize: 14),
