@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sealtech/components/theme.dart';
 
 class Chat extends StatelessWidget {
   Widget build(BuildContext context) => Scaffold(
@@ -16,6 +17,33 @@ class Chat extends StatelessWidget {
               onPressed: () {},
             ),
           ]
+        ),
+        body: SingleChildScrollView(
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.person, size: 100, color: primaryColor,),
+                const SizedBox(height: 8.0),
+                const Text(
+                  'John Doe',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const SizedBox(height: 8.0),
+                const Text(
+                  'aarruwanthie@gmail.com',
+                  style: TextStyle(
+                    fontSize: 13,
+                    fontWeight: FontWeight.normal,
+                  ),
+                ),
+                const SizedBox(height: 36.0),
+              ],
+            ),
+          ),
         ),
       );
 }
