@@ -31,7 +31,7 @@ class _NotificationSettingsPageState extends State<NotificationSettingsPage> {
             right: 10,
           ),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               Text(
                 'Notification Settings',
