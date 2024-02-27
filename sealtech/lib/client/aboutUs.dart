@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:sealtech/components/theme.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class AboutUs extends StatefulWidget {
   const AboutUs({Key? key}) : super(key: key);
@@ -260,6 +261,64 @@ class _AboutUsState extends State<AboutUs> {
                         ],
                       ),
                     ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 30,),
+              Text.rich(
+                TextSpan(
+                  children: [
+                    TextSpan(
+                      text: "At SEALTECH, ",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      ),
+                    ),
+                    TextSpan(
+                      text: "we understand that each project is unique, requiring tailored solutions to address specific needs and challenges. Our collaborative approach fosters open communication and transparency, allowing us to forge strong partnerships with our clients built on trust, integrity, and mutual respect.",
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
+                ),
+                textAlign: TextAlign.justify,
+              ),
+              SizedBox(height: 20,),
+              Text.rich(
+                TextSpan(
+                  children: [
+                    TextSpan(
+                      text: "Driven by a passion ",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      ),
+                    ),
+                    TextSpan(
+                      text: "for excellence and a commitment to customer satisfaction, SEALTECH remains steadfast in its mission to redefine the standards of waterproofing excellence. With a proven track record of success and a relentless pursuit of perfection, we invite you to join us on our journey as we continue to set new benchmarks and shape the future of waterproofing solutions.",
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
+                ),
+                textAlign: TextAlign.justify,
+              ),
+              SizedBox(height: 30,),
+              Image.asset('lib/images/aboutus2.png'),
+              SizedBox(height: 50,),
+              Row(
+                children: [
+                  SizedBox(height: 50,),
+                  Text('Developed by undergraduate students\nfrom NSBM Green University.'),
+                  SizedBox(width: 70,),
+                  GestureDetector(
+                    onTap: () {
+                      launch('https://www.nsbm.ac.lk/');
+                    },
+                    child: Image.asset('lib/images/nsbmLogo.png', width: 60,),
                   ),
                 ],
               ),

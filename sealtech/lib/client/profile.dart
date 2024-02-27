@@ -56,8 +56,7 @@ class Profile extends StatelessWidget {
                       );
                     },
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.white,
-                      onPrimary: Colors.black,
+                      foregroundColor: Colors.black, backgroundColor: Colors.white,
                       side: const BorderSide(color: Colors.black, width: 0.4),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
@@ -85,8 +84,7 @@ class Profile extends StatelessWidget {
                       );
                     },
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.white,
-                      onPrimary: Colors.black,
+                      foregroundColor: Colors.black, backgroundColor: Colors.white,
                       side: const BorderSide(color: Colors.black, width: 0.4),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
@@ -114,8 +112,7 @@ class Profile extends StatelessWidget {
                       );
                     },
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.white,
-                      onPrimary: Colors.black,
+                      foregroundColor: Colors.black, backgroundColor: Colors.white,
                       side: const BorderSide(color: Colors.black, width: 0.4),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
@@ -143,8 +140,7 @@ class Profile extends StatelessWidget {
                       );
                     },
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.white,
-                      onPrimary: Colors.black,
+                      foregroundColor: Colors.black, backgroundColor: Colors.white,
                       side: const BorderSide(color: Colors.black, width: 0.4),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
@@ -172,8 +168,7 @@ class Profile extends StatelessWidget {
                       );
                     },
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.white,
-                      onPrimary: Colors.black,
+                      foregroundColor: Colors.black, backgroundColor: Colors.white,
                       side: const BorderSide(color: Colors.black, width: 0.4),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
@@ -201,8 +196,7 @@ class Profile extends StatelessWidget {
                       );
                     },
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.white,
-                      onPrimary: Colors.black,
+                      foregroundColor: Colors.black, backgroundColor: Colors.white,
                       side: const BorderSide(color: Colors.black, width: 0.4),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
@@ -230,8 +224,7 @@ class Profile extends StatelessWidget {
                       );
                   },
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.white,
-                    onPrimary: Colors.black,
+                    foregroundColor: Colors.black, backgroundColor: Colors.white,
                     side: const BorderSide(color: Colors.black, width: 0.4),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8),
