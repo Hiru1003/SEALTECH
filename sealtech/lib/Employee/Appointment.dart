@@ -80,7 +80,7 @@ class _Appoinment_PageState extends State<Appoinment_Page> {
                   color: Color.fromARGB(255, 94, 95, 94), fontSize: 22),
             ),
             content: const Text(
-              'Location added successfully!',
+              'Appoinment added successfully!',
               style: TextStyle(
                   color: Color.fromARGB(255, 94, 95, 94), fontSize: 14),
             ),
