@@ -100,7 +100,7 @@ class ToolsChemCardState extends State<ToolsChemCard> {
                       ),
                       children: [
                         TextSpan(
-                          text: 'Est. Price:',
+                          text: 'Price:',
                           style: TextStyle(
                             color: Colors.black,
                           ),
