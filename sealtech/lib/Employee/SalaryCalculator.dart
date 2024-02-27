@@ -41,10 +41,11 @@ class _Salary_PageState extends State<Salary_Page> {
               Text(
                 'Salary Calculator',
                 style: GoogleFonts.poppins(
-                    textStyle: Theme.of(context).textTheme.displayLarge,
-                    color: const Color.fromARGB(255, 70, 66, 68),
-                    fontSize: 18,
-                    fontWeight: FontWeight.w600),
+                  textStyle: Theme.of(context).textTheme.displayLarge,
+                  color: const Color.fromARGB(255, 70, 66, 68),
+                  fontSize: 18,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
             ],
           ),
@@ -54,8 +55,9 @@ class _Salary_PageState extends State<Salary_Page> {
         toolbarOpacity: 0.9,
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
-              bottomRight: Radius.circular(18),
-              bottomLeft: Radius.circular(18)),
+            bottomRight: Radius.circular(18),
+            bottomLeft: Radius.circular(18),
+          ),
         ),
         iconTheme: const IconThemeData(
           color: Colors.black,
@@ -93,7 +95,7 @@ class _Salary_PageState extends State<Salary_Page> {
                   },
                   obscureText: false,
                   decoration: InputDecoration(
-                    labelText: ' Enter basic salary',
+                    labelText: 'Enter basic salary',
                     labelStyle: const TextStyle(
                       color: Colors.grey,
                       fontSize: 16,
@@ -116,7 +118,7 @@ class _Salary_PageState extends State<Salary_Page> {
                   },
                   obscureText: false,
                   decoration: InputDecoration(
-                    labelText: ' Enter no:of hours of overtime',
+                    labelText: 'Enter no:of hours of overtime',
                     labelStyle: const TextStyle(
                       color: Colors.grey,
                       fontSize: 16,
