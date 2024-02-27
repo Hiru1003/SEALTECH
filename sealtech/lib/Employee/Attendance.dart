@@ -178,10 +178,21 @@ class _AttendancePageState extends State<AttendancePage> {
           content: TextField(
             decoration: InputDecoration(
               labelText: 'Employee Name',
+              labelStyle: TextStyle(
+                  color: const Color.fromARGB(
+                      255, 94, 95, 94)), // Change label text color
+              focusedBorder: UnderlineInputBorder(
+                borderSide: BorderSide(
+                    color: const Color.fromARGB(
+                        255, 94, 95, 94)), // Change focused border color
+              ),
             ),
             onChanged: (value) {
               newEmployeeName = value;
             },
+            style: TextStyle(
+                color: const Color.fromARGB(255, 94, 95, 94),
+                fontSize: 14), // Change input text color
           ),
           backgroundColor: secondary25,
           actions: [
