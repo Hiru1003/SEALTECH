@@ -8,6 +8,7 @@ import 'package:sealtech/client/orderHistory.dart';
 import 'package:sealtech/client/payMethod.dart';
 import 'package:sealtech/components/button.dart';
 import 'package:sealtech/components/theme.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Profile extends StatelessWidget {
   Widget build(BuildContext context) => Scaffold(
@@ -242,7 +243,25 @@ class Profile extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 36.0),
-              Button(buttonText: 'Logout', onPressed: () {}, color: 'orange', width: 380,)
+              Button(buttonText: 'Logout', onPressed: () {}, color: 'orange', width: 380,),
+              SizedBox(height: 50,),
+              Padding(
+                padding: const EdgeInsets.only(left: 16),
+                child: Row(
+                  children: [
+                    SizedBox(height: 50,),
+                    Text('Developed by undergraduate students\nfrom NSBM Green University.'),
+                    SizedBox(width: 70,),
+                    GestureDetector(
+                      onTap: () {
+                        launch('https://www.nsbm.ac.lk/');
+                      },
+                      child: Image.asset('lib/images/nsbmLogo.png', width: 60,),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(height: 20,),
               ],
             ),
           ),
