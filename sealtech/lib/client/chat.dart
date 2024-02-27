@@ -44,6 +44,7 @@ class Chat extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 36.0),
+                      
                     ],
                   ),
                 ),
@@ -51,19 +52,31 @@ class Chat extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(right: 16.0, left: 16.0),
-              child: TextField(
-                decoration: InputDecoration(
-                  hintText: 'Message SEALTECH...',
-                  filled: true,
-                  fillColor: primary25,
-                  contentPadding: EdgeInsets.fromLTRB(24.0, 6.0, 12.0, 6.0),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide.none,
-                    borderRadius: BorderRadius.circular(32.0),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide.none,
-                    borderRadius: BorderRadius.circular(32.0),
+              child: Container(
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Color.fromARGB(255, 172, 172, 172).withOpacity(0.5),
+                      spreadRadius: 2,
+                      blurRadius: 50,
+                      offset: Offset(0, 3),
+                    ),
+                  ],
+                ),
+                child: TextField(
+                  decoration: InputDecoration(
+                    hintText: 'Message SEALTECH...',
+                    filled: true,
+                    fillColor: secondaryColor,
+                    contentPadding: EdgeInsets.fromLTRB(24.0, 6.0, 12.0, 6.0),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide.none,
+                      borderRadius: BorderRadius.circular(32.0),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide.none,
+                      borderRadius: BorderRadius.circular(32.0),
+                    ),
                   ),
                 ),
               ),
