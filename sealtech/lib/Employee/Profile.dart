@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sealtech/Employee/Noitification.dart';
 import 'package:sealtech/Employee/deleteacc.dart';
 import 'package:sealtech/components/button.dart';
 import 'package:sealtech/components/theme.dart';
@@ -163,7 +164,7 @@ class _Profile_PageState extends State<Profile_Page> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => DeleteAccountPage()),
+                            builder: (context) => NotificationSettingsPage()),
                       );
                     },
                     child: Container(
