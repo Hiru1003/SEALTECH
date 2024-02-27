@@ -18,6 +18,38 @@ class _NewLocation_PageState extends State<NewLocation_Page> {
   final TextEditingController locationController = TextEditingController();
   final TextEditingController duePaymentController = TextEditingController();
 
+  void _showSuccessDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text(
+            'Success',
+            style: TextStyle(
+                color: const Color.fromARGB(255, 94, 95, 94), fontSize: 22),
+          ),
+          content: Text(
+            'Location added successfully!',
+            style: TextStyle(color: const Color.fromARGB(255, 94, 95, 94)),
+          ),
+          backgroundColor: secondary50,
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop(); // Close the dialog
+                Navigator.of(context).pop(); // Go back to the home page
+              },
+              child: Text(
+                'Back to Home',
+                style: TextStyle(color: Color.fromARGB(255, 68, 68, 68)),
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -155,6 +187,8 @@ class _NewLocation_PageState extends State<NewLocation_Page> {
                     String deadline = deadlineController.text;
                     String location = locationController.text;
                     String duePayment = duePaymentController.text;
+
+                    _showSuccessDialog(context);
 
                     // Do something with the user input
                     print(
