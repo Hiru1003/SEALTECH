@@ -18,32 +18,47 @@ class Chat extends StatelessWidget {
             ),
           ]
         ),
-        body: SingleChildScrollView(
-          child: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(Icons.person, size: 100, color: primaryColor,),
-                const SizedBox(height: 8.0),
-                const Text(
-                  'John Doe',
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
+        body: Column(
+          children: [
+            Expanded(
+              child: SingleChildScrollView(
+                child: Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.person, size: 100, color: primaryColor,),
+                      const SizedBox(height: 8.0),
+                      const Text(
+                        'John Doe',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      const SizedBox(height: 8.0),
+                      const Text(
+                        'aarruwanthie@gmail.com',
+                        style: TextStyle(
+                          fontSize: 13,
+                          fontWeight: FontWeight.normal,
+                        ),
+                      ),
+                      const SizedBox(height: 36.0),
+                    ],
                   ),
                 ),
-                const SizedBox(height: 8.0),
-                const Text(
-                  'aarruwanthie@gmail.com',
-                  style: TextStyle(
-                    fontSize: 13,
-                    fontWeight: FontWeight.normal,
-                  ),
-                ),
-                const SizedBox(height: 36.0),
-              ],
+              ),
             ),
-          ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextField(
+                decoration: InputDecoration(
+                  hintText: 'Type your message...',
+                  border: OutlineInputBorder(),
+                ),
+              ),
+            ),
+          ],
         ),
       );
 }
