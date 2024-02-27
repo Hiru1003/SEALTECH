@@ -31,8 +31,14 @@ class _AttendancePageState extends State<AttendancePage> {
     super.initState();
     // Initialize employees from the database (you can replace this with actual database calls)
     employees = [
-      Employee(id: 1, name: 'John Doe'),
-      Employee(id: 2, name: 'Jane Duck'),
+      Employee(id: 1, name: 'Kamal Perera'),
+      Employee(id: 2, name: 'Sanidu Fernando'),
+      Employee(id: 3, name: 'Gehan Peiris'),
+      Employee(id: 4, name: 'Dulish Mendis'),
+      Employee(id: 5, name: 'Shane Salgado'),
+      Employee(id: 6, name: 'Jihan Perera'),
+      Employee(id: 7, name: 'Maleesha Fonseka'),
+      Employee(id: 8, name: 'Vehan Mendis'),
       // Add more employees as needed
     ];
 
