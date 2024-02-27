@@ -50,11 +50,21 @@ class Chat extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.only(right: 16.0, left: 16.0),
               child: TextField(
                 decoration: InputDecoration(
-                  hintText: 'Type your message...',
-                  border: OutlineInputBorder(),
+                  hintText: 'Message SEALTECH...',
+                  filled: true,
+                  fillColor: primary25,
+                  contentPadding: EdgeInsets.fromLTRB(24.0, 6.0, 12.0, 6.0),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide.none,
+                    borderRadius: BorderRadius.circular(32.0),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide.none,
+                    borderRadius: BorderRadius.circular(32.0),
+                  ),
                 ),
               ),
             ),
