@@ -107,8 +107,8 @@ class _NotificationSettingsPageState extends State<NotificationSettingsPage> {
               controller.text = value.toString();
             });
           },
-          activeColor:
-              Color.fromRGBO(255, 132, 0, 1), // Use the specified color
+          activeColor: Color.fromRGBO(255, 132, 0, 1),
+          inactiveThumbColor: Color.fromRGBO(255, 132, 0, 1),
         ),
       ],
     );
