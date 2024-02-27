@@ -5,6 +5,7 @@ import 'package:sealtech/Employee/Attendance.dart';
 import 'package:sealtech/Employee/Holidays.dart';
 import 'package:sealtech/Employee/Location.dart';
 import 'package:sealtech/Employee/SalaryCalculator.dart';
+import 'package:sealtech/components/theme.dart';
 
 class Home_Page extends StatefulWidget {
   const Home_Page({
@@ -49,7 +50,7 @@ class _Home_PageState extends State<Home_Page> {
           elevation: 0.00,
           backgroundColor: const Color.fromRGBO(251, 147, 0, 1),
         ),
-        backgroundColor: const Color.fromRGBO(255, 252, 245, 1),
+        backgroundColor: bgColor,
         body: SingleChildScrollView(
             child: Column(children: [
           const SizedBox(
