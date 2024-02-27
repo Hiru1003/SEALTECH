@@ -18,12 +18,18 @@ class AboutUs extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.only(left: 16.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: 16,),
             Text(
               'Waterproof  |  Seal  |  Protection',
-              textAlign: TextAlign.left,
               style: TextStyle(color: primaryColor),
+              textAlign: TextAlign.left,
+            ),
+            Text(
+              'About Our Company SEALTECH',
+              textAlign: TextAlign.left,
+              style: TextStyle(fontWeight: FontWeight.w900, fontSize: 20),
             ),
           ],
         ),
