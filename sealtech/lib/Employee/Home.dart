@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sealtech/Employee/Appointment.dart';
+import 'package:sealtech/Employee/Attendance.dart';
+import 'package:sealtech/Employee/Holidays.dart';
+import 'package:sealtech/Employee/Location.dart';
+import 'package:sealtech/Employee/SalaryCalculator.dart';
+import 'package:sealtech/components/theme.dart';
 
 class Home_Page extends StatefulWidget {
   const Home_Page({
@@ -44,7 +50,7 @@ class _Home_PageState extends State<Home_Page> {
           elevation: 0.00,
           backgroundColor: const Color.fromRGBO(251, 147, 0, 1),
         ),
-        backgroundColor: const Color.fromRGBO(255, 252, 245, 1),
+        backgroundColor: bgColor,
         body: SingleChildScrollView(
             child: Column(children: [
           const SizedBox(
@@ -86,7 +92,11 @@ class _Home_PageState extends State<Home_Page> {
                       ),
                       OutlinedButton(
                         onPressed: () {
-                          // Handle button press
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Location_Page()),
+                          );
                         },
                         style: OutlinedButton.styleFrom(
                           foregroundColor:
@@ -140,7 +150,14 @@ class _Home_PageState extends State<Home_Page> {
           ),
           const SizedBox(height: 20),
           Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-            Container(
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Holiday_Page()),
+                );
+              },
+              child: Container(
                 width: 100,
                 height: 100,
                 decoration: BoxDecoration(
@@ -151,59 +168,78 @@ class _Home_PageState extends State<Home_Page> {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: const Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.calendar_month,
-                        color: Color.fromARGB(255, 235, 217, 87),
-                      ),
-                      SizedBox(height: 15),
-                      Text('Holidays'),
-                    ])),
-            const SizedBox(width: 15),
-            Container(
-              width: 100,
-              height: 100,
-              decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 248, 241, 192),
-                border: Border.all(
-                  color: const Color.fromARGB(255, 248, 241, 192),
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.calendar_month,
+                      color: Color.fromARGB(255, 235, 217, 87),
+                    ),
+                    SizedBox(height: 15),
+                    Text('Holidays'),
+                  ],
                 ),
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: const Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(
-                    Icons.chat_bubble_rounded,
-                    color: Color.fromARGB(255, 235, 217, 87),
-                  ),
-                  SizedBox(height: 15),
-                  Text('Appointment'),
-                ],
               ),
             ),
             const SizedBox(width: 15),
-            Container(
-              width: 100,
-              height: 100,
-              decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 248, 241, 192),
-                border: Border.all(
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Appoinment_Page()),
+                );
+              },
+              child: Container(
+                width: 100,
+                height: 100,
+                decoration: BoxDecoration(
                   color: const Color.fromARGB(255, 248, 241, 192),
-                ),
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: const Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(
-                    Icons.calendar_view_week,
-                    color: Color.fromARGB(255, 235, 217, 87),
+                  border: Border.all(
+                    color: const Color.fromARGB(255, 248, 241, 192),
                   ),
-                  SizedBox(height: 15),
-                  Text('Attendance'),
-                ],
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: const Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.chat_bubble_rounded,
+                      color: Color.fromARGB(255, 235, 217, 87),
+                    ),
+                    SizedBox(height: 15),
+                    Text('Appointment'),
+                  ],
+                ),
+              ),
+            ),
+            const SizedBox(width: 15),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AttendancePage()),
+                );
+              },
+              child: Container(
+                width: 100,
+                height: 100,
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 248, 241, 192),
+                  border: Border.all(
+                    color: const Color.fromARGB(255, 248, 241, 192),
+                  ),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: const Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.calendar_view_week,
+                      color: Color.fromARGB(255, 235, 217, 87),
+                    ),
+                    SizedBox(height: 15),
+                    Text('Attendance'),
+                  ],
+                ),
               ),
             ),
           ]),
@@ -249,7 +285,11 @@ class _Home_PageState extends State<Home_Page> {
                       ),
                       OutlinedButton(
                         onPressed: () {
-                          // Handle button press
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Salary_Page()),
+                          );
                         },
                         style: OutlinedButton.styleFrom(
                           foregroundColor:

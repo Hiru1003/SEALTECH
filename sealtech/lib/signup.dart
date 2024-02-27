@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sealtech/components/button.dart';
 import 'package:sealtech/components/theme.dart';
+import 'package:sealtech/signin.dart';
 
 class SignUpPage extends StatelessWidget {
   @override
@@ -118,7 +119,7 @@ class SignUpPage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: Button(
-                  buttonText: 'Sign In',
+                  buttonText: 'Sign Up',
                   onPressed: () {
                     
                   },
@@ -142,7 +143,10 @@ class SignUpPage extends StatelessWidget {
                     ),
                     TextButton(
                       onPressed: () {
-                        
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => SignInPage()),
+                        );
                       },
                       child: const Text(
                         'Sign In',
