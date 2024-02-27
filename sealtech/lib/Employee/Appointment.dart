@@ -110,7 +110,7 @@ class _Appoinment_PageState extends State<Appoinment_Page> {
         title: Padding(
           padding: const EdgeInsets.only(left: 10, right: 10),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               Text(
                 'Appointment',
