@@ -39,6 +39,7 @@ class HomeWidget extends State<NavbarE> {
         ),
       ),
       bottomNavigationBar: BottomAppBar(
+        elevation: 0,
         shape: const CircularNotchedRectangle(),
         color: bgColor,
         child: Container(
