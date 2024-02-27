@@ -43,6 +43,23 @@ class AboutUs extends StatelessWidget {
               ),
               SizedBox(height: 20,),
               Image.asset('lib/images/aboutus2.png'),
+              SizedBox(height: 20,),
+              Text(
+                "Our journey began when our founder, John Smith, recognized a critical need for durable, long-lasting waterproofing solutions amidst the burgeoning construction industry. With a relentless pursuit of excellence and a commitment to innovation, SEALTECH quickly gained traction as a trusted name synonymous with quality and reliability.",
+                textAlign: TextAlign.justify,
+                style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+              SizedBox(height: 10,),
+              Text(
+                "Over the years, SEALTECH has evolved into a dynamic team of industry experts, equipped with cutting-edge technology and unmatched expertise to tackle even the most challenging waterproofing projects. Our unwavering dedication to research and development ensures that we stay ahead of the curve, continuously refining our techniques and embracing emerging trends to deliver unparalleled results.",
+                textAlign: TextAlign.justify,
+                style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+              SizedBox(height: 20,),
             ],
           ),
         ),
