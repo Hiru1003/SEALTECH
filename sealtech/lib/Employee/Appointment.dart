@@ -84,7 +84,7 @@ class _Appoinment_PageState extends State<Appoinment_Page> {
               style: TextStyle(
                   color: Color.fromARGB(255, 94, 95, 94), fontSize: 14),
             ),
-            backgroundColor: secondary50,
+            backgroundColor: secondary25,
             actions: [
               TextButton(
                 onPressed: () {
