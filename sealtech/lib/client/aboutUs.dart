@@ -307,7 +307,7 @@ class _AboutUsState extends State<AboutUs> {
                 textAlign: TextAlign.justify,
               ),
               SizedBox(height: 30,),
-              Image.asset('lib/images/aboutus2.png'),
+              Image.asset('lib/images/aboutus3.jpg'),
               SizedBox(height: 50,),
               Row(
                 children: [
