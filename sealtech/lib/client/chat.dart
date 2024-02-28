@@ -64,6 +64,7 @@ class Chat extends StatelessWidget {
                   ],
                 ),
                 child: TextField(
+                  cursorColor: accent75,
                   decoration: InputDecoration(
                     hintText: 'Message SEALTECH...',
                     filled: true,
