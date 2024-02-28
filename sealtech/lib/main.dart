@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sealtech/Employee/navbarE.dart';
 import 'package:sealtech/client/navbar.dart';
 
 void main() {
@@ -12,8 +11,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      //home: NavbarC(),
-      home: NavbarE(),
+      home: NavbarC(),
+      //home: NavbarE(),
     );
   }
 }
