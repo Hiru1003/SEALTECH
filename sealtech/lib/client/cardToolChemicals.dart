@@ -9,11 +9,30 @@ class ToolsChemCard extends StatefulWidget {
 
   @override
   ToolsChemCardState createState() => ToolsChemCardState();
+  
+  void onQuantityChanged(int quantity) {}
 }
 
 class ToolsChemCardState extends State<ToolsChemCard> {
   final PageController _pageController = PageController();
   int _currentPage = 0;
+  int quantity = 1;
+
+  void incrementQuantity() {
+    setState(() {
+      quantity++;
+    });
+    widget.onQuantityChanged(quantity);
+  }
+
+  void decrementQuantity() {
+    setState(() {
+      if (quantity > 1) {
+        quantity--;
+      }
+    });
+    widget.onQuantityChanged(quantity);
+  }
 
   @override
   Widget build(BuildContext context) => Scaffold(
@@ -92,28 +111,54 @@ class ToolsChemCardState extends State<ToolsChemCard> {
                     SizedBox(height: 10,),
                     Text('Lorem ipsum dolor sit amet consectetur. Risus sed et cras sit orci erat. Tortor eu nibh in amet tempor sapien. Et justo egestas leo consequat quis ipsum. Praesent bibendum aliquet massa at dignissim lacus lobortis quisque aliquam.\n\nTortor eu nibh in amet tempor sapien. Et justo egestas leo consequat quis ipsum. Praesent bibendum aliquet massa at dignissim lacus lobortis quisque aliquam.'),
                     SizedBox(height: 32,),
-                    RichText(
-                      text: TextSpan(
-                      style: GoogleFonts.inter(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        TextSpan(
-                          text: 'Price:',
-                          style: TextStyle(
-                            color: Colors.black,
+                        RichText(
+                          text: TextSpan(
+                          style: GoogleFonts.inter(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
                           ),
+                          children: [
+                            TextSpan(
+                              text: 'Price:',
+                              style: TextStyle(
+                                color: Colors.black,
+                              ),
+                            ),
+                            WidgetSpan(child: SizedBox(width: 20,)),
+                            TextSpan(
+                              text: '2 million LKR +',
+                              style: TextStyle(
+                                color: primaryColor,
+                              ),
+                            ),
+                          ],
                         ),
-                        WidgetSpan(child: SizedBox(width: 20,)),
-                        TextSpan(
-                          text: '2 million LKR +',
-                          style: TextStyle(
-                            color: primaryColor,
+                        ),
+                        SizedBox(height: 16,),
+                        Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          IconButton(
+                            icon: const Icon(Icons.remove),
+                            onPressed: decrementQuantity,
                           ),
-                        ),
+                          Text(
+                            quantity.toString(),
+                            style: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          IconButton(
+                            icon: const Icon(Icons.add),
+                            onPressed: incrementQuantity,
+                          ),
+                        ],
+                                          ),
                       ],
-                    ),
                     ),
                     SizedBox(height: 16,),
                     Button(
