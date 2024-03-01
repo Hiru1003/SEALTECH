@@ -1,6 +1,7 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sealtech/client/chat.dart';
 import 'package:sealtech/components/button.dart';
 import 'package:sealtech/components/theme.dart';
 
@@ -118,7 +119,12 @@ class ServiceCardState extends State<ServiceCard> {
                     SizedBox(height: 16,),
                     Button(
                       buttonText: 'Contact Us',
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Chat()),
+                        );
+                      },
                       width: 380,
                       isStroked: false,
                       color: 'orange',
