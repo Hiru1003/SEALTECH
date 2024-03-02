@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:sealtech/client/navbar.dart';
 import 'package:sealtech/components/button.dart';
 import 'package:sealtech/components/theme.dart';
-import 'package:sealtech/signin.dart';
 
 class SignUpPage extends StatefulWidget {
   @override
@@ -197,10 +196,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     ),
                     TextButton(
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => SignInPage()),
-                        );
+                        
                       },
                       child: const Text(
                         'Sign In',

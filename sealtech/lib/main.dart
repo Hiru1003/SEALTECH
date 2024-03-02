@@ -10,9 +10,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  Future<void> getData() async {
-    await Future.delayed(Duration(seconds: 2));
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -26,6 +23,7 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       home: FutureBuilder(
+        initialData: null,
         future: getData(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
@@ -35,6 +33,10 @@ class MyApp extends StatelessWidget {
           }
         },
       ),
+      // home: NavbarC(),
     );
   }
 }
+  Future<void> getData() async {
+    await Future.delayed(Duration(seconds: 2));
+  }
