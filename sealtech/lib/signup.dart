@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sealtech/client/navbar.dart';
 import 'package:sealtech/components/button.dart';
 import 'package:sealtech/components/theme.dart';
 import 'package:sealtech/signin.dart';
@@ -164,13 +165,16 @@ class _SignUpPageState extends State<SignUpPage> {
                   buttonText: 'Sign Up',
                   onPressed: () {
       if (_formKey.currentState!.validate()) {
-        // If the form is valid, display a Snackbar and proceed with sign-up process.
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => NavbarC()),
+        );
         ScaffoldMessenger.of(context)
             .showSnackBar(SnackBar(
               content: Text('Please Wait...'),
               backgroundColor: accentColor,
             ));
-        // TODO: Implement your sign-up process here.
+        //backend code here
       }
     },
                   color: 'orange',
