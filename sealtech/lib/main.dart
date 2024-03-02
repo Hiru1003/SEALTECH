@@ -40,4 +40,3 @@ class MyApp extends StatelessWidget {
 //   await Future.delayed(Duration(seconds: 2));
 //   return 'Data loaded';
 // }
-
