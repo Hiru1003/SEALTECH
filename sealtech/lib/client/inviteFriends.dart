@@ -14,7 +14,7 @@ class _InviteFriendsState extends State<InviteFriends> {
   void _submit() {
     if (_formKey.currentState!.validate()) {
       _formKey.currentState!.save();
-      // TODO: Implement the logic to send the invitation
+      // backend logic
     }
   }
 
