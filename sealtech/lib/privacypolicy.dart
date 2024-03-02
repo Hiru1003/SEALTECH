@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sealtech/components/button.dart';
 import 'package:sealtech/components/theme.dart';
+import 'package:sealtech/signup.dart';
 
 class PrivacyPolicyPage extends StatefulWidget {
   const PrivacyPolicyPage({Key? key}) : super(key: key);
@@ -11,6 +12,7 @@ class PrivacyPolicyPage extends StatefulWidget {
 
 class _PrivacyPolicyPageState extends State<PrivacyPolicyPage> {
   bool isChecked = false;
+  bool showError = false;
 
   @override
   Widget build(BuildContext context) {
@@ -42,6 +44,7 @@ class _PrivacyPolicyPageState extends State<PrivacyPolicyPage> {
                     onChanged: (bool? value) {
                       setState(() {
                         isChecked = value!;
+                        showError = !isChecked;
                       });
                     },
                     activeColor: Colors.orange,
@@ -53,13 +56,26 @@ class _PrivacyPolicyPageState extends State<PrivacyPolicyPage> {
                   ),
                 ],
               ),
+              if (showError)
+                Text(
+                  'You must agree to the terms and conditions to continue. *',
+                  style: TextStyle(color: Colors.red),
+                ),
               Center(
                 child: Button(
                   buttonText: 'Continue',
                   enableIcon: false,
                   onPressed: () {
-                    // Replace print with a logging framework
-                    // logger.info('Button pressed!');
+                    if (!isChecked) {
+                      setState(() {
+                        showError = true;
+                      });
+                    } else {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => SignUpPage()),
+                      );
+                    }
                   },
                   color: 'orange',
                   isStroked: false,

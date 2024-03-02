@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sealtech/components/button.dart';
 import 'package:sealtech/components/theme.dart';
+import 'package:sealtech/signin.dart';
 
 class SignUpPage extends StatefulWidget {
   @override
@@ -163,10 +164,10 @@ class _SignUpPageState extends State<SignUpPage> {
                   buttonText: 'Sign Up',
                   onPressed: () {
       if (_formKey.currentState!.validate()) {
-        // Navigator.push(
-        //   context,
-        //   MaterialPageRoute(builder: (context) => NavbarC()),
-        // );
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => SignInPage()),
+        );
         ScaffoldMessenger.of(context)
             .showSnackBar(SnackBar(
               content: Text('Please Wait...'),
