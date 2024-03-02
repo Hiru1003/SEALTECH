@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sealtech/Employee/Noitification.dart';
-import 'package:sealtech/Employee/Privacy.dart';
 import 'package:sealtech/Employee/deleteacc.dart';
 import 'package:sealtech/components/button.dart';
 import 'package:sealtech/components/theme.dart';
-import 'package:sealtech/privacypolicy.dart';
 import 'package:sealtech/signin.dart';
 
 class Profile_Page extends StatefulWidget {
@@ -120,10 +118,10 @@ class _Profile_PageState extends State<Profile_Page> {
                   GestureDetector(
                     onTap: () {
                       // Navigate to the Privacy and Security page
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => PrivacyPage()),
-                      );
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(builder: (context) => PrivacyPage()),
+                      // );
                     },
                     child: Container(
                       width: 310,
