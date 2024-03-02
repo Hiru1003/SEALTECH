@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:sealtech/client/navbar.dart';
 import 'package:sealtech/components/theme.dart';
-import 'package:sealtech/loadingPage2.dart';
-import 'package:sealtech/loadingpage1.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,21 +21,25 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: FutureBuilder(
-        initialData: null,
-        future: getData(),
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return LoadingPage1();
-          } else {
-            return LoadingPage2();
-          }
-        },
-      ),
-      // home: NavbarC(),
+      // home: FutureBuilder(
+      //   initialData: null,
+      //   future: getData(),
+      //   builder: (context, snapshot) {
+      //     if (snapshot.connectionState == ConnectionState.waiting) {
+      //       return LoadingPage1();
+      //     } else {
+      //       return LoadingPage2();
+      //     }
+      //   },
+      // ),
+      home: NavbarC(),
     );
   }
 }
-  Future<void> getData() async {
-    await Future.delayed(Duration(seconds: 2));
-  }
+
+// Future<String> getData() async {
+//   await Future.delayed(Duration(seconds: 2));
+//   return 'Data loaded';
+// }
+
+

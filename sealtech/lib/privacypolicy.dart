@@ -79,6 +79,7 @@ class _PrivacyPolicyPageState extends State<PrivacyPolicyPage> {
                   },
                   color: 'orange',
                   isStroked: false,
+                  width: 400,
                 ),
               ),
             ],
