@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sealtech/client/navbar.dart';
 import 'package:sealtech/components/button.dart';
 import 'package:sealtech/components/theme.dart';
 
@@ -164,10 +163,10 @@ class _SignUpPageState extends State<SignUpPage> {
                   buttonText: 'Sign Up',
                   onPressed: () {
       if (_formKey.currentState!.validate()) {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => NavbarC()),
-        );
+        // Navigator.push(
+        //   context,
+        //   MaterialPageRoute(builder: (context) => NavbarC()),
+        // );
         ScaffoldMessenger.of(context)
             .showSnackBar(SnackBar(
               content: Text('Please Wait...'),
