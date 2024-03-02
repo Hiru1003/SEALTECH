@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sealtech/client/navbar.dart';
+import 'package:sealtech/signin.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,8 +11,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: NavbarC(),
+      //home: NavbarC(),
       //home: NavbarE(),
+      home: SignInPage(),
     );
   }
 }
