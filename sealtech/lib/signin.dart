@@ -42,6 +42,7 @@ class SignInPage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: TextField(
+                  cursorColor: accentColor,
                   decoration: InputDecoration(
                     labelText: '   Email',
                     labelStyle: const TextStyle(
@@ -59,6 +60,7 @@ class SignInPage extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 16),
                 child: TextField(
+                  cursorColor: accentColor,
                   obscureText: true,
                   decoration: InputDecoration(
                     labelText: '   Password',

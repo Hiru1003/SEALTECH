@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sealtech/client/chat.dart';
 import 'package:sealtech/client/chemicals.dart';
 import 'package:sealtech/client/feedback.dart';
 import 'package:sealtech/client/product.dart';
@@ -49,7 +50,12 @@ class Home extends StatelessWidget {
                         ),
                         Button(
                           buttonText: 'More',
-                          onPressed: (){},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => Chat()),
+                            );
+                          },
                           enableIcon: true,
                           color: 'black',
                           isStroked: true,
