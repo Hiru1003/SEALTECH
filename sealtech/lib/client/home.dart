@@ -240,15 +240,15 @@ class Home extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               FeedbackTemplate(
-                title: 'Your title',
-                additionalText: 'Your additional text',
+                title: 'Name',
+                additionalText: 'Feedback [comment]',
                 stars: [Icons.star, Icons.star, Icons.star, Icons.star_half,Icons.star_border],
                 comment: 'Your comment',
               ),
               const SizedBox(height: 16,),
               FeedbackTemplate(
-                title: 'Your title',
-                additionalText: 'Your additional text',
+                title: 'Name',
+                additionalText: 'Feedback [comment]',
                 stars: [Icons.star, Icons.star, Icons.star, Icons.star_half,Icons.star_border],
                 comment: 'Your comment',
               )
