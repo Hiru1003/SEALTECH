@@ -41,6 +41,7 @@ class _InviteFriendsState extends State<InviteFriends> {
             child: Column(
               children: <Widget>[
                 TextFormField(
+                  cursorColor: accent75,
                   decoration: InputDecoration(
                     labelText: 'Friend\'s Email',
                   ),

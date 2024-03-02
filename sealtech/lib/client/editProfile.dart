@@ -33,6 +33,7 @@ class _EditProfileState extends State<EditProfile> {
           child: Column(
             children: <Widget>[
               TextFormField(
+                cursorColor: accent75,
                 decoration: InputDecoration(
                   labelText: 'Name',
                   focusColor: accentColor,
@@ -52,6 +53,7 @@ class _EditProfileState extends State<EditProfile> {
                 },
               ),
               TextFormField(
+                cursorColor: accent75,
                 decoration: InputDecoration(
                   labelText: 'Email',
                   focusColor: accentColor,
@@ -71,6 +73,7 @@ class _EditProfileState extends State<EditProfile> {
                 },
               ),
               TextFormField(
+                cursorColor: accent75,
                 decoration: InputDecoration(
                   labelText: 'Password',
                   focusColor: accentColor,

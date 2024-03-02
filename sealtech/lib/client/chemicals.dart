@@ -59,6 +59,7 @@ class Chemical extends StatelessWidget {
                   ),
                 ],
               ),
+              
             ),
           ),
         ),

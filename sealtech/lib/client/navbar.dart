@@ -9,7 +9,6 @@ import 'package:sealtech/components/theme.dart';
 
 //Initial widget
 class NavbarC extends StatefulWidget{
-
   @override
   HomeWidget createState() => HomeWidget();
 }
@@ -24,111 +23,108 @@ class HomeWidget extends State<NavbarC>{
   @override
   Widget build(BuildContext context){
     return Scaffold(
-        body: Container(
+      backgroundColor: bgColor,
+      body: PageView(
+        controller: _navPage,
+        onPageChanged: (index){
+          setState(() {
+            _selectedTab = index;
+          });
+        },
+        children: <Widget>[
+          firstTab.Home(),
+          secondTab.Category(),
+          thirdTab.Search(),
+          fourthTab.Cart(),
+          fifthTab.Profile(),
+        ],
+      ),
+      bottomNavigationBar: BottomAppBar(
+        elevation: 0,
+        shape: const CircularNotchedRectangle(),
+        color: bgColor,
+        child: Container(
           color: bgColor,
-          child: PageView(
-            controller: _navPage,
-            onPageChanged: (index){
-              setState(() {
-                _selectedTab = index;
-              });
-            },
+          child: Row(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              firstTab.Home(),
-              secondTab.Category(),
-              thirdTab.Search(),
-              fourthTab.Cart(),
-              fifthTab.Profile(),
+              IconButton(
+                iconSize: 30,
+                icon: Icon(
+                  _selectedTab == 0 ? Icons.home : Icons.home_outlined,
+                  color: _selectedTab == 0 ? accentColor : null,
+                ),
+                onPressed: () {
+                  setState(() {
+                    _navPage.jumpToPage(0);
+                  });
+                },
+              ),
+              IconButton(
+                iconSize: 30,
+                icon: Icon(
+                  _selectedTab == 1 ? Icons.category : Icons.category_outlined,
+                  color: _selectedTab == 1 ? accentColor : null,
+                ),
+                onPressed: () {
+                  setState(() {
+                    _navPage.jumpToPage(1);
+                  });
+                },
+              ),
+              IconButton(
+                iconSize: 30,
+                icon: Icon(
+                  _selectedTab == 2 ? Icons.search : Icons.search_outlined,
+                  color: _selectedTab == 2 ? accentColor : null,
+                ),
+                onPressed: () {
+                  setState(() {
+                    _navPage.jumpToPage(2);
+                  });
+                },
+              ),
+              IconButton(
+                iconSize: 30,
+                icon: Icon(
+                  _selectedTab == 3 ? Icons.shopping_cart : Icons.shopping_cart_outlined,
+                  color: _selectedTab == 3 ? accentColor : null,
+                ),
+                onPressed: () {
+                  setState(() {
+                    _navPage.jumpToPage(3);
+                  });
+                },
+              ),
+              IconButton(
+                iconSize: 30,
+                icon: Icon(
+                  _selectedTab == 4 ? Icons.person : Icons.person_outline,
+                  color: _selectedTab == 4 ? accentColor : null,
+                ),
+                onPressed: () {
+                  setState(() {
+                    _navPage.jumpToPage(4);
+                  });
+                },
+              ),
             ],
           ),
         ),
-        bottomNavigationBar: BottomAppBar(
-          shape: const CircularNotchedRectangle(),
-          color: bgColor,
-          child: Container(
-            color: bgColor,
-            child: Row(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-
-                //home
-                IconButton(
-                  iconSize: 30,
-                  icon: Icon(
-                    _selectedTab == 0 ? Icons.home : Icons.home_outlined,
-                    color: _selectedTab == 0 ? accentColor : null,
-                  ),
-                  onPressed: () {
-                    setState(() {
-                      _navPage.jumpToPage(0);
-                  });}),
-
-                //category
-                IconButton(
-                  iconSize: 30,
-                  icon: Icon(
-                    _selectedTab == 1 ? Icons.category : Icons.category_outlined,
-                    color: _selectedTab == 1 ? accentColor : null,
-                  ),
-                  onPressed: () {
-                    setState(() {
-                      _navPage.jumpToPage(1);
-                    });
-                  },
-                ),
-
-                //search
-                IconButton(
-                  iconSize: 30,
-                  icon: Icon(
-                    _selectedTab == 2 ? Icons.search : Icons.search_outlined,
-                    color: _selectedTab == 2 ? accentColor : null,
-                  ),
-                  onPressed: () {
-                    setState(() {
-                      _navPage.jumpToPage(2);
-                  });}),
-
-                //cart
-                IconButton(
-                  iconSize: 30,
-                  icon: Icon(
-                    _selectedTab == 3 ? Icons.shopping_cart : Icons.shopping_cart_outlined,
-                    color: _selectedTab == 3 ? accentColor : null,
-                  ),
-                  onPressed: () {
-                    setState(() {
-                      _navPage.jumpToPage(3);
-                  });}),
-
-                //profile
-                IconButton(
-                  iconSize: 30,
-                  icon: Icon(
-                    _selectedTab == 4 ? Icons.person : Icons.person_outline,
-                    color: _selectedTab == 4 ? accentColor : null,
-                  ),
-                  onPressed: () {
-                    setState(() {
-                      _navPage.jumpToPage(4);
-                    });
-                  },
-                ),
-              ],
-            ),
-            ),
-        ),
-        floatingActionButton: _selectedTab == 3 || _selectedTab == 4 ? null : FloatingActionButton(
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => Chat()),
-            );
-          },
-          child: Icon(Icons.message, color: primary25),
-          backgroundColor: primaryColor,
-        ),
+      ),
+      floatingActionButton: _selectedTab != 3 && _selectedTab != 4
+        ? FloatingActionButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Chat()),
+              );
+            },
+            child: Icon(Icons.message, color: primary25),
+            backgroundColor: primaryColor,
+          )
+        : null,
     );
   }
 }
