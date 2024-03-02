@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sealtech/client/chat.dart';
 import 'package:sealtech/client/chemicals.dart';
 import 'package:sealtech/client/product.dart';
 import 'package:sealtech/client/services.dart';
@@ -72,7 +73,12 @@ class Category extends StatelessWidget {
                                     ),
                                     Button(
                                       buttonText: 'Contact Us',
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(builder: (context) => Chat()),
+                                        );
+                                      },
                                       width: 150,
                                       isStroked: true,
                                       color: 'white',

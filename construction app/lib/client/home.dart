@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sealtech/client/chat.dart';
 import 'package:sealtech/client/chemicals.dart';
 import 'package:sealtech/client/feedback.dart';
 import 'package:sealtech/client/product.dart';
@@ -49,7 +50,12 @@ class Home extends StatelessWidget {
                         ),
                         Button(
                           buttonText: 'More',
-                          onPressed: (){},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => Chat()),
+                            );
+                          },
                           enableIcon: true,
                           color: 'black',
                           isStroked: true,
@@ -234,15 +240,15 @@ class Home extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               FeedbackTemplate(
-                title: 'Your title',
-                additionalText: 'Your additional text',
+                title: 'Name',
+                additionalText: 'Feedback [comment]',
                 stars: [Icons.star, Icons.star, Icons.star, Icons.star_half,Icons.star_border],
                 comment: 'Your comment',
               ),
               const SizedBox(height: 16,),
               FeedbackTemplate(
-                title: 'Your title',
-                additionalText: 'Your additional text',
+                title: 'Name',
+                additionalText: 'Feedback [comment]',
                 stars: [Icons.star, Icons.star, Icons.star, Icons.star_half,Icons.star_border],
                 comment: 'Your comment',
               )

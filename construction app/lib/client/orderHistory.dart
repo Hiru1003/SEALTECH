@@ -20,18 +20,22 @@ class _OrderHistoryState extends State<OrderHistory> {
       appBar: AppBar(
         title: Text('Order History'),
       ),
-      body: ListView.builder(
-        itemCount: _orders.length,
-        itemBuilder: (context, index) {
-          return ListTile(
-            title: Text('Order ID: ${_orders[index]['id']}'),
-            subtitle: Text('Date: ${_orders[index]['date']}'),
-            trailing: Text(
-              'Total: \$${_orders[index]['total']}',
-              style: TextStyle(color: accentColor),
-            ),
-          );
-        },
+      body: SingleChildScrollView(
+        child: ListView.builder(
+          shrinkWrap: true,
+          physics: NeverScrollableScrollPhysics(),
+          itemCount: _orders.length,
+          itemBuilder: (context, index) {
+            return ListTile(
+              title: Text('Order ID: ${_orders[index]['id']}'),
+              subtitle: Text('Date: ${_orders[index]['date']}'),
+              trailing: Text(
+                'Total: \$${_orders[index]['total']}',
+                style: TextStyle(color: accentColor),
+              ),
+            );
+          },
+        ),
       ),
     );
   }

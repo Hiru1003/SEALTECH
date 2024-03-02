@@ -14,7 +14,7 @@ class _InviteFriendsState extends State<InviteFriends> {
   void _submit() {
     if (_formKey.currentState!.validate()) {
       _formKey.currentState!.save();
-      // TODO: Implement the logic to send the invitation
+      // backend logic
     }
   }
 
@@ -41,6 +41,7 @@ class _InviteFriendsState extends State<InviteFriends> {
             child: Column(
               children: <Widget>[
                 TextFormField(
+                  cursorColor: accent75,
                   decoration: InputDecoration(
                     labelText: 'Friend\'s Email',
                   ),

@@ -60,6 +60,7 @@ class _SearchState extends State<Search> {
               Padding(
                 padding: const EdgeInsets.all(16),
                 child: TextField(
+                  cursorColor: accent75,
                   decoration: InputDecoration(
                     hintText: 'Search by Names, Categories or Keywords',
                     hintStyle: const TextStyle(fontSize: 14),
